@@ -1,0 +1,91 @@
+%btn{
+    &~.btn:not(.voyo-btn-block){
+        margin-left:$--voyo-btn-distance;
+    }
+    vertical-align: bottom;
+}
+.voyo-btn-loading-wrapper{
+    $transformY: -100% *  $--voyo-btn-loading-percent + -50% + 100%;
+    position:relative;
+    display:none;
+    transform: translate(-50%,$transformY);
+    width:1em;
+    height:.5em;
+    .voyo-btn-loading{
+        position:absolute;
+        left:0;
+        font-size:1em*$--voyo-btn-loading-percent;
+    }
+}
+.voyo-btn{
+    @extend %btn;
+    @extend .base-btn;
+    @include Radius();
+    i,.za,.voyo-btn-loading-wrapper{
+        vertical-align: middle;
+        &:first-child{
+            margin-right:$--voyo-btn-icon-dis;
+        }
+        &:last-child{
+            margin-left:$--voyo-btn-icon-dis;
+        }
+    }
+    &.__loading{
+        .voyo-btn-loading-wrapper{
+            display:inline-block;
+        }
+    }
+    //min-width:$--voyo-btn-min-width;
+}
+.voyo-btn-icon{
+    @extend %btn;
+    @extend .base-btn;
+    @include ICenter();
+    display:inline-flex !important;
+    border-radius:50%;
+}
+
+
+.voyo-btn-round{
+    border-radius:$--voyo-btn-round-radius;
+}
+
+@each $k,$v in $--voyo-btn-size{
+    .voyo-btn-size-#{$k}{
+        @include BtnSize($k,$v);
+    }
+    .voyo-btn-icon-size-#{$k}{
+        @include BtnIconSize($v);
+    }
+}
+
+@each $k,$v in $--voyo-btn-colors{
+    .voyo-btn-appear{
+        @include BtnAppear($k);
+    }
+    .voyo-btn-outline{
+        @include BtnOutline($k);
+    }
+    .voyo-btn-pure{
+        @include BtnPure($k);
+    }
+    .voyo-btn-candy{
+        @include BtnCandy($k);
+    }
+}
+.voyo-btn-block{
+    width:100%;
+    .content{
+        letter-spacing: $--voyo-btn-block-spacing;
+        padding-left: $--voyo-btn-block-spacing;
+        font-size:$--voyo-btn-block-font-size;
+    }
+}
+
+.voyo-btn-strip{
+    min-width:10em;
+    .content{
+        padding-left: $--voyo-btn-block-spacing;
+        letter-spacing: $--voyo-btn-block-spacing;
+    }
+}

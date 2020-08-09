@@ -1,0 +1,12 @@
+.voyo-border-bottom{
+  position:relative;
+  @include AfterBorder();
+}
+.voyo-border-right{
+  position:relative;
+  @include AfterBorder(right);
+}
+.voyo-border-right-small{
+  position:relative;
+  @include AfterBorder($borderPos:right,$borderColor:var(--color-after-border),$percent:60%);
+}

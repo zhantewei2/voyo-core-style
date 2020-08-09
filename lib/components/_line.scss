@@ -1,0 +1,31 @@
+%voyo-base-line{
+
+}
+.voyo-line{
+  background:$--voyo-line-bg;
+  position:relative;
+}
+.voyo-line-content{
+  padding:$--voyo-line-padding;
+  position:relative;
+  &:not(.__disableBorder){
+    @include BeforeBorder();
+  }
+  margin-left:$--voyo-line-content-margin-left;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  .voyo-line-cell,._leftIcon,._left,._right,._rightIcon{
+    @include IMid();
+  }
+  ._left,._right{
+    @include text-content();
+  }
+  ._leftIcon{
+    padding-right:$--voyo-line-icon-space;
+  }
+  ._leftIcon,._rightIcon{
+    @include text-brand(medium);
+  }
+}
+

@@ -1,0 +1,33 @@
+
+.voyo-image-icon{
+  width:2.5em;
+  height:2.5em;
+  @each $k,$v in $--voyo-image-icon-size{
+    &.__#{$k}{
+      font-size:$v;
+    }
+  }
+}
+.voyo-img-ready{
+  height:0;
+  width:100%;
+  display:none;
+}
+.voyo-img-container{
+  position:relative;
+  background:var(--color-bg);
+  &.__gentle{
+    background:var(--color-bg3);
+  }
+}
+.voyo-img-default{
+  width:100%;
+}
+.voyo-img-loading{
+  height:$--voyo-load-img-length;
+  width:$--voyo-load-img-length;
+}
+.voyo-img-card-shadow{
+  @include Shadow(card);
+  width:100%;
+}

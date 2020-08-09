@@ -1,0 +1,23 @@
+{
+  "name": "@voyo/core-style",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.css",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "css-loader": "^4.2.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^9.0.3",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}

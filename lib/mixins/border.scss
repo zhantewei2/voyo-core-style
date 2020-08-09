@@ -1,0 +1,59 @@
+@mixin _baseBorder($borderPos:bottom,$borderColor:var(--color-after-border),$percent:100%){
+  content:"";
+  position:absolute;
+  @if $borderPos == "bottom"{
+    height:1px;
+    bottom:0;
+    width: $percent;
+    left:(100% - $percent) /2;
+    transform:scaleY(.4);
+  }
+  @else if $borderPos == "right"{
+    height:$percent;
+    width:1px;
+    top: (100% - $percent) /2;
+    right:0;
+    transform: scaleX(.4);
+  }
+  @else if $borderPos == "top"{
+    height:1px;
+    width:$percent;
+    left:(100% - $percent) /2;
+    top:0;
+    transform: scaleY(.4);
+  }
+  background: $borderColor;
+}
+
+@mixin AfterBorder($borderPos:bottom,$borderColor: var(--color-after-border) ,$percent:100%){
+  &::after{
+    @include _baseBorder($borderPos,$borderColor,$percent);
+  }
+}
+
+@mixin BeforeBorder($borderPos:bottom,$borderColor:var(--color-after-border) ,$percent:100%){
+  &::before{
+    @include _baseBorder($borderPos,$borderColor,$percent);
+  }
+}
+
+@mixin AllBorder($radius:null,$borderColor:var(--color-after-border)){
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  transform-origin: 0 0;
+  height:200%;
+  width: 200%;
+  transform:scale(.5,.5);
+  border:1px solid $borderColor;
+  @if $radius {
+    border-radius:$radius;
+  }
+}
+@mixin AfterAllBorder($radius:null,$borderColor:var(--color-after-border)){
+  &::after{
+    @include AllBorder($radius,$borderColor);
+  }
+}
+

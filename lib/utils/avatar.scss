@@ -1,0 +1,39 @@
+.voyo-avatar-container{
+  display:inline-flex;
+  align-items: center;
+  transform-origin:0 50%;
+  .voyo-avatar{
+    border:none;
+    border-radius:50%;
+    width:$voyo-avatar-w;
+    height:$voyo-avatar-h;
+  }
+  .voyo-avatar-info{
+    margin-left:1em;
+    ._avatar-title{
+      font-size:$voyo-avatar-title;
+      padding:$voyo-avatar-title-p;
+      color:var(--color-font-brand);
+    }
+    ._avatar-des{
+      color:var(--color-font-des);
+    }
+  }
+
+  &.__deep{
+    ._avatar-title{
+      color:var(--color-font-brand-reverse);
+      max-width:$voyo-avatar-title-max-w;
+      @include Ellipsis();
+    }
+    ._avatar-des{
+      color:var(--color-font-des-reverse);
+      @include Ellipsis();
+    }
+  }
+  @each $k,$v in $size-map{
+    &.__size-#{$k}{
+      font-size:$v;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import "../components-dep.scss";
+.voyo-verification{
+  display:flex;
+  justify-content: center;
+  padding:$--voyo-vf-padding;
+}
+.voyo-verification-col{
+  padding:$--voyo-vf-col-margin;
+  max-width:$--voyo-vf-col-width-max;
+  flex-grow:1;
+  flex-basis: 0;
+  box-sizing: border-box;
+  height:$--voyo-vf-col-height;
+}
+.voyo-verification-col-input{
+  box-sizing: border-box;
+  position:relative;
+  width: 100%;
+  height:$--voyo-vf-col-height;
+  @include ICenter();
+  background:$--voyo-vf-col-input-bg;
+  border-radius:$--voyo-vf-col-input-radius;
+  &:after{
+    content:"";
+    position:absolute;
+    border:1px solid var(--color-after-border);
+    top:0;
+    left:0;
+    width:200%;
+    height:200%;
+    transform-origin: 0 0;
+    transform:scale(.5,.5);
+    border-radius:calc( #{$--voyo-vf-col-input-radius} *2);
+  }
+  &.__active{
+    border:1px solid $--voyo-vf-col-input-active-color;
+  }
+}

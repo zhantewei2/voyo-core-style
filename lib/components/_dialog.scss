@@ -1,0 +1,94 @@
+.voyo-dialog-layout{
+  @include Layout(dialog,var(--color-bg-deep));
+}
+.voyo-dialog-article{
+  min-height:$--voyo-dialog-article-minHeight;
+  padding:$--voyo-dialog-article-padding;
+  color: $--voyo-dialog-article-color;
+  font-size: $--voyo-dialog-article-font;
+  @include Center();
+}
+.voyo-dialog-header{
+  padding: $--voyo-dialog-header-padding;
+  color:$--voyo-dialog-header-color;
+  font-weight: bold;
+  text-align: center;
+}
+.voyo-dialog-footer{
+  display:flex;
+  position:relative;
+  @include BeforeBorder($borderPos:top);
+}
+
+.voyo-dialog-footer-confirm,.voyo-dialog-footer-cancel{
+  @include Flex-auto();
+  overflow:hidden;
+  position:relative;
+  text-align: center;
+  font-weight:bold;
+  line-height: $--voyo-footer-btn-line-height;
+  color:$--voyo-footer-btn-color;
+  letter-spacing: $--voyo-footer-btn-spacing;
+}
+.voyo-dialog-footer-cancel{
+  @include BeforeBorder(right);
+}
+.voyo-dialog{
+  @include Shadow(dialog);
+  @include Transition($type:fast);
+  width: $--voyo-dialog-width;
+  min-width: $--voyo-dialog-minWidth;
+  max-width: $--voyo-dialog-maxWidth;
+  background:var(--color-bg);
+  overflow:hidden;
+  @include Radius($type:medium);
+  &.__double-confirm{
+    .voyo-dialog-footer-confirm{
+      @include AfterBorder(right);
+    }
+    .voyo-dialog-footer-cancel{
+      display:inline-block;
+    }
+  }
+}
+.voyo-dialog-animate-enter{
+  ._layout-bg{
+    opacity:0;
+  }
+  .voyo-dialog{
+    opacity:0;
+    transform:translate3d(0,50%,0);
+  }
+}
+.voyo-dialog-animate-enter-to{
+
+}
+.voyo-dialog-animate-enter-active,.voyo-dialog-animate-leave-active{
+  @include Transition($type:fast);
+}
+.voyo-dialog-animate-leave-to{
+  ._layout-bg{
+    opacity:0;
+  }
+  .voyo-dialog{
+    opacity:0;
+    transform: translate3d(0,-20%,0);
+  }
+}
+
+.voyo-dialog2-container{
+  @include Radius($type:medium);
+  padding:$--voyo-dialog2-padding;
+  background-color:$--voyo-dialog2-bg;
+  width: $--voyo-dialog2-width;
+  min-width: $--voyo-dialog2-minWidth;
+  max-width: $--voyo-dialog2-maxWidth;
+  ._article{
+    position:relative;
+   padding:$--voyo-dialog2-article-padding;
+    @include AfterBorder();
+  }
+  ._footer{
+    padding:$--voyo-dialog2-footer-padding;
+  }
+}

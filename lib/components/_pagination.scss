@@ -1,0 +1,72 @@
+.voyo-pagination-bottom-area{
+   width:100%;
+  height: $--voyo-pagination-bottom-area-h;
+  @include Center();
+}
+.voyo-refresh-wrapper{
+  will-change:transform;
+  z-index:1;
+}
+.voyo-refresh-content{
+  position:absolute;
+  top:0;
+  left:0;
+  contain:strict;
+  width:100%;
+  transform: scale(0);
+  z-index:0;
+  will-change:transform;
+}
+.voyo-refresh-content-item{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  display:none;
+  justify-content: center;
+  align-items: center;
+  @include text-des(mini);
+  ._img{
+    display:inline-block;
+    width:$--voyo-pg-refresh-img-w;
+    height:$--voyo-pg-refresh-img-w;
+    margin:$--voyo-pg-refresh-img-margin;
+  }
+}
+@keyframes RefreshRestore {
+  from {}
+  to {transform:translate3d(0,0,0);}
+}
+
+@keyframes RefreshContentRestore {
+  from {}
+  to {transform: scale(0);}
+}
+@keyframes Test {
+  from {}
+  to{transform:translate3d(0,0,0)}
+}
+.voyo-an{
+  animation:Test 1s ease-out;
+}
+
+.voyo-refresh-wrapper-refresh-restore{
+   @include Animation(RefreshRestore,"normal");
+  animation-fill-mode: forwards;
+}
+.voyo-refresh-content-refresh-restore{
+  @include Animation(RefreshContentRestore,"normal");
+  animation-fill-mode: forwards;
+}
+//.voyo-pagination-message-area{
+//  width:100%;
+//  @include CenterColumn();
+//  height: $--voyo-pagination-message-h;
+//  ._image{
+//    height:100px;
+//  }
+//  ._title{
+//    padding:$--voyo-pagination-message-title-padding;
+//    @include text-des(now);
+//  }
+//}

@@ -1,0 +1,34 @@
+.voyo-sidebar-area{
+  width:$--voyo-sidebar-width;
+  height:auto;
+}
+
+.voyo-sidebar-view{
+  width:100%;
+  position:relative;
+}
+
+.voyo-sidebar-thumb{
+  position:absolute;
+  top:0;
+  left:0;
+  background: $--voyo-sidebar-thumb-color;
+  width:$--voyo-sidebar-thumb-width;
+  height:$--voyo-sidebar-thumb-height;
+  @include Transition();
+  &.__hide{
+    display:none;
+  }
+}
+
+.voyo-sidebar-item{
+  @include Center();
+  @include text-des(small);
+  background:$--voyo-sidebar-item-bg;
+  height:$--voyo-sidebar-item-height;
+  &.active{
+    background:$--voyo-sidebar-item-action-bg;
+    @include text-title(small);
+  }
+  @include Transition();
+}

@@ -1,0 +1,104 @@
+.touch-scroll{
+  -webkit-overflow-scrolling: touch;
+}
+.no-padding{
+  padding:0 !important;
+}
+.no-margin{
+  margin:0 !important;
+}
+.no-padding-b{
+  padding-bottom:0 !important;
+}
+.no-padding-t{
+  padding-top:0 !important;
+}
+.no-radius{
+  border-radius: 0 !important;
+}
+.no-padding-x{
+  padding-left:0 !important;
+  padding-right:0 !important;
+}
+.abs-full{
+  @include Full();
+}
+.abs-center{
+  position:absolute;
+  top:50%;
+  left:50%;
+  z-index:1;
+  transform: translate(-50%,-50%);
+}
+.abs-center-page{
+  @extend .abs-center;
+  top:40%;
+}
+.fix-center{
+  position:fixed;
+  top:40%;
+  left:50%;
+  z-index:1;
+  transform: translate(-50%,-50%);
+}
+.no-display{
+  display:none !important;
+}
+
+.slide-right{
+  transform:translate3d(100%,0,0);
+}
+.slide-left{
+  transform: translate3d(-100%,0,0);
+}
+.slide-mid{
+  transform:translate3d(0,0,0);
+}
+.carousel-page{
+  @extend .abs-full;
+  contain:strict;
+  will-change: transform;
+  opacity:1;
+  overflow-y:auto;
+}
+.carousel-container{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  width:100%;
+}
+.img-cover{
+  background-size:cover;
+}
+.scroll-container{
+  @extend .abs-full;
+  overflow-y:auto;
+}
+.scroll-view-y{
+  overflow-y:auto;
+  overflow-x:hidden;
+}
+.weixin-pure-btn{
+  background: transparent;
+  font-size:inherit;
+  &::after{
+    content:none;
+    display: none;
+  }
+}
+.ellipsis{
+  @include Ellipsis();
+}
+.rel{
+  position:relative;
+}
+.y-hid{
+  overflow-y:hidden;
+}
+.y-auto{
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
+.not-touch{
+  transition:transform .2s ease;
+}

@@ -1,0 +1,65 @@
+
+$--voyo-popup-various-slide:(
+  bottom:translate3d(0,100%,0),
+  top:translate3d(0,-100%,0),
+  left:translate3d(-100%,0,0),
+  right:translate3d(100%,0,0),
+  mid:translate3d(-50%,-30%,0)
+);
+
+.voyo-popup-slide{
+  @include Layout(popupSlide,var(--color-bg-deep));
+}
+
+.voyo-popup-slide-view{
+  @include PopupViewPositionStyle();
+  @include PopupViewAppear();
+  &.__appear{
+    padding:$--voyo-popup-container-padding;
+    background:var(--color-bg);
+  }
+  &.__width-close-icon{
+    padding:$--voyo-popup-container-padding-with-close-icon;
+  }
+  ._close-icon{
+    position:absolute;
+    top:$--voyo-popup-close-icon-space;
+    right:$--voyo-popup-close-icon-space;
+    font-size:$--voyo-popup-close-icon-size;
+  }
+}
+@each $k,$v in $--voyo-popup-various-slide{
+  $enterName:VoyoPopupSlideFrame-#{$k}-enter;
+  $leaveName: VoyoPopupSlideFrame-#{$k}-leave;
+  @keyframes #{$enterName} {
+    from {
+      transform: $v;
+    }
+    to {
+    }
+  }
+  @keyframes #{$leaveName}{
+    from {
+    }
+    to {
+      transform: $v;
+    }
+  }
+  .voyo-popup-slide{
+    &.__animate-#{$k}-enter{
+      @include Animation(VoyoFadeIn0,'comfort-in');
+      .voyo-popup-slide-view.__style-#{$k}{
+
+        @include Animation($enterName,'comfort-in');
+      }
+    }
+    &.__animate-#{$k}-leave{
+      @include Animation(VoyoFadeOut0,'comfort-out');
+      animation-fill-mode: forwards;
+      .voyo-popup-slide-view.__style-#{$k}{
+        @include Animation($leaveName,'comfort-out');
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+}

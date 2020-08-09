@@ -1,0 +1,57 @@
+.voyo-load-wrapper{
+  display:inline-block;
+  &.__block{
+    @include Center();
+    height:5.5em;
+    ._img,._img-wrapper{
+      height:$--voyo-load-img-block-length;
+      width:$--voyo-load-img-block-length;
+    }
+    ._view{
+      @include CenterColumn();
+    }
+    ._text{
+      margin:$--voyo-load-text-block-margin;
+    }
+  }
+  &.__inline{
+    ._view{
+      @include ICenter();
+    }
+    ._img,._img-wrapper{
+      height:$--voyo-load-img-length;
+      width:$--voyo-load-img-length;
+    }
+    ._textIcon{
+      font-size:2.5em;
+    }
+    ._text{
+      margin:$--voyo-load-text-margin;
+    }
+  }
+  &.__abs{
+    position:absolute;
+    width:100%;
+    left:0;
+    top:0;
+    z-index:map-get($voyo-index,loadBlock);
+    text-align: center;
+  }
+  ._text{
+    color:$--voyo-load-text-color;
+  }
+  @each $k,$v in $size-map{
+    &.__size-#{$k}{
+      font-size:$v;
+    }
+  }
+  //&.__type-block{
+  //  ._img-wrapper{
+  //    height: $--voyo-load-type-block-wrapper-len;
+  //    width: $--voyo-load-type-block-wrapper-len;
+  //    background: $--voyo-load-type-block-wrapper-bg;
+  //    @include Center();
+  //    border-radius:50%;
+  //  }
+  //}
+}

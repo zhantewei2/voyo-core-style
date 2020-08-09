@@ -1,0 +1,111 @@
+@import "../components-dep.scss";
+
+@keyframes KeyboardSlideIn {
+  from {transform:translate3d(0,100%,0) scale(1.2,1.2)}
+  to {}
+}
+@keyframes KeyboardSlideOut {
+  from {}
+  to {transform: translate3d(0,50%,0);opacity:0}
+}
+
+.voyo-keyboard-an-in{
+  @include Animation(KeyboardSlideIn,'comfort-in');
+}
+.voyo-keyboard-an-out{
+  @include Animation(KeyboardSlideOut,'comfort-out');
+  animation-fill-mode:forwards;
+}
+
+.voyo-keyboard{
+  position:fixed;
+  bottom:0;
+  left:0;
+  width:100%;
+  z-index:map-get($voyo-index,keyboard);
+  background:$--voyo-keyboard-bg;
+  @include AfterBorder(top);
+  &.__closebar{
+    .voyo-keyboard-content{
+      padding-top:0 !important;
+    }
+  }
+}
+.voyo-keyboard-closebar{
+  @include Center();
+  padding:.2rem 0;
+  @include Transition();
+  &:active{
+    background:var(--color-ripple-light-hover);
+  }
+}
+.voyo-keyboard-content{
+  padding:$--voyo-keyboard-content-padding;
+  ._keys-wrapper{
+    display:none;
+  }
+  ._keys-wrapper-row{
+    display:flex;
+  }
+  ._enter-wrapper{
+    display:none;
+    padding:$--voyo-keyboard-item-margin;
+  }
+  &.__double{
+    display:flex;
+    ._keys-wrapper{
+      display:block;
+      flex-basis:$--voyo-keyboard-double-left;
+    }
+    ._enter-wrapper{
+      display:block;
+      flex-basis:$--voyo-keyboard-double-right;
+    }
+    .voyo-keyboard-item{
+
+      height:$--voyo-keyboard-key-h;
+    }
+  }
+  &.__alone{
+    ._keys-wrapper{
+      display:block;
+      flex-basis: 100%;
+    }
+    .voyo-keyboard-item{
+      height:$--voyo-keyboard-key-h-alone;
+    }
+  }
+}
+.voyo-keyboard-item-holder{
+  flex-basis: 33.3%;
+  margin:$--voyo-keyboard-item-margin;
+}
+.voyo-keyboard-item{
+  @extend .base-btn;
+  @extend .voyo-keyboard-item-holder;
+  background-color:$--voyo-keyboard-key-bg;
+  font-weight: bold;
+  font-size:$--voyo-keyboard-key-size;
+  color:var(--color-font-content);
+  @include Radius();
+  @include ICenter();
+  .voyo-keyboard-item-icon{
+    height:1.5em;
+    width:1.5em;
+  }
+  &:active{
+    //background:$--voyo-keyboard-key-active-bg;
+    background:var(--color-ripple-light-hover);
+    transform: scale3d(.9,.9,.9);
+  }
+}
+.voyo-keyboard-enter-btn{
+  @extend .base-btn;
+  height:100%;
+  width:100%;
+  @include LinearPrimaryBg();
+  @include Radius();
+  font-size:var(--size-medium);
+  letter-spacing: .2em;
+  @include Center();
+}
