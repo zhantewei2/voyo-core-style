@@ -54,6 +54,9 @@
   @extend %voyo-line;
   @include text-content(small);
   padding: $voyo-content-line-padding;
+  ._label{
+    @include text-title();
+  }
 }
 .voyo-empty-line{
   @extend %voyo-line;
