@@ -51,6 +51,9 @@ body{
   &.transparent{
     background:transparent;
   }
+  &.inner{
+    bottom:0;
+  }
 }
 .voyo-tab-page-container{
   box-sizing: border-box;
