@@ -85,7 +85,10 @@
   max-width: $--voyo-dialog2-maxWidth;
   ._article{
     position:relative;
-   padding:$--voyo-dialog2-article-padding;
+    padding:$--voyo-dialog2-article-padding;
+    max-height:$--voyo-dialog2-article-max-heigh;
+    overflow-y:auto;
+    -webkit-overflow-scrolling: touch;
     @include AfterBorder();
   }
   ._footer{

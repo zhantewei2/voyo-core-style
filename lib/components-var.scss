@@ -52,6 +52,7 @@ $--voyo-dialog2-maxWidth:500px;
 $--voyo-dialog2-width:90vw;
 $--voyo-dialog2-article-padding:1.5rem .5rem 1rem .5rem;
 $--voyo-dialog2-footer-padding:1rem 0 0 0;
+$--voyo-dialog2-article-max-height:60vh;
 //toastStrong
 $--voyo-toastStrong-width:5rem;
 $--voyo-toastStrong-height:5rem;
@@ -60,7 +61,6 @@ $--voyo-toastStrong-bg-opacity:.2;
 $--voyo-toastStrong-bg:var(--color-bg4);
 $--voyo-toastStrong-footer-bg:var(--color-bg5);
 $--voyo-toastStrong-footer-padding:.5rem;
-
 //input
 $--voyo-input-wrapper-margin:0.2em 0 .2em 0;
 $--voyo-input-wrapper-padding:0 .5em;
