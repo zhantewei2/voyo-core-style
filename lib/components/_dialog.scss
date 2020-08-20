@@ -86,7 +86,7 @@
   ._article{
     position:relative;
     padding:$--voyo-dialog2-article-padding;
-    max-height:$--voyo-dialog2-article-max-heigh;
+    max-height:$--voyo-dialog2-article-max-height;
     overflow-y:auto;
     -webkit-overflow-scrolling: touch;
     @include AfterBorder();
