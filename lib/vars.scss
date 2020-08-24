@@ -3,7 +3,7 @@ $line-height:1.5;
 $line-height-content:1.8;
 $use-radius:true;
 $use-shadow:false;
-$use-linear:true;
+$use-linear:false;
 $use-btn-linear:true;
 $use-block-shadow:true;
 
@@ -68,7 +68,8 @@ $voyo-index:(
   toastStrong:950,
   popupSlide:600,
   loadBlock:2,
-  header:1001
+  header:1001,
+  snackbar:910
 );
 $--voyo-space-position:8px;
 $--voyo-space-base:5px;
@@ -76,14 +77,16 @@ $--voyo-space-base:5px;
 $--voyo-text-block-line-height:1.8 !default;
 
 $--voyo-icon-size-input:1.3em !default;
-$--voyo-icon-size-header: var(--size-strong) !default;
-$--voyo-icon-size-line: var(--size-now) !default;
+$--voyo-icon-size-header: calc(var(--size-strong)*1.2 ) !default;
+$--voyo-icon-size-line: var(--size-medium) !default;
 $--voyo-icon-size-mini: var(--size-small) !default;
+$--voyo-icon-size-title: calc(var(--size-large)*1.3 ) !default;
 $voyo-icon-size:(
   mini: $--voyo-icon-size-mini,
   input: $--voyo-icon-size-input,
   line: $--voyo-icon-size-line,
-  header: $--voyo-icon-size-header
+  header: $--voyo-icon-size-header,
+  title : $--voyo-icon-size-title,
 ) !default;
 
 //line
@@ -102,7 +105,7 @@ $voyo-out-timer:cubic-bezier(.79,.07,.98,1);
 
 $voyo-area-content-padding:1.5rem 1rem;
 $voyo-area-footer-padding:1rem;
-
+$voyo-area-sheetSelect-padding:.7rem;
 //avatar
 $voyo-avatar-h:5em;
 $voyo-avatar-w:5em;

@@ -23,6 +23,9 @@
 .abs-full{
   @include Full();
 }
+.d-block{
+  display:block;
+}
 .abs-center{
   position:absolute;
   top:50%;

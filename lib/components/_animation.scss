@@ -26,6 +26,15 @@
   from {transform: translate3d(0,10%,0) scale(1.1);opacity:0}
   to{}
 }
+@keyframes VoyoSlideDownIn {
+  from {transform: translate3d(0,-50%,0);opacity:0}
+  to{}
+}
+@keyframes VoyoSlideDownOut{
+  from {}
+  to {transform: translate3d(0,-50%,0);opacity:0}
+}
+
 .voyo-an-fadeIn{
   animation: VoyoFadeIn .2s $voyo-in-timer;
 }
@@ -42,4 +51,11 @@
 }
 .voyo-an-slideTop{
   @include Animation(VoyoSlideTop,'normal');
+}
+.voyo-an-slideDownIn{
+  @include Animation(VoyoSlideDownIn,"back-out");
+}
+.voyo-an-slideDownOut{
+  @include Animation(VoyoSlideDownOut,"normal");
+  animation-fill-mode: forwards;
 }

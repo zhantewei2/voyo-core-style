@@ -23,6 +23,9 @@
 .text-bold{
   font-weight: bold;
 }
+.text-underline{
+  text-decoration: underline;
+}
 .voyo-text-content-block{
   @extend .voyo-text-content;
   text,div,view{

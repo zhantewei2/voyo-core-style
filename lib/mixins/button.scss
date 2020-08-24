@@ -1,4 +1,4 @@
-.base-btn{
+@mixin BtnBase(){
     box-sizing: border-box;
     outline:none;
     position:relative;
@@ -30,7 +30,6 @@
     $bgColorLight:map-get($color-light-various,$variousName);
     $borderColor:map-get($color-border-various,$variousName);
     &.__#{$variousName}{
-        @include Disabled(appear);
         @include LinearBg($use-btn-linear,$bgColor,$bgColorLight);
         @include Shadow(appearBtn,$bgColor);
         color:$fontColor;
@@ -48,7 +47,6 @@
     $bgColor:map-get($color-various,$variousName);
     $borderColor:map-get($color-border-various,$variousName);
     &.__#{$variousName}{
-        @include Disabled(outline);
         @include Shadow(outlineBtn,$bgColor);
         border:1px solid $borderColor;
         background:transparent;
@@ -65,7 +63,6 @@
 @mixin BtnPure($variousName){
     $fontColor:map-get($color-various,$variousName);
     &.__#{$variousName}{
-        @include Disabled(pure);
         background: transparent;
         color:$fontColor;
         .ripple-btn{
@@ -76,13 +73,13 @@
 @mixin BtnCandy($variousName){
     $bgColor:map-get($color-gentle-various,$variousName);
     $fontColor:map-get($color-various,$variousName);
+    font-weight: bold;
     &.__#{$variousName}{
-        @include Disabled(candy);
         background: $bgColor;
         color:$fontColor; 
         .ripple-btn{
             @include UseRipple();
-        }   
+        }
     }
 }
 
@@ -93,8 +90,11 @@
     @if $k== "medium"{
         padding: .8em .8em;
     }
-    @else {
+    @else if $k== "mini"{
         padding: .7em .8em;
+    }
+    @else {
+        padding: .85em .8em;
     }
     @if $k == "mini"{
         min-width: 1em;

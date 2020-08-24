@@ -78,11 +78,18 @@
 
 .voyo-dialog2-container{
   @include Radius($type:medium);
+  position:relative;
   padding:$--voyo-dialog2-padding;
   background-color:$--voyo-dialog2-bg;
   width: $--voyo-dialog2-width;
   min-width: $--voyo-dialog2-minWidth;
   max-width: $--voyo-dialog2-maxWidth;
+  ._header{
+    text-align: center;
+    font-weight: bold;
+    padding:$--voyo-dialog2-header-padding;
+    color: var(--color-font-title);
+  }
   ._article{
     position:relative;
     padding:$--voyo-dialog2-article-padding;

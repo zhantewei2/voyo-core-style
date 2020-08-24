@@ -50,7 +50,8 @@ $--voyo-dialog2-bg:var(--color-bg);
 $--voyo-dialog2-minWidth:300px;
 $--voyo-dialog2-maxWidth:500px;
 $--voyo-dialog2-width:80vw;
-$--voyo-dialog2-article-padding:1.5rem .5rem 1rem .5rem;
+$--voyo-dialog2-header-padding:.5rem 0 1rem 0;
+$--voyo-dialog2-article-padding:0.5rem .5rem 1rem .5rem;
 $--voyo-dialog2-footer-padding:1rem 0 0 0;
 $--voyo-dialog2-article-max-height:55vh;
 //toastStrong
@@ -92,7 +93,7 @@ $--voyo-input-cursor-color:var(--color-font-base);
 
 //line
 $--voyo-line-bg:var(--color-bg);
-$--voyo-line-padding:1rem 1rem 1rem 0;
+$--voyo-line-padding:1em 1em 1em 0;
 $--voyo-line-content-margin-left:1.5rem;
 $--voyo-line-icon-space:1.5rem;
 
@@ -204,3 +205,14 @@ $--voyo-vf-r-padding:2.5rem 1rem 1.5rem 1rem;
 $--voyo-vf-r-width:80vw;
 $--voyo-vf-r-max-width:370px;
 $--voyo-vf-r-min-width:320px;
+//snackbar
+$--voyo-snackbar-bg-padding:1.5rem 0;
+$--voyo-snackbar-padding:1rem 1rem 1rem .5rem;
+$--voyo-snackbar-close-padding:0 0 0 .5rem;
+$--voyo-snackbar-radius:var(--radius-medium);
+$--voyo-snackbar-bg:var(--color-bg6);
+$--voyo-snackbar-w:85vw;
+$--voyo-snackbar-max-w:500px;
+$--voyo-snackbar-min-w:300px;
+$--voyo-snackbar-left-w:20%;
+$--voyo-snackbar-icon-w:2rem;

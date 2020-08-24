@@ -95,6 +95,9 @@
   @else if $type== 'comfort-out'{
     animation:$animationName .2s $voyo-out-timer;
   }
+  @else if $type== 'back-out'{
+    animation: $animationName .3s $easeOutBack;
+  }
 }
 @mixin IconVertical(){
   i,.icon{
