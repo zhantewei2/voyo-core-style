@@ -2,6 +2,11 @@
   font-weight: bold;
   @include text-title(now);
 }
+
+.voyo-text-title-white{
+  font-weight: bold;
+  @include text-title(now,true);
+}
 .voyo-text-content{
   @include text-content(small);
 }

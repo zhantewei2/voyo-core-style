@@ -54,6 +54,9 @@ body{
   &.inner{
     bottom:0;
   }
+  &.scroll{
+    overflow-y:auto;
+  }
 }
 .voyo-tab-page-container{
   box-sizing: border-box;

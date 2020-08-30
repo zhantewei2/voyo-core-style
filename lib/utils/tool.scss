@@ -75,11 +75,12 @@
 }
 .scroll-container{
   @extend .abs-full;
-  overflow-y:auto;
+  overflow-y:auto !important;
 }
 .scroll-view-y{
-  overflow-y:auto;
-  overflow-x:hidden;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  -webkit-overflow-scrolling: touch;
 }
 .weixin-pure-btn{
   background: transparent;
