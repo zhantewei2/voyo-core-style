@@ -19,13 +19,18 @@
     @include IMid();
   }
   ._left,._right{
-    @include text-content();
+    color:$--voyo-line-content-color;
+    font-size:$--voyo-line-content-font-size;
   }
   ._leftIcon{
     padding-right:$--voyo-line-icon-space;
   }
   ._leftIcon,._rightIcon{
-    @include text-brand(medium);
+    color:$--voyo-line-icon-color;
+    font-size:$--voyo-line-icon-font-size;
+  }
+  .right{
+
   }
 }
 

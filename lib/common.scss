@@ -30,11 +30,10 @@ body{
   touch-action:manipulation;
   overscroll-behavior-y: none;
 }
-.voyo-tab-page{
+%voyo-page{
   left:0;
   top:0;
   bottom:0;
-  bottom:env(safe-area-inset-bottom);
   width:100%;
   display:flex;
   position:absolute;
@@ -56,7 +55,15 @@ body{
   }
   &.scroll{
     overflow-y:auto;
+    -webkit-overflow-scrolling: touch;
   }
+}
+.voyo-tab-page{
+  @extend %voyo-page;
+}
+.voyo-page{
+  @extend %voyo-page;
+  bottom:env(safe-area-inset-bottom);
 }
 .voyo-tab-page-container{
   box-sizing: border-box;

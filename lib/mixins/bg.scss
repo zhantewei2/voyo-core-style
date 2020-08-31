@@ -1,6 +1,6 @@
 @mixin LinearBg($useLinear,$color,$color2){
     color:var(--color-primary-font);
-    @if $use-linear and $use-linear {
+    @if $use-linear and $useLinear {
         background-image:linear-gradient(90deg,$color,$color2) !important;
     }
     @else{
@@ -10,4 +10,6 @@
 @mixin LinearPrimaryBg(){
     @include LinearBg(true,var(--color-primary),var(--color-primary-light));
 }
-
+@mixin LinearPrimary2Bg(){
+    @include LinearBg(true,var(--color-primary2),var(--color-primary2-light));
+}

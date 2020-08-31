@@ -10,7 +10,7 @@
 }
 
 @mixin text-content($size:now){
-  font-size:map-get($size-map,$size) !important;
+  font-size:map-get($size-map,$size);
   color:var(--color-font-content);
 }
 @mixin text-brand($size:now,$white:false){

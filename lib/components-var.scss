@@ -4,8 +4,8 @@ $--voyo-page-header-adapter-padding:0 .5rem;
 $--voyo-page-header-z-index:51;
 $--voyo-layout-opacity:.6;
 
-$--voyo-tabbar-height:57.6px !default;
-$--voyo-tabbar-background:var(--color-bg2) !default;
+$--voyo-tabbar-height:64px !default;
+$--voyo-tabbar-background:var(--color-bg) !default;
 $--voyo-tabbar-icon-size:1.2em;
 $--voyo-tabbar-title-size:small;
 $--voyo-tabbar-z-index:52;
@@ -96,7 +96,10 @@ $--voyo-line-bg:var(--color-bg);
 $--voyo-line-padding:1em 1em 1em 0;
 $--voyo-line-content-margin-left:1.5rem;
 $--voyo-line-icon-space:1.5rem;
-
+$--voyo-line-content-font-size:1em !default;
+$--voyo-line-icon-font-size:1.3em !default;
+$--voyo-line-content-color:var(--color-font-content) !default;
+$--voyo-line-icon-color:var(--color-font-brand) !default;
 //tab
 $--voyo-tab-bar-item-mini-w:80px !default;
 $--voyo-tab-bar-item-h:48px !default;
@@ -108,6 +111,7 @@ $--voyo-tab-bar-thumb-w:2.5rem !default;
 $--voyo-tab-bar-thumb-h:4px !default;
 $--voyo-tab-bar-thumb-bottom: 0px !default;
 $--voyo-tab-bar-color: var(--color-primary) !default;
+$--voyo-tab-bar-active-color:var(--color-primary2) !default;
 $--voyo-tab-bar-bg:var(--color-bg);
 
 $--voyo-popup-container-padding:1.5rem;
@@ -149,7 +153,7 @@ $--voyo-sidebar-thumb-height:1em;
 $--voyo-sidebar-thumb-width:.3em;
 $--voyo-sidebar-thumb-color:var(--color-primary);
 
-$--voyo-sidebar-item-bg:var(--color-bg2);
+$--voyo-sidebar-item-bg:var(--color-bg3);
 $--voyo-sidebar-item-action-bg:var(--color-bg);
 $--voyo-sidebar-item-height:4em;
 
@@ -192,7 +196,7 @@ $--voyo-vf-r-figure-width:10em;
 $--voyo-vf-r-figure-height:10em;
 $--voyo-vf-r-thumb-padding:3em 2em 1em 2em;
 $--voyo-vf-r-thumb-radius:.7em;
-$--voyo-vf-r-thumb-bg:var(--color-bg2);
+$--voyo-vf-r-thumb-bg:var(--color-bg3);
 $--voyo-vf-r-thumbbar-bg:var(--color-bg);
 $--voyo-vf-r-thumbbar-len:3.4em;
 $--voyo-vf-r-thumbbar-radius:1.7em;

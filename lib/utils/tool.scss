@@ -24,7 +24,7 @@
   @include Full();
 }
 .d-block{
-  display:block;
+  display:block !important;
 }
 .abs-center{
   position:absolute;
