@@ -99,6 +99,9 @@
 .y-hid{
   overflow-y:hidden;
 }
+.over-hid{
+  overflow:hidden;
+}
 .y-auto{
   overflow-y:auto;
   -webkit-overflow-scrolling:touch;
@@ -108,4 +111,7 @@
 }
 .font-b{
   font-weight: bold;
+}
+.more-mini{
+  transform: scale(.9);
 }

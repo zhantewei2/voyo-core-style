@@ -7,3 +7,9 @@
 .voyo-bg-default{
   background-color:var(--color-bg);
 }
+@each $k,$v in $color-various{
+  .voyo-bg-#{$k}{
+    background-color:$v;
+    color:map-get($color-font-various,$k);
+  }
+}

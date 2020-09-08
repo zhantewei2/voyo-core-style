@@ -8,6 +8,7 @@
   --color-disabled: #ececec;
 
   --color-primary-light: #1BC6E2;
+  --color-primary2-light: #52c4e3;
   --color-secondary-light: rgb(230,230,230);
   --color-success-light:#07c160;
   --color-warn-light:#ff976a;
@@ -15,6 +16,7 @@
   --color-disabled-light: #f6f6f6;
 
   --color-primary-gentle: rgba(0, 160, 226,.1);
+  --color-primary2-gentle:  rgba(0, 160, 186,.1);
   --color-secondary-gentle:rgba(100,100,100,.1);
   --color-success-gentle:rgba(0,255,255,.1);
   --color-warn-gentle:rgba(255,255,0,0.1);
@@ -22,6 +24,7 @@
 
 
   --color-primary-font: white;
+  --color-primary2-font: white;
   --color-secondary-font:white;
   --color-success-font: white;
   --color-warn-font:white;

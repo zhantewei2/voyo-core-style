@@ -27,6 +27,7 @@ $color-various:(
 
 $color-border-various:(
   primary:var(--color-primary),
+  primary2:var(--color-primary2),
   secondary:var(--color-secondary),
   success:var(--color-success),
   warn:var(--color-warn),
@@ -35,6 +36,7 @@ $color-border-various:(
 
 $color-font-various:(
   primary:var(--color-primary-font),
+  primary2: var(--color-primary2-font),
   secondary:var(--color-secondary-font),
   success:var(--color-success-font),
   warn:var(--color-warn-font),
@@ -43,6 +45,7 @@ $color-font-various:(
 
 $color-light-various:(
   primary:var(--color-primary-light),
+  primary2: var(--color-primary2-light),
   secondary:var(--color-secondary-light),
   success:var(--color-success-light),
   warn:var(--color-warn-light),
@@ -51,6 +54,7 @@ $color-light-various:(
 
 $color-gentle-various:(
   primary:var(--color-primary-gentle),
+  primary2:var(--color-primary2-gentle),
   secondary:var(--color-secondary-gentle),
   success:var(--color-success-gentle),
   warn:var(--color-warn-gentle),

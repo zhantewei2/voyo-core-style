@@ -1,0 +1,5 @@
+@mixin Badge(){
+  display:inline-block;
+  padding:$--voyo-badge-padding;
+  @include Radius($--voyo-badge-radius);
+}

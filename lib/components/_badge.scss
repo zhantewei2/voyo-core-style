@@ -1,0 +1,21 @@
+.voyo-badge{
+  @include Badge();
+  @each $k,$v in $--voyo-badge-various{
+    &.__badge-color-#{$k}{
+      $fontColor:map-get($--voyo-badge-font-various,$k);
+      background:$v;
+      color:$fontColor;
+    }
+  }
+  @each $k,$v in $--voyo-badge-size{
+    &.__badge-size-#{$k}{
+      font-size:$v;
+    }
+  }
+  &.__margin-space{
+    margin:$--voyo-badge-margin-space;
+  }
+  &.__more-mini{
+    transform: scale($--voyo-badge-more-mini-scale);
+  }
+}
