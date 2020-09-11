@@ -72,10 +72,13 @@ $voyo-index:(
   toast:1000,
   dialog:900,
   toastStrong:950,
-  popupSlide:600,
+  popupSlide:599,
   loadBlock:2,
   header:1001,
-  snackbar:910
+  snackbar:910,
+  footerBar:500,
+  keyboard:600,
+  cover:501
 );
 $--voyo-space-position:8px;
 $--voyo-space-base:5px;
