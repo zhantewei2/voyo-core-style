@@ -63,6 +63,7 @@ body{
 }
 .voyo-page{
   @extend %voyo-page;
+  bottom:constant(safe-area-inset-bottom);
   bottom:env(safe-area-inset-bottom);
 }
 .voyo-tab-page-container{
