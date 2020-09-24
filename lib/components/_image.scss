@@ -31,3 +31,13 @@
   @include Shadow(card);
   width:100%;
 }
+.voyo-image-simple{
+  position:relative;
+  width:100%;
+  &.__gentle{
+    background:$--voyo-image-bg-color;
+  }
+  ._img-loading{
+    display:none;
+  }
+}
