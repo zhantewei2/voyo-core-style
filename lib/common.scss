@@ -1,4 +1,4 @@
-html,page{
+html{
   font-size:var(--size-font);
   color:var(--color-font-base);
   font-family: $font-family;
@@ -11,7 +11,7 @@ html,page{
 view,div,span,text{
   box-sizing: border-box;
 }
-body{
+.root-body{
   position:fixed;
   z-index:0;
   word-wrap:break-word;
@@ -65,6 +65,12 @@ body{
   @extend %voyo-page;
   bottom:constant(safe-area-inset-bottom);
   bottom:env(safe-area-inset-bottom);
+}
+.voyo-mini-page{
+  min-height:100vh;
+  &.gentle{
+    background:var(--color-bg3);
+  }
 }
 .voyo-tab-page-container{
   box-sizing: border-box;
