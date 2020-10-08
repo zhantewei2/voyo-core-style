@@ -73,8 +73,8 @@
 @mixin BtnCandy($variousName){
     $bgColor:map-get($color-gentle-various,$variousName);
     $fontColor:map-get($color-various,$variousName);
-    font-weight: bold;
     &.__#{$variousName}{
+        font-weight: bold;
         background: $bgColor;
         color:$fontColor; 
         .ripple-btn{
