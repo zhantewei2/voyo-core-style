@@ -85,6 +85,8 @@
 .weixin-pure-btn{
   background: transparent;
   font-size:inherit;
+  padding:0;
+  line-height: unset;
   &::after{
     content:none;
     display: none;
