@@ -25,6 +25,7 @@
     @extend %btn;
     @extend .base-btn;
     @include Radius();
+    transform: rotate(0deg);
     i,.za,.voyo-btn-loading-wrapper{
         vertical-align: middle;
         &:first-child{
@@ -52,6 +53,7 @@
 
 .voyo-btn-round{
     border-radius:$--voyo-btn-round-radius;
+
 }
 
 @each $k,$v in $--voyo-btn-size{

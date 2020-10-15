@@ -4,9 +4,7 @@ html{
   font-family: $font-family;
   line-height:1.5;
   -webkit-tap-highlight-color: transparent;
-  overflow-y:auto;
   background:var(--color-bg);
-  min-height:100vh;
 }
 view,div,span,text{
   box-sizing: border-box;
@@ -44,6 +42,7 @@ view,div,span,text{
   background:var(--color-bg);
   padding:0;
   margin:0;
+  overscroll-behavior-y:contain;
   &.gentle{
     background:var(--color-bg3);
   }
@@ -63,8 +62,8 @@ view,div,span,text{
 }
 .voyo-page{
   @extend %voyo-page;
-  bottom:constant(safe-area-inset-bottom);
-  bottom:env(safe-area-inset-bottom);
+  position:fixed;
+  @include IOSSafeHeight();
 }
 .voyo-mini-page{
   min-height:100vh;

@@ -16,3 +16,12 @@
 ._voyo-footer-bar{
   height:$--voyo-footer-bar-height;
 }
+.voyo-footer-bar-abs{
+  position:absolute;
+  bottom:0;
+  left:0;
+}
+.voyo-footer-bar-fixed{
+  position:fixed;
+  @include IOSSafeBottom();
+}
