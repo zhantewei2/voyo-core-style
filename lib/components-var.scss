@@ -19,6 +19,7 @@ $--voyo-btn-size:$size-map;
 $--voyo-btn-colors:$color-various;
 $--voyo-btn-distance:1em;
 $--voyo-btn-icon-dis:0.4em;
+$--voyo-btn-icon-len:3em;
 $--voyo-btn-min-width:5.5em;
 $--voyo-btn-block-spacing:1em;
 $--voyo-btn-block-font-size:1.1em;
@@ -230,3 +231,14 @@ $--voyo-badge-font-various: $color-font-various !default;
 $--voyo-badge-margin-space:0 .5em !default;
 $--voyo-badge-radius:var(--radius-medium) !default;
 $--voyo-badge-more-mini-scale:.9 !default;
+
+
+//fab
+$--voyo-fab-list-directions:(
+  top:column-reverse ,
+  bottom:column,
+  left:row-reverse,
+  right:row
+);
+$--voyo-fab-list-item-max-count:5;
+$--voyo-fab-list-item-delay:.1s;

@@ -80,8 +80,11 @@
   @else if $type == "comfort-in"{
     transition:$attrs .2s $voyo-in-timer;
   }
+  @else if $type == "back"{
+    transition:$attrs .3s $easeOutBack;
+  }
 }
-@mixin Animation($animationName,$type){
+@mixin Animation($animationName,$type,$forward:false){
 
   @if $type== 'normal'{
     animation:$animationName .3s ease-out;
@@ -97,6 +100,12 @@
   }
   @else if $type== 'back-out'{
     animation: $animationName .3s $easeOutBack;
+  }
+  @else if $type == "back-in"{
+    animation: $animationName .3s $easeInBack;
+  }
+  @if $forward{
+    animation-fill-mode: forwards;
   }
 }
 @mixin IconVertical(){

@@ -8,10 +8,10 @@
 
 @keyframes VoyoFadeIn {
   from {opacity:0;transform: scale3d(.8,.8,.8)}
-  to {}
+  to {opacity:1}
 }
 @keyframes VoyoFadeOut {
-  from {}
+  from {opacity:1}
   to {opacity:0;transform: scale3d(.8,.8,.8)}
 }
 @keyframes VoyoFadeIn0 {
@@ -33,6 +33,36 @@
 @keyframes VoyoSlideDownOut{
   from {}
   to {transform: translate3d(0,-50%,0);opacity:0}
+}
+
+@keyframes VoyoScaleShow{
+  from{opacity:0;transform:scale(0.5)}
+  to{}
+}
+@keyframes VoyoScaleHide {
+  from {}
+  to {opacity:0;transform:scale(0.5)}
+}
+@keyframes VoyoDump {
+  0% {}
+  20%{transform:scale(1.25)}
+  40%{transform: scale(.85)}
+  60%{transform: scale(1.1)}
+  80%{transform: scale(0.95)}
+  100%{transform: scale(1)}
+}
+@keyframes VoyoDumpIn {
+  0%{opacity:0;transform:scale(.3)}
+  70%{opacity:.4;transform:scale(1.1)}
+  90%{opacity:1;transform:scale(.95)}
+  100%{opacity:1;transform: scale(1)}
+}
+@keyframes VoyoShrink {
+  0%{}
+  30%{transform: scale(.7)}
+  60%{transform: scale(1.1)}
+  80%{transform:scale(.95)}
+  100%{transform: scale(1)}
 }
 
 .voyo-an-fadeIn{

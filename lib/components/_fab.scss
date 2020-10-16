@@ -1,0 +1,96 @@
+.voyo-fab-wrapper{
+  position:relative;
+}
+
+.voyo-fab-item{
+  opacity:0;
+
+}
+@keyframes VoyoFabListShow{
+  from {opacity:0}
+  to{}
+}
+
+.voyo-fab-list{
+  position:absolute;
+  &._show{
+    .voyo-fab-item{
+      @for $i from 1 through $--voyo-fab-list-item-max-count{
+        &:nth-of-type(#{$i}){
+          $delay: ($i + -1)*$--voyo-fab-list-item-delay;
+          animation:VoyoDumpIn .3s $easeInBack  $delay 1 normal forwards;
+        }
+      }
+    }
+  }
+  &._hide{
+    .voyo-fab-item {
+      opacity:1;
+      @for $i from 1 through $--voyo-fab-list-item-max-count{
+        &:nth-of-type(#{$--voyo-fab-list-item-max-count - $i}){
+          $delay: ($i + -1)*$--voyo-fab-list-item-delay;
+          animation:VoyoFadeOut .4s $easeOutBack $delay 1 normal forwards;
+        }
+      }
+      @include Animation(VoyoFadeOut, back-out, true);
+    }
+  }
+}
+.voyo-fab-list-wrapper{
+  display:flex;
+}
+@each $key,$val in $--voyo-fab-list-directions{
+  .voyo-fab-list-direction-#{$key}{
+    .voyo-fab-list-wrapper{
+      flex-direction: $val;
+    }
+    @if $key=="left" or $key =="right"{
+      top:50%;
+      transform: translateY(-50%);
+    }@else if $key=="bottom" or $key =="top"{
+      left:50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+
+.voyo-fab-wrapper{
+  ._btn-default,._btn-open{
+    height:100%;
+    width:100%;
+    position:absolute;
+    border-radius:50%;
+    @include Transition($attrs:all,$type:"back");
+  }
+  &.__open{
+    .voyo-fab{
+      animation: VoyoDump .4s ease-out;
+    }
+    ._btn-default{
+      opacity:0;
+      transform: scale(.5) rotate(360deg);
+    }
+    ._btn-open{
+      opacity:1;
+      transform: scale(1) rotate(0deg);
+    }
+    .voyo-fab-list{
+      animation: VoyoFabListShow .3s ease-out;
+      animation-fill-mode: forwards;
+    }
+  }
+  &.__hide{
+    .voyo-fab{
+      animation: VoyoShrink .4s ease-out;
+    }
+    ._btn-default{
+      opacity:1;
+      transform: scale(1) rotate(0deg);
+    }
+    ._btn-open{
+      opacity:0;
+      transform: scale(.5) rotate(360deg);
+    }
+  }
+}

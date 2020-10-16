@@ -41,7 +41,7 @@
       box-shadow:0 8px 26px -12px var(--color-bg-deep3);
     }
     @else if $various == "tap"{
-      box-shadow:0 4px 16px -10px var(--color-bg-deep3);
+      box-shadow:0 4px 12px -8px var(--color-bg-deep3);
     }
     @else if $various== "snack"{
       box-shadow:0 8px 26px -8px var(--color-bg-deep3);
