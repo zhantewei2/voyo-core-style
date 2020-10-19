@@ -46,5 +46,8 @@
     @else if $various== "snack"{
       box-shadow:0 8px 26px -8px var(--color-bg-deep3);
     }
+    @else if $various == "fab-card"{
+      box-shadow:0 0 12px -3px var(--shadow-color);
+    }
   }
 }
