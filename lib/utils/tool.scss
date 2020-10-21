@@ -117,3 +117,6 @@
 .more-mini{
   transform: scale(.9);
 }
+.no-behavior{
+  overscroll-behavior-y: none;
+}
