@@ -40,11 +40,11 @@
 
 @each $k,$v in $size-map{
   .voyo-text-size-#{$k}{
-    font-size:$v;
+    font-size:$v !important;
   }
 }
 @each $k,$v in $font-colors{
   .voyo-text-color-#{$k}{
-    color:$v;
+    color:$v !important;
   }
 }

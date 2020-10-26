@@ -147,3 +147,6 @@
   }
 }
 
+@mixin IOSRadius(){
+  transform: rotate(0);
+}

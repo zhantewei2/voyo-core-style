@@ -1,12 +1,12 @@
-$font-family: var(--font-family);
-$line-height:1.5;
-$line-height-content:1.8;
-$use-radius:true;
-$use-shadow:false;
-$use-linear:false;
-$use-btn-linear:true;
-$use-block-shadow:true;
-$use-drop-blur:true;
+$font-family: var(--font-family) !default;
+$line-height:1.5 !default;
+$line-height-content:1.8 !default;
+$use-radius:true !default;
+$use-shadow:false !default;
+$use-linear:true !default;
+$use-btn-linear:false !default;
+$use-block-shadow:true !default;
+$use-drop-blur:true !default;
 
 $size-map:(
   mini:var(--size-mini),

@@ -46,6 +46,7 @@
     @extend %btn;
     @extend .base-btn;
     @include ICenter();
+    @include IOSRadius();
     display:inline-flex !important;
     border-radius:50%;
 }
