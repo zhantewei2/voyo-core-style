@@ -25,6 +25,7 @@
     @extend %btn;
     @extend .base-btn;
     @include Radius();
+    //@include Transition();
     transform: rotate(0deg);
     i,.za,.voyo-btn-loading-wrapper{
         vertical-align: middle;

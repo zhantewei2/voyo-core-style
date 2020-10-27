@@ -3,6 +3,11 @@
   top:$--voyo-space-position;
   right:$--voyo-space-position;
 }
+.abs-br{
+  position:absolute;
+  bottom:$--voyo-space-position;
+  right:$--voyo-space-position;
+}
 
 $voyo-pos-size:(
   25:50%,
