@@ -106,6 +106,7 @@
 }
 .over-hid{
   overflow:hidden;
+  @include IOSRadius();
 }
 .y-auto{
   overflow-y:auto;
