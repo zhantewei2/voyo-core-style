@@ -37,6 +37,8 @@
     transform: translate3d(100%,0,0);
     will-change: transform;
     &.__marquee-primary{
+      padding-left:3rem;
+      padding-right:3rem;
       animation: VoyoMarqueePrimary $--voyo-alert-marquee-duration linear 0s infinite;
     }
     //&.__marquee-secondary{
