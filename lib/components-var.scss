@@ -224,7 +224,8 @@ $--voyo-snackbar-left-w:20%;
 $--voyo-snackbar-icon-w:2rem;
 
 //badge
-$--voyo-badge-padding:.1em .3em !default;
+$--voyo-badge-padding:0 .5em !default;
+$--voyo-badge-height:2em !default;
 $--voyo-badge-size: $size-map !default;
 $--voyo-badge-various: $color-various !default;
 $--voyo-badge-font-various: $color-font-various !default;

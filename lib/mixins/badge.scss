@@ -1,5 +1,7 @@
 @mixin Badge(){
-  display:inline-block;
+  display:inline-flex;
+  align-items: center;
+  height:$--voyo-badge-height;
   padding:$--voyo-badge-padding;
   @include Radius($--voyo-badge-radius);
 }
