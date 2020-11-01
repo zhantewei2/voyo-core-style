@@ -34,6 +34,10 @@
   display:flex;
   justify-content: space-between;
 }
+.flex-v-between{
+  @extend .flex-between;
+  align-items: center;
+}
 .flex-around{
   display:flex;
   justify-content: space-around;
