@@ -1,10 +1,10 @@
 .abs-tr{
-  position:absolute;
+  position:absolute !important;
   top:$--voyo-space-position;
   right:$--voyo-space-position;
 }
 .abs-br{
-  position:absolute;
+  position:absolute !important;
   bottom:$--voyo-space-position;
   right:$--voyo-space-position;
 }

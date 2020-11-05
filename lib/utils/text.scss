@@ -37,7 +37,9 @@
     line-height:$--voyo-text-block-line-height;
   }
 }
-
+.text-justify{
+  text-align: justify;
+}
 @each $k,$v in $size-map{
   .voyo-text-size-#{$k}{
     font-size:$v !important;
