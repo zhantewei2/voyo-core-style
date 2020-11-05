@@ -127,7 +127,7 @@ $--voyo-load-text-color:var(--color-font-des);
 $--voyo-load-text-margin: 0 0 0 .5rem;
 $--voyo-load-text-block-margin:.5rem 0 0 0;
 $--voyo-load-img-length: 4em;
-$--voyo-load-img-block-length: 5em;
+$--voyo-load-img-block-length: 5em !default;
 //$--voyo-load-type-block-wrapper-len: 5em;
 //$--voyo-load-type-block-wrapper-bg: transparent;
 
@@ -224,7 +224,8 @@ $--voyo-snackbar-left-w:20%;
 $--voyo-snackbar-icon-w:2rem;
 
 //badge
-$--voyo-badge-padding:.1em .3em !default;
+$--voyo-badge-padding:0 .5em !default;
+$--voyo-badge-height:2em !default;
 $--voyo-badge-size: $size-map !default;
 $--voyo-badge-various: $color-various !default;
 $--voyo-badge-font-various: $color-font-various !default;
