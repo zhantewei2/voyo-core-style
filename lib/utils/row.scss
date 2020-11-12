@@ -1,0 +1,5 @@
+@each $k,$v in $row-width-map{
+  .w-#{$k}{
+    width:$v;
+  }
+}

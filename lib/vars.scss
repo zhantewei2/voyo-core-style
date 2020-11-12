@@ -68,6 +68,13 @@ $font-colors:(
   assist:var(--color-font-assist)
 );
 
+$row-width-map:(
+  25:25%,
+  50:50%,
+  75:75%,
+  100:100%
+);
+
 $voyo-index:(
   toast:1000,
   dialog:900,
