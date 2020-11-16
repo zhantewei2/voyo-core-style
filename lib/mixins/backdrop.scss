@@ -1,0 +1,7 @@
+@mixin BackDropFilterBg($defaultBg:$--voyo-backdrop-default-bg,$notSupportBg:$--voyo-backdrop-back-bg){
+  background:$defaultBg;
+  backdrop-filter:blur($--voyo-backdrop-filter-blur);
+  @supports not (backdrop-filter: blur(1px)) {
+    background:$notSupportBg;
+  }
+}

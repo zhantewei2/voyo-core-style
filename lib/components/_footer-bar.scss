@@ -11,6 +11,11 @@
   background:$--voyo-footer-bar-bg;
   padding:$--voyo-footer-bar-padding;
   box-sizing: border-box;
+  &.__backdrop{
+    @include BackDropFilterBg();
+    @include AfterBorder($borderPos:top);
+    box-shadow: unset;
+  }
 }
 
 ._voyo-footer-bar{
