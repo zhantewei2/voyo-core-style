@@ -30,6 +30,8 @@
   ._content{
     @include Flex-1();
     @include text-title(small);
+    display:inline-flex;
+    align-items:center;
   }
   ._close{
     padding:$--voyo-snackbar-close-padding;

@@ -7,6 +7,9 @@
   display:flex;
   align-items: center;
   padding:$--voyo-alert-padding;
+  &.__round{
+    @include Radius($v:$--voyo-alert-round);
+  }
   &.__marquee{
     height:$--voyo-alert-marquee-height;
     ._voyo-alert-content{

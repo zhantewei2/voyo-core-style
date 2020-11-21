@@ -12,7 +12,7 @@
   padding:$--voyo-footer-bar-padding;
   box-sizing: border-box;
   &.__backdrop{
-    @include BackDropFilterBg();
+    @include DropBlurBg();
     @include AfterBorder($borderPos:top);
     box-shadow: unset;
   }

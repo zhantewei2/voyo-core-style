@@ -57,9 +57,7 @@
 
 .voyo-fab-wrapper{
   ._btn-default,._btn-open{
-    height:100%;
-    width:100%;
-    position:absolute;
+    @include Full();
     border-radius:50%;
     @include Transition($attrs:all,$type:"back");
   }

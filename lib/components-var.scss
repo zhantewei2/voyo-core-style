@@ -252,8 +252,4 @@ $--voyo-alert-bg-various:$color-gentle-various !default;
 $--voyo-alert-font-various:$color-various !default;
 $--voyo-alert-marquee-duration:16s !default;
 $--voyo-alert-marquee-height:3em;
-
-//backdrop
-$--voyo-backdrop-default-bg:var(--color-bg5);
-$--voyo-backdrop-back-bg:var(--color-bg);
-$--voyo-backdrop-filter-blur:10px;
+$--voyo-alert-round:var(--radius-medium);

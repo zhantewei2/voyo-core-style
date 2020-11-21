@@ -13,15 +13,15 @@
 @mixin LinearPrimary2Bg(){
     @include LinearBg(true,var(--color-primary2),var(--color-primary2-light));
 }
-@mixin DropBlurBg(){
+@mixin DropBlurBg($defaultBg:$--voyo-backdrop-default-bg,$notSupportBg:$--voyo-backdrop-back-bg){
     @if $use-drop-blur{
-        background-color:var(--color-bg4);
+        background-color:$defaultBg;
         backdrop-filter:blur(var(--blur-size));
         @supports not(backdrop-filter: blur(5px)) {
-            background-color:var(--color-bg);
+            background-color:$notSupportBg;
         }
     }
     @else {
-        background-color:var(--color-bg);
+        background-color:$notSupportBg;
     }
 }
