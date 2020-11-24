@@ -10,15 +10,6 @@
   &.__round{
     @include Radius($v:$--voyo-alert-round);
   }
-  &.__marquee{
-    height:$--voyo-alert-marquee-height;
-    ._voyo-alert-content{
-      height:100%;
-      white-space: nowrap;
-      overflow:hidden;
-      transform: rotate(0);
-    }
-  }
   ._voyo-alert-prefix,._voyo-alert-suffix,._voyo-alert-close{
     padding: $--voyo-alert-inner-padding;
     height:100%;
@@ -26,7 +17,8 @@
   ._voyo-alert-content{
     @include Flex-1();
     position:relative;
-
+    overflow:hidden;
+    transform: rotate(0);
   }
   ._voyo-alert-marquee{
     display: inline-flex;
