@@ -89,6 +89,8 @@
   color:var(--color-font-content);
   @include Radius();
   @include ICenter();
+  margin-left:3px;
+  margin-right:3px;
   .voyo-keyboard-item-icon{
     height:1.5em;
     width:1.5em;

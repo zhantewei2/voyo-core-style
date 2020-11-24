@@ -1,3 +1,14 @@
+.voyo-loader-container{
+  &.__cover{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index:2;
+  }
+}
+
 .voyo-load-wrapper{
   display:inline-block;
   &.__block{
@@ -29,13 +40,20 @@
       margin:$--voyo-load-text-margin;
     }
   }
-  &.__abs{
+  &.__abs,&.__absCenter{
     position:absolute;
+    z-index:map-get($voyo-index,loadBlock);
+    text-align: center;
+  }
+  &.__abs{
     width:100%;
     left:0;
     top:0;
-    z-index:map-get($voyo-index,loadBlock);
-    text-align: center;
+  }
+  &.__absCenter{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
   }
   ._text{
     color:$--voyo-load-text-color;
@@ -45,13 +63,4 @@
       font-size:$v;
     }
   }
-  //&.__type-block{
-  //  ._img-wrapper{
-  //    height: $--voyo-load-type-block-wrapper-len;
-  //    width: $--voyo-load-type-block-wrapper-len;
-  //    background: $--voyo-load-type-block-wrapper-bg;
-  //    @include Center();
-  //    border-radius:50%;
-  //  }
-  //}
 }

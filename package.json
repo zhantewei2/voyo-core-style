@@ -21,5 +21,8 @@
   },
   "dependencies": {
     "ceaser-easing": "^1.0.1"
+  },
+  "peerDependencies": {
+    "ceaser-easing": "^1.0.1"
   }
 }

@@ -1,61 +1,14 @@
 html{
-  font-size:var(--size-font);
-  color:var(--color-font-base);
-  font-family: $font-family;
-  line-height:1.5;
-  -webkit-tap-highlight-color: transparent;
-  background:var(--color-bg);
+  @include HTMLBase();
 }
 view,div,span,text{
   box-sizing: border-box;
 }
 .root-body{
-  position:fixed;
-  z-index:0;
-  word-wrap:break-word;
-  padding:0;
-  margin:0;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  max-width: 100%;
-  text-rendering:optimizeLegibility;
-  -webkit-user-drag:none;
-  overflow:hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  touch-action:manipulation;
-  overscroll-behavior-y: none;
+  @include RootBody();
 }
 %voyo-page{
-  left:0;
-  top:0;
-  height: 100%;
-  width:100%;
-  display:flex;
-  position:absolute;
-  flex-direction:column;
-  overflow:hidden;
-  z-index:0;
-  contain:style;
-  background:var(--color-bg);
-  padding:0;
-  margin:0;
-  overscroll-behavior-y:contain;
-  &.gentle{
-    background:var(--color-bg3);
-  }
-  &.transparent{
-    background:transparent;
-  }
-  &.inner{
-    bottom:0;
-  }
-  &.scroll{
-    overflow-y:auto;
-    -webkit-overflow-scrolling: touch;
-  }
+  @include PageBase();
 }
 .voyo-tab-page{
   @extend %voyo-page;
@@ -64,16 +17,4 @@ view,div,span,text{
   @extend %voyo-page;
   position:fixed;
   @include IOSSafeHeight();
-}
-.voyo-mini-page{
-  min-height:100vh;
-  &.gentle{
-    background:var(--color-bg3);
-  }
-}
-.voyo-tab-page-container{
-  box-sizing: border-box;
-  border:none;
-  padding:0;
-  margin:0;
 }

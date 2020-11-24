@@ -6,6 +6,7 @@
   padding:$--voyo-dialog-article-padding;
   color: $--voyo-dialog-article-color;
   font-size: $--voyo-dialog-article-font;
+  text-align: center;
   @include Center();
 }
 .voyo-dialog-header{
@@ -17,6 +18,7 @@
 .voyo-dialog-footer{
   display:flex;
   position:relative;
+  font-weight: bold;
   @include BeforeBorder($borderPos:top);
 }
 
@@ -41,13 +43,26 @@
   max-width: $--voyo-dialog-maxWidth;
   background:var(--color-bg);
   overflow:hidden;
+  margin-right:auto;
+  margin-left:auto;
   @include Radius($type:medium);
   &.__double-confirm{
     .voyo-dialog-footer-confirm{
+      color:$--voyo-dialog-confirm-color;
       @include AfterBorder(right);
     }
     .voyo-dialog-footer-cancel{
       display:inline-block;
+      color:$--voyo-dialog-cancel-color;
+    }
+  }
+  &.__disable-confirm{
+    @include Radius($type:medium);
+    .voyo-dialog-article{
+      padding: $--voyo-dialog-article-disable-confirm-padding;
+    }
+    .voyo-dialog-footer{
+      display:none;
     }
   }
 }

@@ -1,0 +1,56 @@
+@import "../components-dep";
+.voyo-toastStrong-layout{
+  @include Layout($indexType:toastStrong);
+}
+
+.voyo-toastStrong{
+  position:absolute;
+  top:50%;
+  left:50%;
+  will-change:opacity,transform;
+  transform: translate3d(-50%,-50%,0);
+  box-sizing: border-box;
+  @include Center();
+  background:$--voyo-toastStrong-bg;
+  transform-origin: 0 0;
+  display:flex;
+  flex-flow:column;
+  justify-content: center;
+  padding:$--voyo-toastStrong-padding;
+  @include Shadow(toastStrong);
+  @include Radius();
+}
+.voyo-toastStrong-footer{
+  text-align:center;
+  padding: $--voyo-toastStrong-footer-padding;
+  @include Radius($type:large);
+  font-size: var(--size-font-small);
+  font-weight:bold;
+}
+.voyo-toastStrong-article-image{
+  height:$--voyo-toastStrong-article-height;
+  width:$--voyo-toastStrong-article-width;
+}
+.voyo-toastStrong-container-enter{
+  ._layout-bg{
+    opacity:0;
+  }
+  .voyo-toastStrong{
+    opacity:0;
+    transform:scale(.5,.5) translate3d(-50%,-50%,0);
+  }
+}
+.voyo-toastStrong-container-enter-active,.voyo-toastStrong-container-leave-active{
+  .voyo-toastStrong{
+    @include Transition($type:fast);
+  }
+}
+.voyo-toastStrong-container-leave-to{
+  ._layout-bg{
+    opacity:0;
+  }
+  .voyo-toastStrong{
+    opacity:0;
+    transform:scale(.5,.5) translate3d(-50%,-50%,0);
+  }
+}
