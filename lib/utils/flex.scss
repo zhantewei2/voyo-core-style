@@ -36,6 +36,10 @@
   display:flex;
   justify-content: space-between;
 }
+.iflex-between{
+  display: inline-flex;
+  justify-content: space-between;
+}
 .flex-v-between{
   @extend .flex-between;
   align-items: center;
