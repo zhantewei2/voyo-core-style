@@ -63,3 +63,11 @@ $--voyo-popup-various-slide:(
     }
   }
 }
+.voyo-popup-activity-close{
+  color:var(--color-font-title-reverse);
+  font-size:$--voyo-popup-activity-close-size;
+  position:absolute;
+  left:50%;
+  bottom:0;
+  transform: translate3d(-50%,150%,0);
+}
