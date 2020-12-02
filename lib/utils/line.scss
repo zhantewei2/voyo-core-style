@@ -62,3 +62,19 @@
   @extend %voyo-line;
   padding:$voyo-empty-line-padding;
 }
+
+.voyo-li{
+  position:relative;
+  padding:$voyo-li-padding;
+  color:var(--color-font-content);
+  @each $k,$v in $size-map{
+    &.__size-#{$k}{
+      font-size:$v;
+    }
+  }
+  .__border{
+    &:not(:last-of-type){
+      @include AfterBorder();
+    }
+  }
+}
