@@ -16,6 +16,7 @@
   display:flex;
   flex-flow:column;
   justify-content: center;
+  color:$--voyo-toastStrong-color;
   padding:$--voyo-toastStrong-padding;
   @include Shadow(toastStrong);
   @include Radius();
@@ -37,7 +38,7 @@
   }
   .voyo-toastStrong{
     opacity:0;
-    transform:scale(.5,.5) translate3d(-50%,-50%,0);
+    transform:scale(.9,.9) translate3d(-50%,-50%,0);
   }
 }
 .voyo-toastStrong-container-enter-active,.voyo-toastStrong-container-leave-active{
@@ -51,6 +52,6 @@
   }
   .voyo-toastStrong{
     opacity:0;
-    transform:scale(.5,.5) translate3d(-50%,-50%,0);
+    transform:scale(.9,.9) translate3d(-50%,-50%,0);
   }
 }

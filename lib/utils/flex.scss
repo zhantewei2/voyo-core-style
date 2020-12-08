@@ -25,7 +25,7 @@
   @include ICenter();
 }
 .flex-v-mid{
-  display:flex;
+  display:flex !important;
   align-items: center;
 }
 .flex-h-mid{
