@@ -3,6 +3,12 @@
   border-radius:50%;
   width:$voyo-avatar-w;
   height:$voyo-avatar-h;
+  @each $k,$v in $--voyo-avatar-size-map{
+    &.__size-#{$k}{
+      width:$v;
+      height:$v;
+    }
+  }
 }
 
 .voyo-avatar-container{

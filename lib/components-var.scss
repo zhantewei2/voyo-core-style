@@ -132,6 +132,15 @@ $--voyo-load-text-margin: 0 0 0 .5rem;
 $--voyo-load-text-block-margin:.5rem 0 0 0;
 $--voyo-load-img-length: 4em;
 $--voyo-load-img-block-length: 5em !default;
+$--voyo-load-wrapper-h: 5.5em !default;
+$--voyo-load-size-map:(
+  mini:6px,
+  small:10px,
+  now:12px,
+  medium:14px,
+  strong:16px,
+  large:20px
+)!default;
 //$--voyo-load-type-block-wrapper-len: 5em;
 //$--voyo-load-type-block-wrapper-bg: transparent;
 

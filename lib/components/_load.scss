@@ -13,7 +13,7 @@
   display:inline-block;
   &.__block{
     @include Center();
-    height:5.5em;
+    height:$--voyo-load-wrapper-h;
     ._img,._img-wrapper{
       height:$--voyo-load-img-block-length;
       width:$--voyo-load-img-block-length;
@@ -58,7 +58,7 @@
   ._text{
     color:$--voyo-load-text-color;
   }
-  @each $k,$v in $size-map{
+  @each $k,$v in $--voyo-load-size-map{
     &.__size-#{$k}{
       font-size:$v;
     }

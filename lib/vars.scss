@@ -132,7 +132,14 @@ $voyo-avatar-title:1.5em;
 $voyo-avatar-des:1em;
 $voyo-avatar-title-p:0 0 .5rem 0;
 $voyo-avatar-title-max-w:9em;
-
+$--voyo-avatar-size-map:(
+  mini: 1em,
+  small: 1.5em,
+  now: 2em,
+  medium: 3em,
+  strong: 5em,
+  large: 6em,
+) !default;
 
 //backdrop
 $--voyo-backdrop-default-bg:var(--color-bg5);
