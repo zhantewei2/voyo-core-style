@@ -7,6 +7,9 @@
     width:100%;
     z-index:2;
   }
+  &.__inline{
+    display:inline-block;
+  }
 }
 
 .voyo-load-wrapper{

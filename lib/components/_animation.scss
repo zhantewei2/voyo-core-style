@@ -71,7 +71,18 @@
   80%{transform: rotate(10deg)}
   100%{}
 }
-
+@keyframes VoyoLineEnter{
+  from {transform:translate3d(0,80%,0)}
+  to{transform: scaleY(1);opacity:1;}
+}
+.voyo-an-lineEnter-fromBottom{
+  ._content{
+    opacity:0;
+    transform-origin: 50% 100%;
+    animation: VoyoLineEnter .3s $easeOutBack .2s;
+    animation-fill-mode: forwards;
+  }
+}
 .voyo-an-fadeIn{
   animation: VoyoFadeIn .2s $voyo-in-timer;
 }
