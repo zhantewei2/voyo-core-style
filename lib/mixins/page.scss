@@ -55,4 +55,11 @@
     overflow-y:auto;
     -webkit-overflow-scrolling: touch;
   }
+  &.__blur{
+    filter:blur(var(--blur-size));
+    transform: scale(1.1,1.1);
+  }
+  &.iosHeight{
+    @include IOSSafeHeight();
+  }
 }
