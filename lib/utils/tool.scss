@@ -79,6 +79,12 @@
 .img-cover{
   background-size:cover;
 }
+.overflow-y{
+  overflow-y:auto;
+}
+.overflow-x{
+  overflow-x:auto;
+}
 .scroll-container{
   @extend .abs-full;
   overflow-y:auto !important;

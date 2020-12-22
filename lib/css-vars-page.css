@@ -41,6 +41,7 @@ page{
     --color-bg-deep:black;
     --color-bg-deep2: #373737;
     --color-bg-deep3:rgba(0,0,0,0.4);
+    --color-bg-deep4:rgba(0,0,0,0.8);
     --color-after-border: rgb(230,230,230);
     --color-border-light:rgb(249,249,249);
     /*page header bg*/

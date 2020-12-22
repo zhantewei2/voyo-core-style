@@ -72,7 +72,7 @@
       font-size:$v;
     }
   }
-  .__border{
+  &.__border{
     &:not(:last-of-type){
       @include AfterBorder();
     }
