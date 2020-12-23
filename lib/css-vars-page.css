@@ -6,6 +6,7 @@ page{
     --color-warn:#ff976a;
     --color-error:#ee0a24;
     --color-disabled: #ececec;
+    --color-gentle:rgb(100,100,100);
 
     --color-primary-light: #1BC6E2;
     --color-primary2-light: #52c4e3;
@@ -14,6 +15,7 @@ page{
     --color-warn-light:#ff976a;
     --color-error-light:#ee0a24;
     --color-disabled-light: #f6f6f6;
+    --color-gentle-light:rgb(240,240,240);
 
     --color-primary-gentle: rgba(0, 160, 226,.1);
     --color-primary2-gentle:  rgba(0, 160, 186,.1);
@@ -21,7 +23,7 @@ page{
     --color-success-gentle:rgba(0,255,255,.1);
     --color-warn-gentle:rgba(255,255,0,0.1);
     --color-error-gentle:rgba(255,0,0,.1);
-
+    --color-gentle-gentle:rgba(130,130,130,.1);
 
     --color-primary-font: white;
     --color-primary2-font: white;
@@ -29,6 +31,7 @@ page{
     --color-success-font: white;
     --color-warn-font:white;
     --color-error-font:white;
+    --color-gentle-font:white;
     --color-disabled-font:gainsboro;
     --color-disabled-border:gainsboro;
 

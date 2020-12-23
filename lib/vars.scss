@@ -22,7 +22,8 @@ $color-various:(
   secondary:var(--color-secondary),
   success:var(--color-success),
   warn:var(--color-warn),
-  error:var(--color-error)
+  error:var(--color-error),
+  gentle:var(--color-gentle),
 );
 
 $color-border-various:(
@@ -31,7 +32,8 @@ $color-border-various:(
   secondary:var(--color-secondary),
   success:var(--color-success),
   warn:var(--color-warn),
-  error:var(--color-error)
+  error:var(--color-error),
+  gentle:var(--color-gentle),
 );
 
 $color-font-various:(
@@ -40,7 +42,8 @@ $color-font-various:(
   secondary:var(--color-secondary-font),
   success:var(--color-success-font),
   warn:var(--color-warn-font),
-  error:var(--color-error-font)
+  error:var(--color-error-font),
+  gentle:var(--color-gentle-font),
 );
 
 $color-light-various:(
@@ -49,7 +52,8 @@ $color-light-various:(
   secondary:var(--color-secondary-light),
   success:var(--color-success-light),
   warn:var(--color-warn-light),
-  error:var(--color-error-light)
+  error:var(--color-error-light),
+  gentle:var(--color-gentle-light)
 );
 
 $color-gentle-various:(
@@ -58,7 +62,8 @@ $color-gentle-various:(
   secondary:var(--color-secondary-gentle),
   success:var(--color-success-gentle),
   warn:var(--color-warn-gentle),
-  error:var(--color-error-gentle)
+  error:var(--color-error-gentle),
+  gentle:var(--color-gentle-gentle)
 );
 $font-colors:(
   des:var(--color-font-des),
