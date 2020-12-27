@@ -5,6 +5,7 @@
   ._valueBlock{
     max-width:60%;
     text-align:right;
+    word-break: break-all;
   }
   @each $k,$v in $size-map{
     &.__#{$k}{
