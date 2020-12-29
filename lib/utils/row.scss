@@ -3,6 +3,10 @@
     width:$v;
   }
 }
+.row{
+  display:flex;
+  align-items: center;
+}
 %col{
  box-sizing: border-box;
   display: inline-block;

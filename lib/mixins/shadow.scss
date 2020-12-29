@@ -32,7 +32,7 @@
     }
       //header tabbar
     @else if $various == "tabBar"{
-      box-shadow: 0 3px 12px -3px var(--shadow-color-tabbar);
+      box-shadow: 0 4px 12px -1px var(--shadow-color-tabbar);
     }
     @else if $various == "card"{
       box-shadow:0 8px 24px -10px rgba(0,0,0,0.1);

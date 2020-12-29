@@ -65,8 +65,11 @@
 }
 
 .voyo-li{
+
+  align-items: center;
   position:relative;
   padding:$voyo-li-padding;
+  padding-left:$voyo-li-left;
   color:var(--color-font-content);
   @each $k,$v in $size-map{
     &.__size-#{$k}{
@@ -75,7 +78,7 @@
   }
   &.__border{
     &:not(:last-of-type){
-      @include AfterBorder();
+      @include AfterListBorder($reducerPercent:$voyo-li-left);
     }
   }
 }
