@@ -2,9 +2,9 @@
   @include Badge();
   @each $k,$v in $--voyo-badge-various{
     &.__badge-color-#{$k}{
-      $fontColor:map-get($--voyo-badge-font-various,$k);
-      background:$v;
-      color:$fontColor;
+      background:map-get($--voyo-badge-bg-various,$k);
+      color:$v;
+      @include BadgeBorderColor($v);
     }
   }
   @each $k,$v in $--voyo-badge-size{

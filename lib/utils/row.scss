@@ -3,3 +3,14 @@
     width:$v;
   }
 }
+%col{
+ box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+}
+@for $i from 1 through $--voyo-col-count{
+  .col-#{$i}{
+    @extend %col;
+    width: $--voyo-row-width/$--voyo-col-count*$i;
+  }
+}
