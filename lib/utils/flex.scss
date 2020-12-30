@@ -1,5 +1,8 @@
 .flex{
-  display:flex;
+  display:flex !important;
+}
+.flex-inline{
+  display:inline-flex !important;
 }
 .flex-center{
   @include Center();
