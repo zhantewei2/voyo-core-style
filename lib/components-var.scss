@@ -110,7 +110,7 @@ $--voyo-tab-bar-color: var(--color-primary) !default;
 $--voyo-tab-bar-bg:var(--color-bg);
 
 $--voyo-popup-container-padding:1.5rem;
-$--voyo-popup-radius:var(--radius-large);
+$--voyo-popup-radius:var(--radius-large) !default;
 $--voyo-popup-view-type: mid top left right bottom;
 $--voyo-popup-close-icon-size:1rem;
 $--voyo-popup-close-icon-space:.5rem;
