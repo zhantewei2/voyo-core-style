@@ -1,13 +1,21 @@
+.voyo-avatar{
+  border:none;
+  border-radius:50%;
+  width:$voyo-avatar-w;
+  height:$voyo-avatar-h;
+  @each $k,$v in $--voyo-avatar-size-map{
+    &.__size-#{$k}{
+      width:$v;
+      height:$v;
+    }
+  }
+}
+
 .voyo-avatar-container{
   display:inline-flex;
   align-items: center;
   transform-origin:0 50%;
-  .voyo-avatar{
-    border:none;
-    border-radius:50%;
-    width:$voyo-avatar-w;
-    height:$voyo-avatar-h;
-  }
+
   .voyo-avatar-info{
     margin-left:1em;
     ._avatar-title{

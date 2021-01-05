@@ -1,3 +1,7 @@
+.base-btn{
+    @include BtnBase();
+}
+
 %btn{
     &~.btn:not(.voyo-btn-block){
         margin-left:$--voyo-btn-distance;
@@ -21,6 +25,8 @@
     @extend %btn;
     @extend .base-btn;
     @include Radius();
+    //@include Transition();
+    transform: rotate(0deg);
     i,.za,.voyo-btn-loading-wrapper{
         vertical-align: middle;
         &:first-child{
@@ -41,6 +47,7 @@
     @extend %btn;
     @extend .base-btn;
     @include ICenter();
+    @include IOSRadius();
     display:inline-flex !important;
     border-radius:50%;
 }
@@ -48,6 +55,7 @@
 
 .voyo-btn-round{
     border-radius:$--voyo-btn-round-radius;
+
 }
 
 @each $k,$v in $--voyo-btn-size{
@@ -73,6 +81,19 @@
         @include BtnCandy($k);
     }
 }
+.voyo-btn-appear{
+    @include Disabled(appear);
+}
+.voyo-btn-outline{
+    @include Disabled(outline);
+}
+.voyo-btn-pure{
+    @include Disabled(pure);
+}
+.voyo-btn-candy{
+    @include Disabled(candy);
+}
+
 .voyo-btn-block{
     width:100%;
     .content{

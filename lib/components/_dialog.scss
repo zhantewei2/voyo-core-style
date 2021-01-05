@@ -6,6 +6,8 @@
   padding:$--voyo-dialog-article-padding;
   color: $--voyo-dialog-article-color;
   font-size: $--voyo-dialog-article-font;
+  text-align: center;
+  position:relative;
   @include Center();
 }
 .voyo-dialog-header{
@@ -17,6 +19,7 @@
 .voyo-dialog-footer{
   display:flex;
   position:relative;
+  font-weight: bold;
   @include BeforeBorder($borderPos:top);
 }
 
@@ -32,6 +35,7 @@
 }
 .voyo-dialog-footer-cancel{
   @include BeforeBorder(right);
+  display:none;
 }
 .voyo-dialog{
   @include Shadow(dialog);
@@ -41,13 +45,26 @@
   max-width: $--voyo-dialog-maxWidth;
   background:var(--color-bg);
   overflow:hidden;
+  margin-right:auto;
+  margin-left:auto;
   @include Radius($type:medium);
   &.__double-confirm{
     .voyo-dialog-footer-confirm{
+      color:$--voyo-dialog-confirm-color;
       @include AfterBorder(right);
     }
     .voyo-dialog-footer-cancel{
+      color:$--voyo-dialog-cancel-color;
       display:inline-block;
+    }
+  }
+  &.__disable-confirm{
+    @include Radius($type:medium);
+    .voyo-dialog-article{
+      padding: $--voyo-dialog-article-disable-confirm-padding;
+    }
+    .voyo-dialog-footer{
+      display:none;
     }
   }
 }
@@ -78,14 +95,24 @@
 
 .voyo-dialog2-container{
   @include Radius($type:medium);
+  position:relative;
   padding:$--voyo-dialog2-padding;
   background-color:$--voyo-dialog2-bg;
   width: $--voyo-dialog2-width;
   min-width: $--voyo-dialog2-minWidth;
   max-width: $--voyo-dialog2-maxWidth;
+  ._header{
+    text-align: center;
+    font-weight: bold;
+    padding:$--voyo-dialog2-header-padding;
+    color: var(--color-font-title);
+  }
   ._article{
     position:relative;
-   padding:$--voyo-dialog2-article-padding;
+    padding:$--voyo-dialog2-article-padding;
+    max-height:$--voyo-dialog2-article-max-height;
+    overflow-y:auto;
+    -webkit-overflow-scrolling: touch;
     @include AfterBorder();
   }
   ._footer{

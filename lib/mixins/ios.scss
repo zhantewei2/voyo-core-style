@@ -1,0 +1,13 @@
+@mixin IOSSafeBottom{
+  bottom:0;
+  bottom:constant(safe-area-inset-bottom);
+  bottom:env(safe-area-inset-bottom);
+}
+@mixin IOSSafeHeight{
+  height:100%;
+  height:calc( 100% - constant(safe-area-inset-bottom) );
+  height:calc( 100% - env(safe-area-inset-bottom) );
+}
+@mixin IOSScroll{
+  overflow-scrolling: touch;
+}

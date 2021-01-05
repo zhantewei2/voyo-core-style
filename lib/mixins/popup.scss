@@ -49,7 +49,7 @@
           border-radius: 0 0 $--voyo-popup-radius $--voyo-popup-radius;
       }
       @else if $pos == mid{
-        border-radius:0;
+        border-radius: $--voyo-popup-radius;
       }
     }
   }

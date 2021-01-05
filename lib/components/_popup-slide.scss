@@ -14,6 +14,7 @@ $--voyo-popup-various-slide:(
 .voyo-popup-slide-view{
   @include PopupViewPositionStyle();
   @include PopupViewAppear();
+  box-sizing: border-box;
   &.__appear{
     padding:$--voyo-popup-container-padding;
     background:var(--color-bg);
@@ -62,4 +63,53 @@ $--voyo-popup-various-slide:(
       }
     }
   }
+}
+.voyo-popup-activity-close{
+  color:var(--color-font-title-reverse);
+  font-size:$--voyo-popup-activity-close-size;
+  position:absolute;
+  left:50%;
+  bottom:0;
+  transform: translate3d(-50%,150%,0);
+}
+// for vue transition
+.voyo-popup-slide-an-enter-active{
+  @include Transition($type:comfort-in);
+  .voyo-popup-slide-view{
+    @include Transition($type:comfort-in);
+  }
+}
+.voyo-popup-slide-an-leave-active{
+  @include Transition($type:comfort-in);
+  .voyo-popup-slide-view{
+    @include Transition($type:comfort-in);
+  }
+}
+
+.voyo-popup-slide-an-enter,.voyo-popup-slide-an-leave-to{
+  opacity:0;
+  .voyo-popup-slide-view{
+    @each $k,$v in $--voyo-popup-various-slide{
+      &.__style-#{$k}{
+        transform: $v;
+      }
+    }
+  }
+}
+.voyo-popup-slide-an-enter-to{
+  opacity:1;
+  .voyo-popup-slide-view{
+    transform:translate3d(0,0,0);
+    &.__style-mid{
+      transform: translate3d(-50%,-50%,0);
+    }
+  }
+}
+.voyo-popup-activity-close{
+  color:var(--color-font-title-reverse);
+  font-size:$--voyo-popup-activity-close-size;
+  position:absolute;
+  left:50%;
+  bottom:0;
+  transform: translate3d(-50%,150%,0);
 }

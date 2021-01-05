@@ -30,6 +30,18 @@
     @include _baseBorder($borderPos,$borderColor,$percent);
   }
 }
+@mixin AfterListBorder($reducerPercent:5%,$borderColor:var(--color-after-border)){
+  &::after{
+    content:"";
+    position:absolute;
+    height:1px;
+    bottom:0;
+    left:$reducerPercent;
+    width:100%-$reducerPercent;
+    background:$borderColor;
+    transform:scaleY(.4);
+  }
+}
 
 @mixin BeforeBorder($borderPos:bottom,$borderColor:var(--color-after-border) ,$percent:100%){
   &::before{

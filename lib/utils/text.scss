@@ -2,6 +2,11 @@
   font-weight: bold;
   @include text-title(now);
 }
+
+.voyo-text-title-white{
+  font-weight: bold;
+  @include text-title(now,true);
+}
 .voyo-text-content{
   @include text-content(small);
 }
@@ -23,20 +28,33 @@
 .text-bold{
   font-weight: bold;
 }
+.text-right{
+  text-align: right;
+}
+.text-rich{
+  text-align: justify;
+  font-size: $--voyo-text-rich-size;
+  color:$--voyo-text-rich-color;
+}
+.text-underline{
+  text-decoration: underline;
+}
 .voyo-text-content-block{
   @extend .voyo-text-content;
   text,div,view{
     line-height:$--voyo-text-block-line-height;
   }
 }
-
+.text-justify{
+  text-align: justify;
+}
 @each $k,$v in $size-map{
   .voyo-text-size-#{$k}{
-    font-size:$v;
+    font-size:$v !important;
   }
 }
 @each $k,$v in $font-colors{
   .voyo-text-color-#{$k}{
-    color:$v;
+    color:$v !important;
   }
 }

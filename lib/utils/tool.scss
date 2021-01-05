@@ -20,8 +20,17 @@
   padding-left:0 !important;
   padding-right:0 !important;
 }
+.no-wrap{
+  white-space: nowrap;
+}
 .abs-full{
   @include Full();
+}
+.d-block{
+  display:block !important;
+}
+.d-inline{
+  display:inline-block !important;
 }
 .abs-center{
   position:absolute;
@@ -60,6 +69,7 @@
   will-change: transform;
   opacity:1;
   overflow-y:auto;
+  user-select: none;
 }
 .carousel-container{
   position:relative;
@@ -70,17 +80,26 @@
 .img-cover{
   background-size:cover;
 }
-.scroll-container{
-  @extend .abs-full;
+.overflow-y{
   overflow-y:auto;
 }
+.overflow-x{
+  overflow-x:auto;
+}
+.scroll-container{
+  @extend .abs-full;
+  overflow-y:auto !important;
+}
 .scroll-view-y{
-  overflow-y:auto;
-  overflow-x:hidden;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  -webkit-overflow-scrolling: touch;
 }
 .weixin-pure-btn{
   background: transparent;
   font-size:inherit;
+  padding:0;
+  line-height: unset;
   &::after{
     content:none;
     display: none;
@@ -95,10 +114,23 @@
 .y-hid{
   overflow-y:hidden;
 }
+.over-hid{
+  overflow:hidden;
+  @include IOSRadius();
+}
 .y-auto{
   overflow-y:auto;
   -webkit-overflow-scrolling:touch;
 }
 .not-touch{
   transition:transform .2s ease;
+}
+.font-b{
+  font-weight: bold;
+}
+.more-mini{
+  transform: scale(.9);
+}
+.no-behavior{
+  overscroll-behavior-y: none;
 }

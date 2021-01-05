@@ -40,5 +40,10 @@
   .pb-#{$i}{
     padding-bottom:$v;
   }
-
+  .pl-#{$i}{
+    padding-left:$v;
+  }
+  .pr-#{$i}{
+    padding-right:$v;
+  }
 }

@@ -81,7 +81,7 @@
   margin:$--voyo-keyboard-item-margin;
 }
 .voyo-keyboard-item{
-  @extend .base-btn;
+  @include BtnBase();
   @extend .voyo-keyboard-item-holder;
   background-color:$--voyo-keyboard-key-bg;
   font-weight: bold;
@@ -89,6 +89,8 @@
   color:var(--color-font-content);
   @include Radius();
   @include ICenter();
+  margin-left:3px;
+  margin-right:3px;
   .voyo-keyboard-item-icon{
     height:1.5em;
     width:1.5em;
@@ -100,7 +102,7 @@
   }
 }
 .voyo-keyboard-enter-btn{
-  @extend .base-btn;
+  @include BtnBase();
   height:100%;
   width:100%;
   @include LinearPrimaryBg();

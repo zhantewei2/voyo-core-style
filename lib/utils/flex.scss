@@ -1,5 +1,8 @@
 .flex{
-  display:flex;
+  display:flex !important;
+}
+.flex-inline{
+  display:inline-flex !important;
 }
 .flex-center{
   @include Center();
@@ -8,7 +11,9 @@
   @include Flex-auto();
 }
 .flex-1{
-  flex:1;
+  flex-grow:1 ;
+  flex-shrink: 1;
+  flex-basis: 0;
   position:relative;
 }
 .flex-center-column{
@@ -23,7 +28,7 @@
   @include ICenter();
 }
 .flex-v-mid{
-  display:flex;
+  display:flex !important;
   align-items: center;
 }
 .flex-h-mid{
@@ -34,10 +39,21 @@
   display:flex;
   justify-content: space-between;
 }
+.iflex-between{
+  display: inline-flex;
+  justify-content: space-between;
+}
+.flex-v-between{
+  @extend .flex-between;
+  align-items: center;
+}
 .flex-around{
   display:flex;
   justify-content: space-around;
 }
 .__h-center{
   align-items: center;
+}
+.flex-row-reverse{
+  flex-direction: row-reverse;
 }

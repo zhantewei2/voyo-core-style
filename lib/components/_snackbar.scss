@@ -1,0 +1,43 @@
+.voyo-snackbar-bg{
+  @include Center();
+  position:fixed;
+  top:30px;
+  width:100%;
+  z-index:map-get($voyo-index,snackbar);
+  padding:$--voyo-snackbar-bg-padding;
+}
+.voyo-snackbar-wrapper{
+  display:flex;
+  position:relative;
+  border-radius:$--voyo-snackbar-radius;
+  padding:$--voyo-snackbar-padding;
+  width:$--voyo-snackbar-w;
+  max-width:$--voyo-snackbar-max-w;
+  min-width:$--voyo-snackbar-min-w;
+  background:$--voyo-snackbar-bg;
+  border:1px solid var(--color-after-border);
+  backdrop-filter: blur(13px);
+  @supports not (backdrop-filter: blur(5px)) {
+    background:var(--color-bg);
+  }
+  ._snack-icon{
+    width:$--voyo-snackbar-icon-w;
+  }
+  ._left{
+    @include Center();
+    width: $--voyo-snackbar-left-w;
+  }
+  ._content{
+    @include Flex-1();
+    @include text-title(small);
+    display:inline-flex;
+    align-items:center;
+  }
+  ._close{
+    padding:$--voyo-snackbar-close-padding;
+  }
+}
+.voyo-snackbar-cover-bg{
+  background:var(--color-bg6);
+  @include Full();
+}

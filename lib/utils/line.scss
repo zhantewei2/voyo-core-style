@@ -5,6 +5,7 @@
   ._valueBlock{
     max-width:60%;
     text-align:right;
+    word-break: break-all;
   }
   @each $k,$v in $size-map{
     &.__#{$k}{
@@ -54,8 +55,30 @@
   @extend %voyo-line;
   @include text-content(small);
   padding: $voyo-content-line-padding;
+  ._label{
+    @include text-title();
+  }
 }
 .voyo-empty-line{
   @extend %voyo-line;
   padding:$voyo-empty-line-padding;
+}
+
+.voyo-li{
+
+  align-items: center;
+  position:relative;
+  padding:$voyo-li-padding;
+  padding-left:$voyo-li-left;
+  color:var(--color-font-content);
+  @each $k,$v in $size-map{
+    &.__size-#{$k}{
+      font-size:$v;
+    }
+  }
+  &.__border{
+    &:not(:last-of-type){
+      @include AfterListBorder($reducerPercent:$voyo-li-left);
+    }
+  }
 }

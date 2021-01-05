@@ -6,6 +6,9 @@
 .voyo-refresh-wrapper{
   will-change:transform;
   z-index:1;
+  @if $--voyo-platform-h5{
+    transition:none !important;
+  }
 }
 .voyo-refresh-content{
   position:absolute;

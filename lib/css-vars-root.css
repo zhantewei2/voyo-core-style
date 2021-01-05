@@ -6,26 +6,32 @@
   --color-warn:#ff976a;
   --color-error:#ee0a24;
   --color-disabled: #ececec;
+  --color-gentle:rgb(100,100,100);
 
   --color-primary-light: #1BC6E2;
+  --color-primary2-light: #52c4e3;
   --color-secondary-light: rgb(230,230,230);
   --color-success-light:#07c160;
   --color-warn-light:#ff976a;
   --color-error-light:#ee0a24;
   --color-disabled-light: #f6f6f6;
+  --color-gentle-light:rgb(240,240,240);
 
   --color-primary-gentle: rgba(0, 160, 226,.1);
+  --color-primary2-gentle:  rgba(0, 160, 186,.1);
   --color-secondary-gentle:rgba(100,100,100,.1);
   --color-success-gentle:rgba(0,255,255,.1);
   --color-warn-gentle:rgba(255,255,0,0.1);
   --color-error-gentle:rgba(255,0,0,.1);
-
+  --color-gentle-gentle:rgba(160,160,160,.1);
 
   --color-primary-font: white;
+  --color-primary2-font: white;
   --color-secondary-font:white;
   --color-success-font: white;
   --color-warn-font:white;
   --color-error-font:white;
+  --color-gentle-font:white;
   --color-disabled-font:gainsboro;
   --color-disabled-border:gainsboro;
 
@@ -34,9 +40,11 @@
   --color-bg3:#F7F8FA;
   --color-bg4:rgba(255,255,255,.9);
   --color-bg5:rgba(255,255,255,.5);
+  --color-bg6:rgba(255,255,255,.7);
   --color-bg-deep:black;
   --color-bg-deep2: #373737;
   --color-bg-deep3:rgba(0,0,0,0.4);
+  --color-bg-deep4:rgba(0,0,0,0.8);
   --color-after-border: rgb(230,230,230);
   --color-border-light:rgb(249,249,249);
   /*page header bg*/
@@ -83,7 +91,8 @@
   --radius-medium:10px;
   --radius-large:25px;
   --page-header-h:3.4rem;
-
   --shadow-color:rgba(197, 180, 180, 0.2);
   --shadow-color-tabbar:rgba(197, 180, 180, 0.2);
+  --font-family:-apple-system,'STHeiti', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+  --blur-size:10px;
 }

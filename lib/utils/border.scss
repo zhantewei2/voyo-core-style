@@ -2,6 +2,10 @@
   position:relative;
   @include AfterBorder();
 }
+.voyo-border-top{
+  position:relative;
+  @include AfterBorder($borderPos:top);
+}
 .voyo-border-right{
   position:relative;
   @include AfterBorder(right);

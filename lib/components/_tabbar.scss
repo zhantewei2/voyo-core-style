@@ -11,27 +11,29 @@
   display:flex;
   z-index:$--voyo-tabbar-z-index;
   @include Shadow(tabbar);
-  .voyo-tabbar-item{
-    @include ICenter();
-    @include Flex-auto();
-    flex-flow:column;
-    .voyo-tabbar-item-icon{
-      i{
-        font-size:$--voyo-tabbar-icon-size;
-        color:var(--color-font-brand);
-        //color:var(--color-font-title);
-      }
+
+}
+
+.voyo-tabbar-item{
+  @include ICenter();
+  @include Flex-auto();
+  flex-flow:column;
+  .voyo-tabbar-item-icon{
+    i{
+      font-size:$--voyo-tabbar-icon-size;
+      color:var(--color-font-brand);
+      //color:var(--color-font-title);
     }
+  }
+  .voyo-tabbar-item-title{
+    @include text-brand(mini);
+  }
+  &.active{
     .voyo-tabbar-item-title{
-      @include text-brand(mini);
+      color:var(--color-primary);
     }
-    &.active{
-      .voyo-tabbar-item-title{
-        color:var(--color-primary);
-      }
-      .voyo-tabbar-item-icon i{
-        color:var(--color-primary);
-      }
+    .voyo-tabbar-item-icon i{
+      color:var(--color-primary);
     }
   }
 }

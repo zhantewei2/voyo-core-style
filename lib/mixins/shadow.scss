@@ -32,7 +32,7 @@
     }
       //header tabbar
     @else if $various == "tabBar"{
-      box-shadow: 0 3px 12px -3px var(--shadow-color-tabbar);
+      box-shadow: 0 4px 12px -1px var(--shadow-color-tabbar);
     }
     @else if $various == "card"{
       box-shadow:0 8px 24px -10px rgba(0,0,0,0.1);
@@ -41,7 +41,13 @@
       box-shadow:0 8px 26px -12px var(--color-bg-deep3);
     }
     @else if $various == "tap"{
-      box-shadow:0 4px 16px -10px var(--color-bg-deep3);
+      box-shadow:0 4px 12px -8px var(--color-bg-deep3);
+    }
+    @else if $various== "snack"{
+      box-shadow:0 8px 26px -8px var(--color-bg-deep3);
+    }
+    @else if $various == "fab-card"{
+      box-shadow:0 0 12px -3px var(--shadow-color);
     }
   }
 }

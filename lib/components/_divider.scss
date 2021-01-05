@@ -1,0 +1,26 @@
+.voyo-divider-wrapper{
+  ._divider-content{
+    padding:$voyo-divider-content-padding;
+    @include text-des(mini);
+  }
+  ._divider-left-line,._divider-right-line{
+    height:1px;
+    background-color:$voyo-divider-line-color;
+  }
+  &.__divider-direction-horizontal{
+    display:flex;
+    align-items: center;
+
+
+    @each $k,$v in $voyo-divider-horizontal-position {
+      &.__divider-position-#{$k}{
+        ._divider-left-line{
+          flex-grow:nth($v,1);
+        }
+        ._divider-right-line{
+          flex-grow:nth($v,2);
+        }
+      }
+    }
+  }
+}

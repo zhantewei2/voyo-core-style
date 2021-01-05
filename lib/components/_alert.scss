@@ -1,0 +1,54 @@
+@keyframes VoyoMarqueePrimary {
+  from{ opacity:1;transform: translate3d(0,0,0)}
+  to{opacity:1;transform: translate3d(-100%,0,0)}
+}
+
+.voyo-alert{
+  display:flex;
+  align-items: center;
+  padding:$--voyo-alert-padding;
+  &.__round{
+    @include Radius($v:$--voyo-alert-round);
+  }
+  ._voyo-alert-prefix,._voyo-alert-suffix,._voyo-alert-close{
+    padding: $--voyo-alert-inner-padding;
+    height:100%;
+  }
+  ._voyo-alert-content{
+    @include Flex-1();
+    position:relative;
+    overflow:hidden;
+    transform: rotate(0);
+  }
+  ._voyo-alert-marquee{
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    height:100%;
+    min-width: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    transform: translate3d(100%,0,0);
+    will-change: transform;
+    &.__marquee-primary{
+      animation: VoyoMarqueePrimary $--voyo-alert-marquee-duration linear 0s infinite;
+    }
+    //&.__marquee-secondary{
+    //  z-index:1;
+    //  opacity:0;
+    //  animation: VoyoMarqueePrimary $--voyo-alert-marquee-duration linear $--voyo-alert-marquee-duration/2 infinite;
+    //}
+  }
+}
+
+@each $k,$v in $--voyo-alert-bg-various{
+  .voyo-alert-bg-#{$k}{
+    background:$v;
+  }
+}
+@each $k,$v in $--voyo-alert-font-various{
+  .voyo-alert-font-#{$k}{
+    color:$v;
+  }
+}

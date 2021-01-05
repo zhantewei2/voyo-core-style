@@ -1,11 +1,12 @@
-$font-family: -apple-system,'STHeiti', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
-$line-height:1.5;
-$line-height-content:1.8;
-$use-radius:true;
-$use-shadow:false;
-$use-linear:true;
-$use-btn-linear:true;
-$use-block-shadow:true;
+$font-family: var(--font-family) !default;
+$line-height:1.5 !default;
+$line-height-content:1.8 !default;
+$use-radius:true !default;
+$use-shadow:false !default;
+$use-linear:true !default;
+$use-btn-linear:false !default;
+$use-block-shadow:true !default;
+$use-drop-blur:true !default;
 
 $size-map:(
   mini:var(--size-mini),
@@ -17,42 +18,52 @@ $size-map:(
 );
 $color-various:(
   primary:var(--color-primary),
+  primary2:var(--color-primary2),
   secondary:var(--color-secondary),
   success:var(--color-success),
   warn:var(--color-warn),
-  error:var(--color-error)
+  error:var(--color-error),
+  gentle:var(--color-gentle),
 );
 
 $color-border-various:(
   primary:var(--color-primary),
+  primary2:var(--color-primary2),
   secondary:var(--color-secondary),
   success:var(--color-success),
   warn:var(--color-warn),
-  error:var(--color-error)
+  error:var(--color-error),
+  gentle:var(--color-gentle),
 );
 
 $color-font-various:(
   primary:var(--color-primary-font),
+  primary2: var(--color-primary2-font),
   secondary:var(--color-secondary-font),
   success:var(--color-success-font),
   warn:var(--color-warn-font),
-  error:var(--color-error-font)
+  error:var(--color-error-font),
+  gentle:var(--color-gentle-font),
 );
 
 $color-light-various:(
   primary:var(--color-primary-light),
+  primary2: var(--color-primary2-light),
   secondary:var(--color-secondary-light),
   success:var(--color-success-light),
   warn:var(--color-warn-light),
-  error:var(--color-error-light)
+  error:var(--color-error-light),
+  gentle:var(--color-gentle-light)
 );
 
 $color-gentle-various:(
   primary:var(--color-primary-gentle),
+  primary2:var(--color-primary2-gentle),
   secondary:var(--color-secondary-gentle),
   success:var(--color-success-gentle),
   warn:var(--color-warn-gentle),
-  error:var(--color-error-gentle)
+  error:var(--color-error-gentle),
+  gentle:var(--color-gentle-gentle)
 );
 $font-colors:(
   des:var(--color-font-des),
@@ -62,28 +73,45 @@ $font-colors:(
   assist:var(--color-font-assist)
 );
 
+$row-width-map:(
+  25:25%,
+  50:50%,
+  75:75%,
+  100:100%
+);
+
 $voyo-index:(
   toast:1000,
   dialog:900,
   toastStrong:950,
-  popupSlide:600,
+  popupSlide:599,
   loadBlock:2,
-  header:1001
+  header:1001,
+  snackbar:910,
+  footerBar:500,
+  keyboard:600,
+  cover:501,
+  top:2000
 );
 $--voyo-space-position:8px;
 $--voyo-space-base:5px;
 //text
+
+$--voyo-text-rich-size: var(--size-small) !default;
+$--voyo-text-rich-color: var(--color-font-content) !default;
 $--voyo-text-block-line-height:1.8 !default;
 
 $--voyo-icon-size-input:1.3em !default;
-$--voyo-icon-size-header: var(--size-strong) !default;
-$--voyo-icon-size-line: var(--size-now) !default;
+$--voyo-icon-size-header: calc(var(--size-strong)*1.2 ) !default;
+$--voyo-icon-size-line: var(--size-medium) !default;
 $--voyo-icon-size-mini: var(--size-small) !default;
+$--voyo-icon-size-title: calc(var(--size-large)*1.3 ) !default;
 $voyo-icon-size:(
   mini: $--voyo-icon-size-mini,
   input: $--voyo-icon-size-input,
   line: $--voyo-icon-size-line,
-  header: $--voyo-icon-size-header
+  header: $--voyo-icon-size-header,
+  title : $--voyo-icon-size-title,
 ) !default;
 
 //line
@@ -94,6 +122,8 @@ $voyo-title-line-image-h:2em;
 $voyo-des-line-padding:.5rem 1rem;
 $voyo-content-line-padding:.5rem 1rem;
 $voyo-empty-line-padding:.5rem 1rem;
+$voyo-li-padding: .9em;
+$voyo-li-left:5%;
 //icon
 $--voyo-icon-space:var(--space-base);
 //animation
@@ -102,11 +132,30 @@ $voyo-out-timer:cubic-bezier(.79,.07,.98,1);
 
 $voyo-area-content-padding:1.5rem 1rem;
 $voyo-area-footer-padding:1rem;
-
+$voyo-area-sheetSelect-padding:.7rem;
+$voyo-area-deep-padding:1rem;
+$voyo-area-deep-bg:var(--color-bg3);
 //avatar
-$voyo-avatar-h:5em;
-$voyo-avatar-w:5em;
+$voyo-avatar-h:5em !default;
+$voyo-avatar-w:5em !default;
 $voyo-avatar-title:1.5em;
 $voyo-avatar-des:1em;
 $voyo-avatar-title-p:0 0 .5rem 0;
 $voyo-avatar-title-max-w:9em;
+$--voyo-avatar-size-map:(
+  mini: 1em,
+  small: 1.5em,
+  now: 2em,
+  medium: 3em,
+  strong: 5em,
+  large: 6em,
+) !default;
+
+//backdrop
+$--voyo-backdrop-default-bg:var(--color-bg5);
+$--voyo-backdrop-back-bg:var(--color-bg);
+$--voyo-backdrop-filter-blur:10px;
+
+//row
+$--voyo-col-count:12;
+$--voyo-row-width:99.9%;

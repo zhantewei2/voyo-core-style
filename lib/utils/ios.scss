@@ -1,0 +1,6 @@
+.voyo-ios-safe-area-holder{
+  display:block;
+  width:100%;
+  height:constant(safe-area-inset-bottom);
+  height:env(safe-area-inset-bottom);
+}
