@@ -1,7 +1,7 @@
 html{
   @include HTMLBase();
 }
-view,div,span,text{
+view,div,span,text,uni-view,article,main,header,nav{
   box-sizing: border-box;
 }
 .root-body{
