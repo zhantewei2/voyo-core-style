@@ -48,12 +48,17 @@
     z-index:map-get($voyo-index,loadBlock);
     text-align: center;
   }
+  &.__fixCenter{
+    position:fixed;
+    z-index:map-get($voyo-index,loadBlock);
+    text-align: center;
+  }
   &.__abs{
     width:100%;
     left:0;
     top:0;
   }
-  &.__absCenter{
+  &.__absCenter,&.__fixCenter{
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
