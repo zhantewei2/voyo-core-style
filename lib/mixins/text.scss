@@ -6,7 +6,7 @@
 
 @mixin text-title($size:now,$white:false){
   font-size:map-get($size-map,$size) !important;
-  color:if($white,var(--color-font-title-reverse),var(--color-font-title));
+  color:if($white,var(--color-font-brand-reverse),var(--color-font-title));
 }
 
 @mixin text-content($size:now){

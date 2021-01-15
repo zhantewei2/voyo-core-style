@@ -34,7 +34,6 @@
   letter-spacing: $--voyo-footer-btn-spacing;
 }
 .voyo-dialog-footer-cancel{
-  @include BeforeBorder(right);
   display:none;
 }
 .voyo-dialog{
@@ -51,7 +50,7 @@
   &.__double-confirm{
     .voyo-dialog-footer-confirm{
       color:$--voyo-dialog-confirm-color;
-      @include AfterBorder(right);
+      @include AfterBorder(bottom);
     }
     .voyo-dialog-footer-cancel{
       color:$--voyo-dialog-cancel-color;

@@ -27,8 +27,19 @@
     ._text{
       margin:$--voyo-load-text-block-margin;
     }
+    @each $k,$v in $--voyo-load-block-size-map{
+      &.__size-#{$k}{
+        font-size:$v;
+      }
+    }
+
   }
   &.__inline{
+    @each $k,$v in $--voyo-load-size-map{
+      &.__size-#{$k}{
+        font-size:$v;
+      }
+    }
     ._view{
       @include ICenter();
     }
@@ -49,7 +60,7 @@
     text-align: center;
   }
   &.__fixCenter{
-    position:fixed;
+    position:fixed !important;
     z-index:map-get($voyo-index,loadBlock);
     text-align: center;
   }
@@ -65,10 +76,5 @@
   }
   ._text{
     color:$--voyo-load-text-color;
-  }
-  @each $k,$v in $--voyo-load-size-map{
-    &.__size-#{$k}{
-      font-size:$v;
-    }
   }
 }

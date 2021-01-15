@@ -39,6 +39,9 @@
 .text-underline{
   text-decoration: underline;
 }
+.text-through{
+  text-decoration: line-through;
+}
 .voyo-text-content-block{
   @extend .voyo-text-content;
   text,div,view{

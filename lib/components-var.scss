@@ -141,6 +141,14 @@ $--voyo-load-size-map:(
   strong:16px,
   large:20px
 )!default;
+$--voyo-load-block-size-map: (
+  mini: 8px,
+  small: 12px,
+  now: 14px,
+  medium :16px,
+  strong: 18px,
+  large: 22px,
+) !default;
 //$--voyo-load-type-block-wrapper-len: 5em;
 //$--voyo-load-type-block-wrapper-bg: transparent;
 
