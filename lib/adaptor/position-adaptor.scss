@@ -1,0 +1,10 @@
+
+%voyo-fab-fixed{
+  position:fixed;
+  contain: strict;
+}
+.voyo-fab-fixed-rb{
+  @extend %voyo-fab-fixed;
+  bottom: $--voyo-fab-abs-space;
+  right : $--voyo-fab-abs-space;
+}
