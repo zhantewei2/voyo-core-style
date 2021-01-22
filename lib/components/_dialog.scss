@@ -110,9 +110,9 @@
     position:relative;
     padding:$--voyo-dialog2-article-padding;
     max-height:$--voyo-dialog2-article-max-height;
+    min-height:$--voyo-dialog2-article-min-height;
     overflow-y:auto;
     -webkit-overflow-scrolling: touch;
-    @include AfterBorder();
   }
   ._footer{
     padding:$--voyo-dialog2-footer-padding;
