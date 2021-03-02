@@ -1,0 +1,45 @@
+.voyo-menu-wrapper{
+  @include Layout(menu);
+  //display:none;
+
+}
+.voyo-menu-content{
+  position:absolute;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.voyo-menu-wrapper{
+  &.__type-menu{
+    .voyo-menu-content{
+      @include Radius($type:medium);
+      @include Shadow(menu);
+      background: $--voyo-menu-bg;
+      max-height:$--voyo-menu-max-height;
+      min-width:$--voyo-menu-min-width;
+      overflow-y:auto;
+    }
+  }
+  &.__show{
+    display:block;
+    .voyo-menu-content{
+      @include Animation(VoyoMenuShow,"comfort-in");
+    }
+  }
+  &.__hide{
+    display:block;
+    .voyo-menu-content{
+      @include Animation(VoyoMenuHide,"comfort-out");
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @each $k,$v in $--voyo-menu-position-various{
+    &.__position-#{$k}{
+      .voyo-menu-content{
+        transform-origin: $v;
+      }
+    }
+  }
+
+}

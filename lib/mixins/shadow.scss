@@ -50,4 +50,8 @@
       box-shadow:0 0 12px -3px var(--shadow-color);
     }
   }
+
+  @if $various == "menu"{
+    box-shadow: 0 4px 12px -3px var(--color-bg-deep3);
+  }
 }

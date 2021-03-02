@@ -55,10 +55,10 @@ $--voyo-dialog2-minWidth:300px;
 $--voyo-dialog2-maxWidth:500px;
 $--voyo-dialog2-width:80vw;
 $--voyo-dialog2-header-padding:.5rem 0 1rem 0;
-$--voyo-dialog2-article-padding:0.5rem .5rem 1rem .5rem;
+$--voyo-dialog2-article-padding:0.5rem .7rem .5rem .7rem;
 $--voyo-dialog2-footer-padding:1rem 0 0 0;
 $--voyo-dialog2-article-max-height:55vh;
-$--voyo-dialog2-article-min-height:80px;
+$--voyo-dialog2-article-min-height:100px;
 //toastStrong
 $--voyo-toastStrong-article-width:4rem;
 $--voyo-toastStrong-article-height:4rem;
@@ -285,3 +285,14 @@ $voyo-divider-horizontal-position:(
 ) !default;
 $voyo-divider-content-padding:0 1em !default;
 $voyo-divider-line-color:var(--color-after-border) !default;
+
+//menu
+$--voyo-menu-bg: var(--color-bg);
+$--voyo-menu-max-height:60vh;
+$--voyo-menu-min-width:7rem;
+$--voyo-menu-position-various:(
+  bottom: 50% 0%,
+  left:100% 50%,
+  right: 0% 50%,
+  top:50% 100%
+)
