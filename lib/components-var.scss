@@ -37,7 +37,7 @@ $--voyo-dialog-top:40%;
 $--voyo-dialog-minWidth:320px;
 $--voyo-dialog-maxWidth:600px;
 $--voyo-dialog-width:85%;
-$--voyo-dialog-article-minHeight:80px;
+$--voyo-dialog-article-minHeight:50px !default;
 $--voyo-dialog-article-padding:2rem 1.5rem;
 $--voyo-dialog-article-color: var(--color-font-content);
 $--voyo-dialog-article-font: var(--size-font-message);
