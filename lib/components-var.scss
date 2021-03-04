@@ -32,6 +32,11 @@ $--voyo-toast-max-width:80%;
 $--voyo-toast-padding:.5em 1em;
 $--voyo-toast-font-size:var(--size-small);
 
+//card
+$--voyo-card-bg: var(--color-bg) !default;
+$--voyo-card-padding: 1rem !default;
+$--voyo-card-margin:.9rem !default;
+
 //dialog
 $--voyo-dialog-top:40%;
 $--voyo-dialog-minWidth:320px;

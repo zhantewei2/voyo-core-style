@@ -1,0 +1,39 @@
+.voyo-card{
+  padding: $--voyo-card-padding;
+  background:$--voyo-card-bg;
+  margin: $--voyo-card-margin;
+  position:relative;
+  overflow:hidden;
+  @include IOSRadius();
+  @include Radius(var(--radius-medium));
+}
+
+.voyo-card-header{
+  padding-bottom: $--voyo-card-padding;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include AfterBorder();
+  &>._title,&.__title{
+    font-weight: bold;
+    @include text-title(now);
+  }
+  &>._des{
+    @include text-des(mini);
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+.voyo-card-footer{
+  padding-top: $--voyo-card-padding;
+  text-align: center;
+}
+.voyo-card-content{
+  padding-top: $--voyo-card-padding;
+  &~.voyo-card-footer{
+    padding-top: $--voyo-card-padding*2;
+  }
+}

@@ -23,13 +23,16 @@
   @include text-des(mini,true);
 }
 .text-center{
-  text-align: center;
+  text-align: center !important;
+}
+.text-left{
+  text-align: left !important;
 }
 .text-bold{
   font-weight: bold;
 }
 .text-right{
-  text-align: right;
+  text-align: right !important;
 }
 .text-rich{
   text-align: justify;
