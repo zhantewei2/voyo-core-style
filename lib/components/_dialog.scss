@@ -1,5 +1,8 @@
 .voyo-dialog-layout{
   @include Layout(dialog,var(--color-bg-deep));
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 .voyo-dialog-article{
   min-height:$--voyo-dialog-article-minHeight;
