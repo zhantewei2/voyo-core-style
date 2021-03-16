@@ -21,9 +21,6 @@
     @else if $various == "toast"{
       box-shadow: 0 6px 20px -12px $color, 0 2px 12px -5px $color;
     }
-    @else if $various == "dialog"{
-      box-shadow: 0 6px 20px -12px var(--color-bg-deep);
-    }
 
   }
   @else if $use-block-shadow{
@@ -49,8 +46,10 @@
     @else if $various == "fab-card"{
       box-shadow:0 0 12px -3px var(--shadow-color);
     }
+    @else if $various == "dialog"{
+      box-shadow: 0 6px 20px -12px var(--color-bg-deep);
+    }
   }
-
   @if $various == "menu"{
     box-shadow: 0 4px 12px -3px var(--color-bg-deep3);
   }

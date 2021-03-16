@@ -35,12 +35,7 @@
         @include LinearBg($use-btn-linear,$bgColor,$bgColorLight);
         @include Shadow(appearBtn,$bgColor);
         color:$fontColor;
-        @if $--voyo-platform-h5{
-            border:none;
-        }
-        @else {
-            border:none;
-        }
+        border:none;
         &.ripple-callback{
             @include Shadow(appearBtnCallback,$bgColor);
         }

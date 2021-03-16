@@ -4,7 +4,7 @@ page{
     --color-secondary: rgb(0, 0, 0);
     --color-success:#07c160;
     --color-warn:#ff976a;
-    --color-error:#ee0a24;
+    --color-error: #ee0a24;
     --color-disabled: #ececec;
     --color-gentle:rgb(100,100,100);
 

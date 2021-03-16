@@ -1,3 +1,13 @@
+@keyframes VoyoMenuShow{
+  from {transform: scale3d(0.5,0.5,0.5);opacity:.1}
+  to {}
+}
+
+@keyframes VoyoMenuHide {
+  from {}
+  to{transform: scale3d(0.5,0.5,0.5);opacity:0}
+}
+
 .voyo-menu-wrapper{
   @include Layout(menu);
   //display:none;

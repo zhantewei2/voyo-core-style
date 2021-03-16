@@ -36,8 +36,8 @@
   --color-disabled-border:gainsboro;
 
   --color-bg:white;
-  --color-bg2:#FAFAFA;
-  --color-bg3:#F7F8FA;
+  --color-bg2:rgba(245,245,245);
+  --color-bg3: #f7f8fa;
   --color-bg4:rgba(255,255,255,.9);
   --color-bg5:rgba(255,255,255,.5);
   --color-bg6:rgba(255,255,255,.7);
