@@ -1,4 +1,4 @@
-:root{
+html{
   --color-primary: #00A0E2;
   --color-primary2: #12b6e2;
   --color-secondary: rgb(0, 0, 0);
@@ -68,7 +68,7 @@
   --color-font-title:#333333;
   --color-font-title-reverse:rgb(249,249,249);
   /*brand color*/
-  --color-font-assist:#999999;
+  --color-font-assist: #999999;
   /*ripple-deep*/
   --color-ripple-deep-bg:rgba(255,255,255,.2);
   --color-ripple-deep-hover:rgba(255,255,255,.3);
