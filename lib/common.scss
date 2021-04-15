@@ -13,8 +13,13 @@ view,div,span,text,uni-view,article,main,header,nav,button{
 .voyo-tab-page{
   @extend %voyo-page;
 }
-.voyo-page{
+
+.voyo-full-page{
   @extend %voyo-page;
   position:fixed;
+}
+
+.voyo-page{
+  @extend .voyo-full-page;
   @include IOSSafeHeight();
 }
