@@ -15,6 +15,7 @@ $--voyo-popup-various-slide:(
   @include PopupViewPositionStyle();
   @include PopupViewAppear();
   box-sizing: border-box;
+  z-index:1;
   &.__appear{
     padding:$--voyo-popup-container-padding;
     background:var(--color-bg);
