@@ -16,7 +16,7 @@
 
 .voyo-tabbar-item{
   @include ICenter();
-  @include Flex-auto();
+  @include Flex-1();
   flex-flow:column;
   .voyo-tabbar-item-icon{
     i{
