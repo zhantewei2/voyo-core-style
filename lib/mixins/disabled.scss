@@ -1,10 +1,9 @@
 %appear-disabled{
-    //background:var(--color-disabled) !important;
     color:var(--color-disabled-font) !important;
     box-shadow: none !important;
     &::after{
         content:"";
-        background:var(--color-bg5);
+        background: $disable-bg;
         z-index:1;
         border-color:transparent;
     }
@@ -29,16 +28,29 @@
     &[disabled]:not([disabled="0"]){
         cursor:not-allowed;
         @if $various == "appear"{
-            @extend %appear-disabled;
+            color:var(--color-disabled-font) !important;
+            box-shadow: none !important;
+            &::after{
+                content:"";
+                background: $disable-bg;
+                z-index:1;
+                border-color:transparent;
+            }
         }
         @else if $various == "outline" {
-            @extend %outline-disabled;
+            border-color:var(--color-disabled-border) !important;
+            color:var(--color-disabled-font) !important;
+            box-shadow:none !important;
         }
         @else if $various == "pure"{
-            @extend %pure-disabled;     
+            color:var(--color-disabled-font) !important;  
         }
         @else if $various == "candy" {
-            @extend %candy-disabled;
+            background:var(--color-disabled-light) !important;
+            color: var(--color-disabled-font) !important;
+            i{
+                color:var(--color-disabled-font) !important;
+            }
         }
     }
 }

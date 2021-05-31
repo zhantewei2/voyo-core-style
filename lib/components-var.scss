@@ -17,9 +17,9 @@ $--voyo-carousel-image-thumb-margin:0 .3rem;
 
 $--voyo-btn-size:$size-map;
 $--voyo-btn-colors:$color-various;
-$--voyo-btn-distance:1em;
-$--voyo-btn-icon-dis:0.4em;
-$--voyo-btn-icon-len:3em;
+$--voyo-btn-distance:1em !default;
+$--voyo-btn-icon-dis:0.4em !default;
+$--voyo-btn-icon-len:3em !default;
 $--voyo-btn-min-width:5.5em;
 $--voyo-btn-block-spacing:1em;
 $--voyo-btn-block-font-size:1.1em;
@@ -219,7 +219,7 @@ $--voyo-vf-col-height:3em;
 $--voyo-vf-col-input-bg: var(--color-bg);
 $--voyo-vf-col-input-radius: var(--radius-base);
 $--voyo-vf-col-input-active-color:var(--color-primary);
-
+$--voyo-vf-col-input-disable-bg: var(--color-bg2) !default;
 //verification rotate
 $--voyo-vf-r-figure-width:10em;
 $--voyo-vf-r-figure-height:10em;

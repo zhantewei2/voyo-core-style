@@ -36,3 +36,10 @@
     border:1px solid $--voyo-vf-col-input-active-color;
   }
 }
+.voyo-verification{
+  &.__disable{
+    .voyo-verification-col-input{
+      background: $--voyo-vf-col-input-disable-bg;
+    }
+  }
+}

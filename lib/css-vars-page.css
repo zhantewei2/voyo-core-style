@@ -41,6 +41,8 @@ page{
     --color-bg4:rgba(255,255,255,.9);
     --color-bg5:rgba(255,255,255,.5);
     --color-bg6:rgba(255,255,255,.7);
+    --color-bg-opacity: rgba(255,255,255,.5);
+    --color-bg-opacity2: rgba(255,255,255,.8);
     --color-bg-deep:black;
     --color-bg-deep2: #373737;
     --color-bg-deep3:rgba(0,0,0,0.4);
