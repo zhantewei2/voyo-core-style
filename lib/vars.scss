@@ -154,9 +154,9 @@ $--voyo-avatar-size-map:(
 ) !default;
 
 //backdrop
-$--voyo-backdrop-default-bg:var(--color-bg5);
-$--voyo-backdrop-back-bg:var(--color-bg);
-$--voyo-backdrop-filter-blur:10px;
+$--voyo-backdrop-default-bg:var(--color-bg-opacity) !default;
+$--voyo-backdrop-back-bg:var(--color-bg) !default;
+$--voyo-backdrop-filter-blur:10px !default;
 
 //row
 $--voyo-col-count:12;
