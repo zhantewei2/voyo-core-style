@@ -1,3 +1,4 @@
+@use "sass:math";
 @each $k,$v in $row-width-map{
   .w-#{$k}{
     width:$v;
@@ -15,6 +16,6 @@
 @for $i from 1 through $--voyo-col-count{
   .col-#{$i}{
     @extend %col;
-    width: $--voyo-row-width/$--voyo-col-count*$i;
+    width: math.div($--voyo-row-width,$--voyo-col-count)*$i;
   }
 }

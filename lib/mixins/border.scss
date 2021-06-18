@@ -1,3 +1,4 @@
+@use "sass:math";
 @mixin _baseBorder($borderPos:bottom,$borderColor:var(--color-after-border),$percent:100%){
   content:"";
   position:absolute;
@@ -5,20 +6,20 @@
     height:1px;
     bottom:0;
     width: $percent;
-    left:(100% - $percent) /2;
+    left: math.div(100% - $percent, 2);
     transform:scaleY(.4);
   }
   @else if $borderPos == "right"{
     height:$percent;
     width:1px;
-    top: (100% - $percent) /2;
+    top: math.div(100% - $percent, 2);
     right:0;
     transform: scaleX(.4);
   }
   @else if $borderPos == "top"{
     height:1px;
     width:$percent;
-    left:(100% - $percent) /2;
+    left: math.div(100% - $percent, 2);
     top:0;
     transform: scaleY(.4);
   }
