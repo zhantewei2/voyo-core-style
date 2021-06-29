@@ -1,6 +1,6 @@
 {
   "name": "@voyo/core-style",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
