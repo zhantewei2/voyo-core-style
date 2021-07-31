@@ -1,4 +1,6 @@
+@use "sass:math";
 @import "../components-dep";
+
 .voyo-input-wrapper{
   margin:$--voyo-input-wrapper-margin;
   ._prefix,._suffix,._clear{
@@ -29,7 +31,7 @@
     bottom:0;
     background:$--voyo-input-line-color;
     transform: translate(-50%,0) scaleX(.1);
-    @include Transition($type:fast)
+    @include Transition($type:fast);
   }
   ._placeholder{
     position:absolute;
@@ -104,7 +106,7 @@
     }
     ._placeholder{
       opacity:0;
-      transform: translate3d(100%,#{$--voyo-input-height-flat*1em/2 - 1em},0);
+      transform: translate3d(100%,#{ math.div($--voyo-input-height-flat*1em,2) - 1em},0);
     }
     &.__show-placeholder{
       ._placeholder{
@@ -115,7 +117,7 @@
   &.__type-candy{
     ._placeholder{
       opacity: 0;
-      transform: translate3d(100%, #{$--voyo-input-height-candy*1em/2 - 1em},0);
+      transform: translate3d(100%, #{ math.div($--voyo-input-height-candy*1em,2) - 1em},0);
     }
     &.__show-placeholder{
       ._placeholder{
@@ -145,7 +147,7 @@
       ._placeholder{
         opacity:1;
         color:$--voyo-input-placeholder-color;
-        transform: translate3d(100%,#{$--voyo-input-height-md*1em/2 - 1em} ,0);
+        transform: translate3d(100%,#{ math.div($--voyo-input-height-md*1em,2) - 1em} ,0);
       }
     }
     @each $k,$v in $--voyo-input-colors{
