@@ -1,7 +1,7 @@
 .voyo-snackbar-bg{
   @include Center();
   position:fixed;
-  top:30px;
+  top:70px;
   width:100%;
   z-index:map-get($voyo-index,snackbar);
   padding:$--voyo-snackbar-bg-padding;
