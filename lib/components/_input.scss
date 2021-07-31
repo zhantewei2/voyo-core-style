@@ -62,9 +62,7 @@
       align-items: center;
     }
   }
-
-
-
+  
   ._clear{
     display:none;
     padding:$--voyo-input-clear-padding;
@@ -100,7 +98,7 @@
 
 
 .voyo-input-wrapper{
-  &.__type-flat{
+  &.__type-flat:not(.__no-border){
     ._container{
       @include AfterBorder();
     }
