@@ -1,11 +1,11 @@
 {
   "name": "@voyo/core-style",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js"
   },
-  "author": "",
+  "author": "zhantewei",
   "license": "ISC",
   "devDependencies": {
     "cross-env": "^7.0.2",
