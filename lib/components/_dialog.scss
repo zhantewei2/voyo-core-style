@@ -103,13 +103,13 @@
   width: $--voyo-dialog2-width;
   min-width: $--voyo-dialog2-minWidth;
   max-width: $--voyo-dialog2-maxWidth;
-  ._header{
+  &>._header{
     text-align: center;
     font-weight: bold;
     padding:$--voyo-dialog2-header-padding;
     color: var(--color-font-title);
   }
-  ._article{
+  &>._article{
     position:relative;
     padding:$--voyo-dialog2-article-padding;
     max-height:$--voyo-dialog2-article-max-height;
@@ -117,7 +117,7 @@
     overflow-y:auto;
     -webkit-overflow-scrolling: touch;
   }
-  ._footer{
+  &>._footer{
     padding:$--voyo-dialog2-footer-padding;
   }
 }

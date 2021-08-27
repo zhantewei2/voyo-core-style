@@ -1,3 +1,6 @@
+@function Space($size){
+  @return calc(var(--space-base)*#{$size});
+}
 $font-family: var(--font-family) !default;
 $line-height:1.5 !default;
 $line-height-content:1.8 !default;
@@ -93,7 +96,7 @@ $voyo-index:(
   keyboard:600,
   cover:501,
   top:2000,
-  menu:1500
+  menu:1500,
 ) !default;
 
 $--voyo-space-position:8px;
@@ -128,7 +131,8 @@ $voyo-empty-line-padding:.5rem 1rem;
 $voyo-li-padding: .9em;
 $voyo-li-left:5%;
 //icon
-$--voyo-icon-space:var(--space-base);
+$--voyo-icon-space:var(--space-base) !default;
+$--voyo-icon-padding: .5em !default;
 //animation
 $voyo-in-timer:cubic-bezier(.09,.34,.48,.97);
 $voyo-out-timer:cubic-bezier(.79,.07,.98,1);
@@ -162,3 +166,4 @@ $--voyo-backdrop-filter-blur:10px !default;
 //row
 $--voyo-col-count:12;
 $--voyo-row-width:99.9%;
+

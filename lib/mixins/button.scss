@@ -90,25 +90,21 @@
     // font-size:$sizeValue;
     // padding:$sizeValue*0.7 $sizeValue*0.8;
     font-size:$sizeValue;
-    @if $k== "medium"{
-        line-height:3em;
-        height:3em;
-    }
-    @else if $k== "mini"{
-        padding: 0 .8em;
+    @if $k== "mini"{
+        padding: 0 .6em;
         line-height: 2.5em;
         height:2.5em;
     }
     @else {
-        line-height: 3em;
-        height:3em;
-        padding:0 .8em;
+        line-height: 2.5em;
+        height:2.5em;
+        padding:0 .6em;
     }
     @if $k == "mini"{
         min-width: 1em;
     }
     @else{
-        min-width:5em;
+        min-width:4em;
     }
 }
 

@@ -1,0 +1,76 @@
+@use "sass:math";
+@use "../components-use" as *;
+@use "../mixins/animation" as an;
+
+%base-ripple-radio{
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  border-radius: 50%;
+}
+.voyo-ripple-radio{
+  @extend %base-ripple-radio;
+  z-index:1;
+  user-select: none;
+  touch-action:none;
+}
+.voyo-ripple-radio-bg{
+  @extend %base-ripple-radio;
+  display:none;
+  transform:scale($voyo-ripple-radio-scale-end);
+  z-index:-1;
+}
+@keyframes Ripple-Radio-Bubbling{
+  0%{transform:scale(math.div($voyo-ripple-radio-scale-end,5),math.div($voyo-ripple-radio-scale-end,5));opacity:.1}
+  30%{transform: scale(math.div($voyo-ripple-radio-scale-end,2),math.div($voyo-ripple-radio-scale-end,2));opacity:.15}
+  75%{transform:scale($voyo-ripple-radio-scale-end,$voyo-ripple-radio-scale-end);opacity:.2}
+  100%{opacity:0 ;transform: salce(1.1)}
+    
+}
+@keyframes VoyoRippleRadioEntry {
+  from{transform: scale($voyo-ripple-radio-scale-start);opacity:0}
+  to{transform: scale($voyo-ripple-radio-scale-end);opacity:1}
+}
+@keyframes VoyoRippleRadioLeave {
+  from{transform: scale($voyo-ripple-radio-scale-end)}
+  to{transform: scale($voyo-ripple-radio-scale-start);opacity:0}
+}
+
+.voyo-ripple-radio-bubbling{
+  @extend %base-ripple-radio;
+  transform:scale($voyo-ripple-radio-scale-end);
+  background-color:var(--color-ripple-light-bubbling);
+  z-index:-2;
+  @include an.Animation(Ripple-Radio-Bubbling,"normal",true);
+}
+
+.voyo-ripple-radio{
+  @each $k,$v in $color-various {
+    &.__color-#{$k}{
+      .voyo-ripple-radio-bg {
+        background-color: map-get($color-gentle-various, $k);
+      }
+    }
+  }
+}
+
+.voyo-ripple-radio{
+  &.__active{
+    .voyo-ripple-radio-bg{
+      display:block;
+    }
+  }
+  &.__enter{
+    .voyo-ripple-radio-bg{
+      @include  an.Animation(VoyoRippleRadioEntry,"comfort-in");
+    }
+  }
+  &.__leave{
+    .voyo-ripple-radio-bg{
+      animation: VoyoRippleRadioLeave .15s ease-out;
+      @include an.Animation(VoyoRippleRadioLeave,"sudden-out",true);
+    }
+  }
+}

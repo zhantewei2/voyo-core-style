@@ -1,34 +1,47 @@
 @use "sass:math";
-@mixin _baseBorder($borderPos:bottom,$borderColor:var(--color-after-border),$percent:100%){
+
+@mixin _baseBorder($borderPos:bottom,$borderColor:var(--color-after-border),$percent:100%,$align:"mid",$space:null){
+  $pos:0;
+  @if $align == "mid"{
+    $pos: math.div(100%-$percent,2);
+  }@else if $align == "right"{
+    $pos: 100% - $percent;
+  }@else{
+    $pos: 0;
+  }
+  @if $space{
+    $pos: $space;
+  }
+  
   content:"";
   position:absolute;
   @if $borderPos == "bottom"{
     height:1px;
     bottom:0;
     width: $percent;
-    left: math.div(100% - $percent, 2);
+    left: $pos;
     transform:scaleY(.4);
   }
   @else if $borderPos == "right"{
     height:$percent;
     width:1px;
-    top: math.div(100% - $percent, 2);
+    top: $pos;
     right:0;
     transform: scaleX(.4);
   }
   @else if $borderPos == "top"{
     height:1px;
     width:$percent;
-    left: math.div(100% - $percent, 2);
+    left: $pos;
     top:0;
     transform: scaleY(.4);
   }
   background: $borderColor;
 }
 
-@mixin AfterBorder($borderPos:bottom,$borderColor: var(--color-after-border) ,$percent:100%){
+@mixin AfterBorder($borderPos:bottom,$borderColor: var(--color-after-border) ,$percent:100%,$align:"mid",$space:null){
   &::after{
-    @include _baseBorder($borderPos,$borderColor,$percent);
+    @include _baseBorder($borderPos,$borderColor,$percent,$align,$space);
   }
 }
 @mixin AfterListBorder($reducerPercent:5%,$borderColor:var(--color-after-border)){

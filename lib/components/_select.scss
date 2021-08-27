@@ -1,0 +1,72 @@
+
+.voyo-select-bg{
+  @include Layout(menu,$--voyo-select-bg);
+
+}
+@keyframes VoyoSelectContainerEntry {
+  from {
+    transform: scale(.5) rotateZ(0);
+  }
+  to {
+    transform: scale(1) rotateZ(0);
+  }
+}
+@keyframes VoyoSelectContainerLeave {
+  0% {}
+  100%{
+    opacity:0;
+  }
+}
+.voyo-select-container{
+  opacity:0;
+  position:absolute;
+  @include Shadow($various:menu);
+  border-radius: $--voyo-select-radius;
+  background:var(--color-bg);
+}
+
+.voyo-select-bg{
+  opacity:0;
+  transition: opacity $--voyo-select-ease-time;
+  &._entry{
+    opacity:1;
+    .voyo-select-container{
+      opacity:1;
+      animation: VoyoSelectContainerEntry $--voyo-select-ease-time;
+    }
+  }
+  &._leave{
+    opacity: 0;
+    .voyo-select-container{
+      opacity:1;
+      animation: VoyoSelectContainerLeave $--voyo-select-ease-time;
+      animation-fill-mode: forwards;
+    }
+  }
+  &._handle{}
+}
+.voyo-select-ul{
+  
+}
+.voyo-select-li{
+  position: relative;
+  padding: $--voyo-select-li-padding;
+  min-width: $--voyo-select-li-min-w;
+  overflow:hidden;
+  @include Transition($type:sudden);
+  &:first-of-type{
+    border-radius: $--voyo-select-radius $--voyo-select-radius 0 0;
+    padding-top: $--voyo-select-bound-padding;
+  }
+  &:last-of-type{
+    border-radius: 0 0 $--voyo-select-radius $--voyo-select-radius;
+    padding-bottom: $--voyo-select-bound-padding;
+  }
+  ._select-li-icon{
+    width:$--voyo-select-li-icon-width;
+  }
+  &.__active{
+    color: $--voyo-select-li-active-color;
+    background: $--voyo-select-li-active-bg;
+  }
+}

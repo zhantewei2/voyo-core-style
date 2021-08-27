@@ -49,8 +49,9 @@
     @else if $various == "dialog"{
       box-shadow: 0 6px 20px -12px var(--color-bg-deep);
     }
+    @else if $various == "menu"{
+    box-shadow: 0 2px 12px -3px var(--color-bg-deep3), 0 26px 36px -20px var(--color-bg-deep3);
+    }
   }
-  @if $various == "menu"{
-    box-shadow: 0 4px 12px -3px var(--color-bg-deep3);
-  }
+  
 }

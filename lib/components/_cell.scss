@@ -1,0 +1,50 @@
+.voyo-cell{
+  padding: $--voyo-cell-padding-y $--voyo-cell-padding-x;
+  position: relative;
+  @if $--voyo-cell-border{
+
+    &.__border{
+      @include AfterBorder($space: $--voyo-cell-padding-x);
+    } 
+  }
+  &>._left{
+    padding-right: $--voyo-cell-space;
+    .voyo-cell-img{
+      padding-right: $--voyo-cell-space;
+    }
+    .voyo-cell-icon{
+      padding-right: $--voyo-cell-space;
+    }
+  }
+  &>._right{
+    text-align: right;
+    display:inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: $--voyo-cell-content-color;
+    font-size: $--voyo-cell-content-font;
+    &>._right-icon{
+      padding-left: $--voyo-icon-padding;
+    }
+  }
+}
+
+.voyo-cell-img{
+  height: $--voyo-cell-img-w;
+  width: $--voyo-cell-img-h;
+}
+.voyo-cell-left-title{
+  @if $--voyo-cell-title-weight{
+    font-weight: bold;
+  }
+  font-size: $--voyo-cell-title-font;
+  color: $--voyo-cell-title-color;
+}
+.voyo-cell-left-label{
+  padding-top: Space(1);
+  font-size: $--voyo-cell-label-font;
+  color: $--voyo-cell-label-color;
+}
+.voyo-cell-icon{
+  font-size:$--voyo-cell-icon-size;
+}

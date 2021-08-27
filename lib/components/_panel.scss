@@ -1,0 +1,24 @@
+.voyo-panel{
+  @each $type,$v in $--voyo-panel{
+    &.__type-#{$type}{
+      .voyo-panel-header{
+        padding: map-get($v,header-padding);
+        font-size: map-get($v,header-font);
+        color: map-get($v,header-color);
+      }
+      .voyo-panel-body{
+        padding-bottom: map-get($v,body-padding-bottom);
+        margin: map-get($v,body-margin);
+        $bg:map-get($v,body-bg);
+        @if $bg{
+          background-color:$bg;
+        }
+        &.__padding-x{
+          $padding-x: map-get($v, body-padding-x);
+          padding-left: $padding-x;
+          padding-right: $padding-x;
+        }
+      }
+    }
+  } 
+}

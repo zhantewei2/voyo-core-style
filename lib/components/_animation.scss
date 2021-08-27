@@ -107,3 +107,9 @@
   @include Animation(VoyoSlideDownOut,"normal");
   animation-fill-mode: forwards;
 }
+
+@each $k,$v in $--voyo-an-origin{
+  .voyo-an-origin-#{$k}{
+    transform-origin: $v;
+  }
+}

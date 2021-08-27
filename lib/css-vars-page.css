@@ -47,6 +47,7 @@ page{
     --color-bg-deep2: #373737;
     --color-bg-deep3:rgba(0,0,0,0.4);
     --color-bg-deep4:rgba(0,0,0,0.8);
+    --color-border-neut:rgb(150,150,150);
     --color-after-border: rgb(230,230,230);
     --color-border-light:rgb(249,249,249);
     /*page header bg*/
@@ -65,7 +66,7 @@ page{
     --color-font-white:white;
     --color-font-dark:#333333;
     /*content color*/
-    --color-font-content:#666666;
+    --color-font-content: #6e6e6e;
     /*title color*/
     --color-font-title:#333333;
     --color-font-title-reverse:rgb(249,249,249);
@@ -80,7 +81,9 @@ page{
     --color-ripple-light-hover:rgba(0,0,0,.1);
     --color-ripple-light-bubbling:rgba(0,0,0,.6);
     --size-font:16px;
+    --size-font-content:14px;
     --size-font-message:16px;
+    --size-font-title: 18px;
     --size-font-small:13px;
     --size-mini:12px;
     --size-small:14px;

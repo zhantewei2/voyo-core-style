@@ -1,3 +1,5 @@
+
+
 $--voyo-page-content-z-index:50;
 
 $--voyo-page-header-adapter-padding:0 .5rem;
@@ -300,4 +302,67 @@ $--voyo-menu-position-various:(
   left:100% 50%,
   right: 0% 50%,
   top:50% 100%
-)
+);
+
+
+// animation
+$--voyo-an-origin:(
+  tl:0% 0%,
+  tr:100% 0,
+  bl:0 100%,
+  br:100% 100%
+) !default;
+
+//select
+$--voyo-select-ease-time:.2s ease-out;
+$--voyo-select-bg: var(--color-bg-deep3) !default;
+$--voyo-select-li-hover-bg:var(--color-primary-gentle) !default;
+$--voyo-select-li-padding: Space(3) !default;
+$--voyo-select-bound-padding: Space(5) !default;
+$--voyo-select-li-min-w: 8em !default;
+$--voyo-select-li-active-bg: var(--color-primary-gentle) !default;
+$--voyo-select-li-active-color: var(--color-primary) !default;
+$--voyo-select-li-icon-width: 3em !default;
+$--voyo-select-radius: var(--radius-medium) !default;
+
+//cell
+$--voyo-cell-padding-x: Space(4.8);
+$--voyo-cell-padding-y: Space(3);
+$--voyo-cell-title-font: var(--size-font-title) !default;
+$--voyo-cell-title-weight:true;
+$--voyo-cell-title-color: var(--color-font-brand) !default;
+$--voyo-cell-label-font: var(--size-font-small) !default;
+$--voyo-cell-label-color: var(--color-font-des) !default;
+$--voyo-cell-content-font:var(--size-font-content) !default;
+$--voyo-cell-content-color: var(--color-font-content) !default;
+$--voyo-cell-border: true;
+$--voyo-cell-img-w:2em;
+$--voyo-cell-img-h: 2em;
+$--voyo-cell-icon-size:2em;
+$--voyo-cell-space: Space(3);
+
+//panel
+$--voyo-panel-setting:(
+  header-padding: $--voyo-cell-padding-y $--voyo-cell-padding-x,
+  header-font: var(--size-font-small),
+  header-color: var(--color-font-des),
+  body-padding-bottom:Space(4),
+  body-margin:0,
+  body-padding-x: $--voyo-cell-padding-x,
+  body-bg:null
+) !default;
+
+$--voyo-panel-list:(
+  header-padding: $--voyo-cell-padding-y $--voyo-cell-padding-x,
+  header-font: var(--size-font-title),
+  header-color: var(--color-font-brand),
+  body-padding-bottom: 0,
+  body-padding-x: $--voyo-cell-padding-x,
+  body-margin: 0 0 Space(3) 0,
+  body-bg: var(--color-bg),
+) !default;
+
+$--voyo-panel:(
+  setting:$--voyo-panel-setting,
+  list:$--voyo-panel-list
+) !default;

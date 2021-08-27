@@ -1,0 +1,31 @@
+@use "~ceaser-easing" as e;
+
+@mixin Animation($animationName,$type,$forward:false){
+  $in-timer:cubic-bezier(.09,.34,.48,.97);
+  $out-timer:cubic-bezier(.79,.07,.98,1);
+
+  @if $type== 'normal'{
+    animation:$animationName .3s ease-out;
+  }
+  @else if $type=='fast'{
+    animation:$animationName .2s ease;
+  }
+  @else if $type== 'comfort-in'{
+    animation:$animationName .2s $in-timer;
+  }
+  @else if $type== 'comfort-out'{
+    animation:$animationName .2s $out-timer;
+  }
+  @else if $type== 'back-out'{
+    animation: $animationName .3s e.$easeOutBack;
+  }
+  @else if $type == "back-in"{
+    animation: $animationName .3s e.$easeInBack;
+  }
+  @else if $type == "sudden-out"{
+    animation: $animationName .1s ease-out;
+  }
+  @if $forward{
+    animation-fill-mode: forwards;
+  }
+}
