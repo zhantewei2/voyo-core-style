@@ -8,11 +8,20 @@
   bottom:$--voyo-space-position;
   right:$--voyo-space-position;
 }
-
+.abs-tr-0{
+  position:absolute !important;
+  top:0;
+  right:0;
+}
+.abs-br-0{
+  position:absolute !important;
+  bottom:0;
+  right:0;
+}
 $voyo-pos-size:(
-  25:50%,
+  25:25%,
   50:50%,
-  75:74%,
+  75:75%,
   100:100%
 );
 
