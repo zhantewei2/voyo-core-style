@@ -326,19 +326,19 @@ $--voyo-select-li-icon-width: 3em !default;
 $--voyo-select-radius: var(--radius-medium) !default;
 
 //cell
-$--voyo-cell-padding-x: Space(4.8);
-$--voyo-cell-padding-y: Space(3);
+$--voyo-cell-padding-x: Space(4.8) !default;
+$--voyo-cell-padding-y: Space(3) !default;
 $--voyo-cell-title-font: var(--size-font-title) !default;
-$--voyo-cell-title-weight:true;
+$--voyo-cell-title-weight:true !default;
 $--voyo-cell-title-color: var(--color-font-brand) !default;
 $--voyo-cell-label-font: var(--size-font-small) !default;
 $--voyo-cell-label-color: var(--color-font-des) !default;
 $--voyo-cell-content-font:var(--size-font-content) !default;
 $--voyo-cell-content-color: var(--color-font-content) !default;
-$--voyo-cell-border: true;
-$--voyo-cell-img-w:2em;
-$--voyo-cell-img-h: 2em;
-$--voyo-cell-icon-size:2em;
+$--voyo-cell-border: true !default;
+$--voyo-cell-img-w:2em !default;
+$--voyo-cell-img-h: 2em !default;
+$--voyo-cell-icon-size:2em !default;
 $--voyo-cell-space: Space(3);
 
 //panel

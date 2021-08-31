@@ -5,7 +5,6 @@
 
 .voyo-alert{
   display:flex;
-  align-items: center;
   padding:$--voyo-alert-padding;
   &.__round{
     @include Radius($v:$--voyo-alert-round);
