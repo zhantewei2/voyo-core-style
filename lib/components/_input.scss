@@ -98,9 +98,11 @@
 
 
 .voyo-input-wrapper{
-  &.__type-flat:not(.__no-border){
-    ._container{
-      @include AfterBorder();
+  &.__type-flat{
+    &:not(.__no-border){
+      ._container{
+        @include AfterBorder();
+      } 
     }
     ._placeholder{
       opacity:0;
