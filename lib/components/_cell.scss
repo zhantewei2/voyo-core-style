@@ -4,7 +4,7 @@
   @if $--voyo-cell-border{
 
     &.__border{
-      @include AfterBorder($space: $--voyo-cell-padding-x);
+      @include AfterBorder($space: $--voyo-cell-padding-x,$percent: calc( 100% - #{$--voyo-cell-padding-x}));
     } 
   }
   &>._left{
