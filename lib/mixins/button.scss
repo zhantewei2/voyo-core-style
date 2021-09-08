@@ -32,7 +32,7 @@
     $bgColorLight:map-get($color-light-various,$variousName);
     $borderColor:map-get($color-border-various,$variousName);
     &.__#{$variousName}{
-        @include LinearBg($use-btn-linear,$bgColor,$bgColorLight);
+        @include LinearBg($use-btn-linear,$bgColor,$bgColorLight,$deg:$--voyo-btn-linear-deg,$autoColor:false);
         @include Shadow(appearBtn,$bgColor);
         color:$fontColor;
         border:none;
@@ -48,7 +48,6 @@
 @mixin BtnOutline($variousName){
     $bgColor:map-get($color-various,$variousName);
     $borderColor:map-get($color-border-various,$variousName);
-    position: relative;
     &.__#{$variousName}{
         @include Shadow(outlineBtn,$bgColor);
         border:1px solid $borderColor;
@@ -87,35 +86,26 @@
 }
 
 @mixin BtnSize($k,$sizeValue){
-    // font-size:$sizeValue;
-    // padding:$sizeValue*0.7 $sizeValue*0.8;
-    font-size:$sizeValue;
-    @if $k== "mini"{
-        padding: 0 .6em;
-        line-height: 2.5em;
-        height:2.5em;
-    }
-    @else {
-        line-height: 2.5em;
-        height:2.5em;
-        padding:0 .6em;
-    }
-    @if $k == "mini"{
-        min-width: 1em;
-    }
-    @else{
-        min-width:4em;
+    .voyo-btn-size-#{$k} {
+        font-size: $sizeValue;
+        line-height: map-get($--voyo-btn-various-height, $k);
+        min-width: map-get($--voyo-btn-various-min-width, $k);
     }
 }
 
-@mixin BtnIconSize($sizeValue){
-    font-size:$sizeValue;
-    i{
-        // font-size:$sizeValue*1.3;
-        font-size:1.3em;
+@mixin BtnBlockSize($k){
+    &.voyo-btn-size-#{$k}{
+        line-height: map-get($--voyo-btn-various-block-height,$k);
     }
-    // height:$sizeValue*3;
-    // width:$sizeValue*3;
-    height:$--voyo-btn-icon-len;
-    width:$--voyo-btn-icon-len;
+}
+
+@mixin BtnIconSize($k,$sizeValue){
+    .voyo-btn-icon-size-#{$k} {
+        font-size: $sizeValue;
+        i {
+            font-size: 1.3em;
+        }
+        height: $--voyo-btn-icon-len;
+        width: $--voyo-btn-icon-len;
+    }
 }

@@ -27,6 +27,7 @@
     @include Radius();
     //@include Transition();
     transform: rotate(0deg);
+    padding: $--voyo-btn-padding;
     i,.za,.voyo-btn-loading-wrapper{
         vertical-align: middle;
         &:first-child{
@@ -41,7 +42,6 @@
             display:inline-block;
         }
     }
-    //min-width:$--voyo-btn-min-width;
 }
 .voyo-btn-icon{
     @extend %btn;
@@ -59,12 +59,8 @@
 }
 
 @each $k,$v in $--voyo-btn-size{
-    .voyo-btn-size-#{$k}{
-        @include BtnSize($k,$v);
-    }
-    .voyo-btn-icon-size-#{$k}{
-        @include BtnIconSize($v);
-    }
+    @include BtnSize($k,$v);
+    @include BtnIconSize($k,$v);
 }
 
 @each $k,$v in $--voyo-btn-colors{
@@ -100,6 +96,9 @@
         letter-spacing: $--voyo-btn-block-spacing;
         padding-left: $--voyo-btn-block-spacing;
         font-size:$--voyo-btn-block-font-size;
+    }
+    @each $k,$v in $--voyo-btn-size {
+        @include BtnBlockSize($k);
     }
 }
 

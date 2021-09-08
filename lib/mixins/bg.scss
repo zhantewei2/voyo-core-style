@@ -1,5 +1,7 @@
-@mixin LinearBg($useLinear,$color,$color2,$deg:90deg){
-    color:var(--color-primary-font);
+@mixin LinearBg($useLinear,$color,$color2,$deg:90deg,$autoColor:true){
+    @if $autoColor {
+        color:var(--color-primary-font);
+    }
     @if $use-linear and $useLinear {
         background-image:linear-gradient($deg,$color,$color2) !important;
     }
@@ -7,6 +9,7 @@
         background-color:$color !important;
     }
 }
+
 @mixin LinearPrimaryBg($deg:90deg){
     @include LinearBg(true,var(--color-primary),var(--color-primary-light),$deg);
 }
