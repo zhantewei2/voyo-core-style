@@ -109,3 +109,11 @@
         width: $--voyo-btn-icon-len;
     }
 }
+
+@mixin BtnShadow($k){
+    @if $--voyo-btn-shadow-use {
+        .voyo-btn-shadow-#{$k}{
+            box-shadow : map-get($--voyo-btn-shadow-various,$k);
+        }
+    }
+}

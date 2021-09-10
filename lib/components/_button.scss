@@ -76,6 +76,7 @@
     .voyo-btn-candy{
         @include BtnCandy($k);
     }
+    @include BtnShadow($k);
 }
 .voyo-btn-appear{
     @include Disabled(appear);
