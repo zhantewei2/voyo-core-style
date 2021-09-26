@@ -61,11 +61,18 @@
       display:flex;
       align-items: center;
     }
+    &.__only-tap{
+      display:flex;
+      align-items: center;
+    }
   }
   
   ._clear{
     display:none;
     padding:$--voyo-input-clear-padding;
+  }
+  ._input-clear-icon{
+    font-size: 1em; 
   }
   &.__clearable{
     ._clear{
@@ -169,7 +176,7 @@
   }
 }
 
-@each $k,$v in $--voyo-input-size{
+@each $k,$v in $--voyo-input-size {
   .voyo-input-wrapper{
     &.__size-#{$k}{
       font-size:$v;

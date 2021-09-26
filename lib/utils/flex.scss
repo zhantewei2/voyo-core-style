@@ -25,7 +25,7 @@
   flex-flow: column;
 }
 .iflex-center{
-  @include ICenter();
+  @include ICenter(true);
 }
 .flex-v-mid{
   display:flex !important;

@@ -4,3 +4,7 @@
   height:constant(safe-area-inset-bottom);
   height:env(safe-area-inset-bottom);
 }
+
+.voyo-ios-scroll{
+  @include IOSScroll();
+}

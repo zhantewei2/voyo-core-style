@@ -1,8 +1,11 @@
 .voyo-badge{
   @include Badge();
+  
   @each $k,$v in $--voyo-badge-various{
     &.__badge-color-#{$k}{
-      background:map-get($--voyo-badge-bg-various,$k);
+      @if $--voyo-badge-bg-use{
+        background:map-get($--voyo-badge-bg-various,$k);
+      }
       color:$v;
       @include BadgeBorderColor($v);
     }

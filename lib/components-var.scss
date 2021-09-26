@@ -129,8 +129,8 @@ $--voyo-input-placeholder-color:var(--color-font-assist) !default;
 $--voyo-input-placeholder-color2:var(--color-font-title) !default;
 $--voyo-input-clear-padding:.2em .5em !default;
 $--voyo-input-color-md:var(--color-font-content) !default;
-$--voyo-input-height-md:2.5 !default;
-$--voyo-input-height-flat:2.5 !default;
+$--voyo-input-height-md:3 !default;
+$--voyo-input-height-flat:3 !default;
 $--voyo-input-height-candy:3 !default;
 $--voyo-input-candy-radius:2em !default;
 $--voyo-input-candy-bg:var(--color-bg3) !default;
@@ -293,6 +293,7 @@ $--voyo-snackbar-left-w:20%;
 $--voyo-snackbar-icon-w:2rem;
 
 //badge
+$--voyo-badge-bg-use: true !default;
 $--voyo-badge-padding:0 .3em !default;
 $--voyo-badge-height:1.5em !default;
 $--voyo-badge-size: $size-map !default;

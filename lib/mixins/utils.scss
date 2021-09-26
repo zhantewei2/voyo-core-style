@@ -12,8 +12,8 @@
   align-items:center;
   flex-flow:column;
 }
-@mixin ICenter(){
-  display:inline-flex;
+@mixin ICenter($important:false){
+  display:if($important,inline-flex !important,inline-flex);
   justify-content: center;
   align-items: center;
 }
