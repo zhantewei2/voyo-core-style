@@ -14,7 +14,7 @@
 }
 
 .voyo-load-wrapper{
-  display:inline-block;
+  display:inline-flex;
   &.__block{
     @include Center();
     height:$--voyo-load-wrapper-h;
