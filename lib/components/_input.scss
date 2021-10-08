@@ -52,7 +52,7 @@
     @include Flex-1();
   }
   ._input{
-    @extend %base-input;
+    @include base-input();
     height:100%;
     width:100%;
     font-size:inherit;

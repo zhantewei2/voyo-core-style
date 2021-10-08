@@ -2,15 +2,15 @@
 
 @mixin _baseBorder($borderPos:bottom,$borderColor:var(--color-after-border),$percent:100%,$align:"mid",$space:null){
   $pos:0;
-  @if $align == "mid"{
-    $pos: math.div(100%-$percent,2);
-  }@else if $align == "right"{
-    $pos: 100% - $percent;
-  }@else{
-    $pos: 0;
-  }
+  
   @if $space{
     $pos: $space;
+  }@else{
+    @if $align == "mid"{
+      $pos: math.div(100%-$percent,2);
+    }@else if $align == "right"{
+      $pos: 100% - $percent;
+    }  
   }
   
   content:"";
