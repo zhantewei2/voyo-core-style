@@ -1,0 +1,18 @@
+.voyo-search-badge{
+  background-color: var(--color-bg-deep3);
+  color: var(--color-font-white);
+  padding: 0 .5em;
+  border-radius: 2em;
+  line-height: 2em;
+  font-size: var(--size-font-small);
+  white-space: nowrap;
+  display:inline-flex;
+  align-items: center;
+}
+.voyo-search-input-tags{
+  position:absolute;
+  width:100%;
+  padding: .5em;
+  z-index:10;
+  height:100%;
+}
