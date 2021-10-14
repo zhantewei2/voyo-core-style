@@ -1,0 +1,23 @@
+.voyo-filter-popup-container{
+  position:fixed;
+  top:0;
+  height: 100vh;
+  width: 100%;
+  left:0;
+  z-index:map-get($voyo-index,cover)
+}
+.voyo-filter-popup-bg{
+  @include Full();
+  z-index:-1;
+}
+.voyo-filter-popup{
+  @include Layout($indexType:dialog,$bgColor:var(--color-bg-deep),$fixTop:false);
+  height:unset;
+  bottom: 0;
+  overflow:hidden;
+  @include IOSRadius();
+}
+.voyo-filter-content{
+  background: var(--color-bg);
+  @include Animation(VoyoSlideDownIn,"comfort-in");
+}
