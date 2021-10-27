@@ -105,8 +105,9 @@
         i {
             font-size: 1.3em;
         }
-        height: $--voyo-btn-icon-len;
-        width: $--voyo-btn-icon-len;
+        $len: map-get($--voyo-btn-icon-various-len,$k);
+        height: $len;
+        width: $len;
     }
 }
 

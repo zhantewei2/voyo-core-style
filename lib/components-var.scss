@@ -47,6 +47,15 @@ $--voyo-btn-various-block-height: (
   large: 3em
 ) !default;
 
+$--voyo-btn-icon-various-len: (
+  mini: 2.5em,
+  small: 2.5em,
+  now: 3em,
+  medium: 3em,
+  strong: 3em,
+  large: 3em
+) !default;
+
 $--voyo-btn-distance:1em !default;
 $--voyo-btn-icon-dis:0.4em !default;
 $--voyo-btn-icon-len:3em !default;
@@ -164,15 +173,15 @@ $--voyo-tab-bar-thumb-h:4px !default;
 $--voyo-tab-bar-thumb-bottom: 0px !default;
 $--voyo-tab-bar-color: var(--color-primary) !default;
 $--voyo-tab-bar-active-color:var(--color-primary2) !default;
-$--voyo-tab-bar-bg:var(--color-bg);
+$--voyo-tab-bar-bg:var(--color-bg) !default;
 
-$--voyo-popup-container-padding:1.5rem;
+$--voyo-popup-container-padding:1.5rem !default;
 $--voyo-popup-radius:var(--radius-large) !default;
-$--voyo-popup-view-type: mid top left right bottom;
+$--voyo-popup-view-type: mid top left right bottom !default;
 $--voyo-popup-close-icon-size:1rem !default;
 $--voyo-popup-close-icon-space:.5rem !default;
 $--voyo-popup-container-padding-with-close-icon:2rem 1.5rem 1.5rem 1.5rem;
-$--voyo-popup-activity-close-size:3rem;
+$--voyo-popup-activity-close-size:3rem !default;
 
 //load
 $--voyo-load-text-color:var(--color-font-des);
