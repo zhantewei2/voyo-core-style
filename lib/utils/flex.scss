@@ -39,6 +39,10 @@
   display:flex;
   justify-content: space-between;
 }
+.flex-end{
+  display:flex;
+  justify-content: flex-end;
+}
 .iflex-between{
   display: inline-flex;
   justify-content: space-between;

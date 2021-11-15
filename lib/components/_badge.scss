@@ -20,5 +20,6 @@
   }
   &.__more-mini{
     transform: scale($--voyo-badge-more-mini-scale);
+    transform-origin: 0% 50%;
   }
 }
