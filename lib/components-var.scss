@@ -416,3 +416,7 @@ $--voyo-panel:(
   setting:$--voyo-panel-setting,
   list:$--voyo-panel-list
 ) !default;
+
+// skeleton
+$--voyo-skeleton-color1:var(--color-after-border);
+$--voyo-skeleton-color2:var(--color-bg);

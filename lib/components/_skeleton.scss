@@ -1,0 +1,46 @@
+@keyframes Skeleton {
+  from{
+    background-position: 0 0;
+  }
+  to{
+    background-position:100% 0;
+  }
+}
+.yo-skeleton{
+  background-image:linear-gradient(90deg,$--voyo-skeleton-color1,$--voyo-skeleton-color2,$--voyo-skeleton-color1,$--voyo-skeleton-color2);
+  background-position: 0 0;
+  background-size:300% 100%;
+  background-repeat: space;
+  animation: Skeleton 1s linear infinite;
+}
+.yo-skeleton-line-des{
+  @extend .yo-skeleton;
+  font-size:var(--color-font-des);
+  height:1.5em;
+  margin:.7em;
+}
+.yo-skeleton-line-title{
+  @extend .yo-skeleton;
+  font-size:var(--color-font-content);
+  height:2em;
+  margin:.5em;
+}
+.yo-skeleton-inner{
+  @extend .yo-skeleton;
+  height: 100%;
+}
+// 行内文本，适应line-height
+.yo-skeleton-inner-line{
+  //height:100%;
+  position:relative;
+  &::after{
+    width: 100%;
+    content:"";
+    display: block;
+    position:absolute;
+    top:50%;
+    height:1em;
+    transform: translateY(-50%);
+    @extend .yo-skeleton;
+  }
+}
