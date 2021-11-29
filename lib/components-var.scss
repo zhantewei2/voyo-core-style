@@ -219,11 +219,11 @@ $--voyo-pg-refresh-img-h:2.5rem;
 $--voyo-pg-refresh-img-margin:0 .5rem 0 0;
 
 //figure
-$--voyo-figure-padding:2.2rem 1rem 2rem 1rem;
-$--voyo-figure-image-width:8em;
-$--voyo-figure-image-height:8em;
-$--voyo-figure-title-padding:1rem;
-$--voyo-figure-content-padding:1rem;
+$--voyo-figure-padding:2.2rem 1rem 2rem 1rem !default;
+$--voyo-figure-image-width:8em !default;
+$--voyo-figure-image-height:8em !default;
+$--voyo-figure-title-padding:1rem !default;
+$--voyo-figure-content-padding:1rem !default;
 
 //sidebar
 $--voyo-sidebar-size:var(--size-font);
