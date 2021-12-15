@@ -95,4 +95,6 @@ html{
   --shadow-color-tabbar:rgba(197, 180, 180, 0.2);
   --font-family:-apple-system,'STHeiti', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
   --blur-size:10px;
+  --load-cover-bg:transparent;
+  --line-height: 1.5;
 }

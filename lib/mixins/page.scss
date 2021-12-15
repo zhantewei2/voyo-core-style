@@ -2,7 +2,7 @@
   font-size:var(--size-font);
   color:var(--color-font-base);
   font-family: $font-family;
-  line-height:1.5;
+  line-height: var(--line-height);
   -webkit-tap-highlight-color: transparent;
   background:var(--color-bg);
 }
