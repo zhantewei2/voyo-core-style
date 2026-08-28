@@ -1,0 +1,84 @@
+@use "sass:map";
+@use "../components-dep" as *;
+
+.voyo-loader-container{
+  &.__cover{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    z-index:2;
+    background: var(--load-cover-bg);
+  }
+  &.__inline{
+    display:inline-block;
+  }
+}
+
+.voyo-load-wrapper{
+  display:inline-flex;
+  &.__block{
+    @include Center();
+    height:$voyo-load-wrapper-h;
+    ._img,._img-wrapper{
+      height:$voyo-load-img-block-length;
+      width:$voyo-load-img-block-length;
+    }
+    ._view{
+      @include CenterColumn();
+    }
+    ._text{
+      margin:$voyo-load-text-block-margin;
+    }
+    @each $k,$v in $voyo-load-block-size-map{
+      &.__size-#{$k}{
+        font-size:$v;
+      }
+    }
+
+  }
+  &.__inline{
+    @each $k,$v in $voyo-load-size-map{
+      &.__size-#{$k}{
+        font-size:$v;
+      }
+    }
+    ._view{
+      @include ICenter();
+    }
+    ._img,._img-wrapper{
+      height:$voyo-load-img-length;
+      width:$voyo-load-img-length;
+    }
+    ._textIcon{
+      font-size:2.5em;
+    }
+    ._text{
+      margin:$voyo-load-text-margin;
+    }
+  }
+  &.__abs,&.__absCenter{
+    position:absolute;
+    z-index:map.get($voyo-index,loadBlock);
+    text-align: center;
+  }
+  &.__fixCenter{
+    position:fixed !important;
+    z-index:map.get($voyo-index,loadBlock);
+    text-align: center;
+  }
+  &.__abs{
+    width:100%;
+    left:0;
+    top:0;
+  }
+  &.__absCenter,&.__fixCenter{
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+  }
+  ._text{
+    color:$voyo-load-text-color;
+  }
+}

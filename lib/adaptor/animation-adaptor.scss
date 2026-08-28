@@ -1,0 +1,10 @@
+@use "../easing" as *;
+
+@keyframes VoyoAdaptorFlicker {
+  from {transform:scale(0.9)}
+  to {transform: scale(1.1)}
+}
+
+.voyo-an-adaptor-flicker{
+  animation: VoyoAdaptorFlicker .5s $easeInOutBack;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@voyo/new-core-style",
+  "version": "3.0.2",
+  "description": "Voyo core style with modern Sass module system",
+  "type": "module",
+  "main": "lib/main.scss",
+  "sass": "lib/main.scss",
+  "bin": {
+    "new-core-style": "./mcp/server.js"
+  },
+  "files": [
+    "lib",
+    "mcp",
+    "docs"
+  ],
+  "scripts": {
+    "build": "sass --no-source-map lib/main.scss lib/main.css",
+    "watch": "sass --watch lib/main.scss:lib/main.css",
+    "check": "sass --no-source-map --quiet lib/main.scss /dev/null",
+    "build:common": "sass --no-source-map lib/common.scss lib/common.css",
+    "build:components": "sass --no-source-map lib/components-dep.scss lib/components-dep.css"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "sass": "^1.103.1"
+  }
+}

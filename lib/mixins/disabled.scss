@@ -1,0 +1,59 @@
+@use "../vars" as *;
+@use "../components-var" as *;
+
+%appear-disabled{
+    color:var(--color-disabled-font) !important;
+    box-shadow: none !important;
+    &::after{
+        content:"";
+        background: $disable-bg;
+        z-index:1;
+        border-color:transparent;
+    }
+}
+%outline-disabled{
+    border-color:var(--color-disabled-border) !important;
+    color:var(--color-disabled-font) !important;
+    box-shadow:none !important;
+}
+%pure-disabled{
+    color:var(--color-disabled-font) !important;
+}
+%candy-disabled{
+    background:var(--color-disabled-light) !important;
+    color: var(--color-disabled-font) !important;
+    i{
+        color:var(--color-disabled-font) !important;
+    }
+}
+
+@mixin Disabled($various){
+    &[disabled]:not([disabled="0"]){
+        cursor:not-allowed;
+        @if $various == "appear"{
+            color:var(--color-disabled-font) !important;
+            box-shadow: none !important;
+            &::after{
+                content:"";
+                background: $disable-bg;
+                z-index:1;
+                border-color:transparent;
+            }
+        }
+        @else if $various == "outline" {
+            border-color:var(--color-disabled-border) !important;
+            color:var(--color-disabled-font) !important;
+            box-shadow:none !important;
+        }
+        @else if $various == "pure"{
+            color:var(--color-disabled-font) !important;  
+        }
+        @else if $various == "candy" {
+            background:var(--color-disabled-light) !important;
+            color: var(--color-disabled-font) !important;
+            i{
+                color:var(--color-disabled-font) !important;
+            }
+        }
+    }
+}

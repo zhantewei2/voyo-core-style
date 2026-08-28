@@ -1,0 +1,34 @@
+@use "../vars" as *;
+
+.abs-tr{
+  position:absolute !important;
+  top:$voyo-space-position;
+  right:$voyo-space-position;
+}
+.abs-br{
+  position:absolute !important;
+  bottom:$voyo-space-position;
+  right:$voyo-space-position;
+}
+.abs-tr-0{
+  position:absolute !important;
+  top:0;
+  right:0;
+}
+.abs-br-0{
+  position:absolute !important;
+  bottom:0;
+  right:0;
+}
+$voyo-pos-size:(
+  25:25%,
+  50:50%,
+  75:75%,
+  100:100%
+);
+
+@each $k,$v in $voyo-pos-size{
+  .w-#{$k}{
+    width:$v;
+  }
+}

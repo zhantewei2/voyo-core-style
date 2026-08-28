@@ -1,0 +1,12 @@
+@forward "vars";
+//@use "vars" as *;
+$voyo-ripple-radio-scale-start:0.5;
+//ripple-radio
+$voyo-ripple-radio-scale-end:2.5;
+
+//checkbox
+$voyo-checkbox-w:1.3em;
+$voyo-checkbox-h:1.3em;
+$voyo-checkbox-border-color: var(--color-border-neut);
+$voyo-checkbox-radius: var(--radius-base);
+$voyo-checkbox-b:2px;

@@ -1,0 +1,19 @@
+@use "../vars" as *;
+@use "../mixins" as *;
+
+.voyo-area-content{
+  padding:$voyo-area-content-padding;
+}
+.voyo-area-footer{
+  padding:$voyo-area-footer-padding;
+}
+
+.voyo-area-sheetSelect{
+  padding:$voyo-area-sheetSelect-padding;
+}
+.voyo-area-deep{
+  @include Radius();
+  padding:$voyo-area-deep-padding;
+  background:$voyo-area-deep-bg;
+  color:var(--color-font-content);
+}

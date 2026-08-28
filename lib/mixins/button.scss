@@ -1,0 +1,126 @@
+@use "sass:map";
+@use "../vars" as *;
+@use "../components-var" as *;
+@use "utils" as *;
+@use "bg" as *;
+@use "shadow" as *;
+@use "ripple" as *;
+
+@mixin BtnBase(){
+    box-sizing: border-box;
+    outline:none;
+    position:relative;
+    appearance:none;
+    border:none;
+    display:inline-block;
+    text-align: center;
+    cursor:pointer;
+    line-height:1;
+    -webkit-tap-highlight-color: transparent;
+    &:focus{
+        outline:none;
+    }
+    white-space: nowrap;
+    overflow:hidden;
+    user-select: none;
+    //@include Transition($attrs:all,$timer:.2s ease);
+    &::after{
+        content:none;
+        @include Radius();
+        @include Full();
+        transform: none;
+    }
+}
+
+@mixin BtnAppear($variousName){
+    $fontColor:map.get($color-font-various,$variousName);
+    $bgColor:map.get($color-various,$variousName);
+    $bgColorLight:map.get($color-light-various,$variousName);
+    $borderColor:map.get($color-border-various,$variousName);
+    &.__#{$variousName}{
+        @include LinearBg($use-btn-linear,$bgColor,$bgColorLight,$deg:$voyo-btn-linear-deg,$autoColor:false);
+        @include Shadow(appearBtn,$bgColor);
+        color:$fontColor;
+        border:none;
+        &.ripple-callback{
+            @include Shadow(appearBtnCallback,$bgColor);
+        }
+        .ripple-btn{
+            @include UseRipple(deep);
+        }
+    }
+}
+
+@mixin BtnOutline($variousName){
+    $bgColor:map.get($color-various,$variousName);
+    $borderColor:map.get($color-border-various,$variousName);
+    &.__#{$variousName}{
+        @include Shadow(outlineBtn,$bgColor);
+        border:1px solid $borderColor;
+        background:transparent;
+        color:$bgColor;
+        .ripple-btn{
+            @include UseRipple();
+        }
+        &.ripple-callback{
+            @include Shadow(outlineBtnCallback,$bgColor);
+        }
+    }
+}
+
+@mixin BtnPure($variousName){
+    $fontColor:map.get($color-various,$variousName);
+    &.__#{$variousName}{
+        background: transparent;
+        color:$fontColor;
+        .ripple-btn{
+            @include UseRipple();
+        }
+    }
+}
+@mixin BtnCandy($variousName){
+    $bgColor:map.get($color-gentle-various,$variousName);
+    $fontColor:map.get($color-various,$variousName);
+    &.__#{$variousName}{
+        font-weight: bold;
+        background: $bgColor;
+        color:$fontColor;
+        .ripple-btn{
+            @include UseRipple();
+        }
+    }
+}
+
+@mixin BtnSize($k,$sizeValue){
+    .voyo-btn-size-#{$k} {
+        font-size: $sizeValue;
+        line-height: map.get($voyo-btn-various-height, $k);
+        min-width: map.get($voyo-btn-various-min-width, $k);
+    }
+}
+
+@mixin BtnBlockSize($k){
+    &.voyo-btn-size-#{$k}{
+        line-height: map.get($voyo-btn-various-block-height,$k);
+    }
+}
+
+@mixin BtnIconSize($k,$sizeValue){
+    .voyo-btn-icon-size-#{$k} {
+        font-size: $sizeValue;
+        i {
+            font-size: 1.3em;
+        }
+        $len: map.get($voyo-btn-icon-various-len,$k);
+        height: $len;
+        width: $len;
+    }
+}
+
+@mixin BtnShadow($k){
+    @if $voyo-btn-shadow-use {
+        .voyo-btn-shadow-#{$k}{
+            box-shadow : map.get($voyo-btn-shadow-various,$k);
+        }
+    }
+}

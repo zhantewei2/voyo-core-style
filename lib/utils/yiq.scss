@@ -1,0 +1,21 @@
+@use "sass:math";
+
+$yiq-contrasted:180;
+$yiq-toocontrasted:200;
+
+@function yiq-is-light($color,$contrasted:$yiq-contrasted){
+  $red: red($color);
+  $green: green($color);
+  $blue: blue($color);
+  $yiq: math.div(($red*299)+($green*587)+($blue*114),1000);
+  @return if(sass($yiq >= $contrasted): true; else: false);
+}
+
+@function yiq-is-toolight($color){
+  @return yiq-is-light($color,$yiq-toocontrasted);
+}
+
+@function yiq-select($validValue,$light-option,$deep-option){
+  $islight:yiq-is-light($validValue);
+  @return if(sass($islight): $light-option; else: $deep-option);
+}

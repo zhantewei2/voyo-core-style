@@ -1,0 +1,65 @@
+@use "../mixins" as *;
+
+.flex{
+  display:flex !important;
+}
+.flex-inline{
+  display:inline-flex !important;
+}
+.flex-center{
+  @include Center();
+}
+.flex-auto{
+  @include Flex-auto();
+}
+.flex-1{
+  flex-grow:1 ;
+  flex-shrink: 1;
+  flex-basis: 0;
+  position:relative;
+}
+.flex-center-column{
+  @extend .flex-center;
+  flex-flow:column;
+}
+.flex-column{
+  display:flex;
+  flex-flow: column;
+}
+.iflex-center{
+  @include ICenter(true);
+}
+.flex-v-mid{
+  display:flex !important;
+  align-items: center;
+}
+.flex-h-mid{
+  display:flex;
+  justify-content: center;
+}
+.flex-between{
+  display:flex;
+  justify-content: space-between;
+}
+.flex-end{
+  display:flex;
+  justify-content: flex-end;
+}
+.iflex-between{
+  display: inline-flex;
+  justify-content: space-between;
+}
+.flex-v-between{
+  @extend .flex-between;
+  align-items: center;;
+}
+.flex-around{
+  display:flex;
+  justify-content: space-around;
+}
+.__h-center{
+  align-items: center;
+}
+.flex-row-reverse{
+  flex-direction: row-reverse;
+}

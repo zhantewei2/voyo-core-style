@@ -1,0 +1,7 @@
+@use "../components-dep" as *;
+
+.voyo-article {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background:$voyo-article-bg;
+}

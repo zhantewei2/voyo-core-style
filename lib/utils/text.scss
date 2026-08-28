@@ -1,0 +1,69 @@
+@use "../mixins" as *;
+@use "../vars" as *;
+
+.voyo-text-title{
+  font-weight: bold;
+  @include text-title(now);
+}
+
+.voyo-text-title-white{
+  font-weight: bold;
+  @include text-title(now,true);
+}
+.voyo-text-content{
+  @include text-content(small);
+}
+.voyo-text-brand{
+  @include text-brand(large);
+}
+.voyo-text-des{
+  @include text-des(mini);
+}
+.voyo-text-brand-white{
+  @include text-brand(large,true);
+}
+.voyo-text-des-white{
+  @include text-des(mini,true);
+}
+.text-center{
+  text-align: center !important;
+}
+.text-left{
+  text-align: left !important;
+}
+.text-bold{
+  font-weight: bold;
+}
+.text-right{
+  text-align: right !important;
+}
+.text-rich{
+  text-align: justify;
+  font-size: $voyo-text-rich-size;
+  color:$voyo-text-rich-color;
+}
+.text-underline{
+  text-decoration: underline;
+}
+.text-through{
+  text-decoration: line-through;
+}
+.voyo-text-content-block{
+  @extend .voyo-text-content;
+  text,div,view{
+    line-height:$voyo-text-block-line-height;
+  }
+}
+.text-justify{
+  text-align: justify;
+}
+@each $k,$v in $size-map{
+  .voyo-text-size-#{$k}{
+    font-size:$v !important;
+  }
+}
+@each $k,$v in $font-colors{
+  .voyo-text-color-#{$k}{
+    color:$v !important;
+  }
+}

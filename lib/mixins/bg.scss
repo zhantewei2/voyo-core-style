@@ -1,0 +1,33 @@
+@use "../vars" as *;
+@use "../components-var" as *;
+
+@mixin LinearBg($useLinear,$color,$color2,$deg:90deg,$autoColor:true){
+    @if $autoColor {
+        color:var(--color-primary-font);
+    }
+    @if $use-linear and $useLinear {
+        background-image:linear-gradient($deg,$color,$color2) !important;
+    }
+    @else{
+        background-color:$color !important;
+    }
+}
+
+@mixin LinearPrimaryBg($deg:90deg){
+    @include LinearBg(true,var(--color-primary),var(--color-primary-light),$deg);
+}
+@mixin LinearPrimary2Bg($deg:90deg){
+    @include LinearBg(true,var(--color-primary2),var(--color-primary2-light),$deg);
+}
+@mixin DropBlurBg($defaultBg:$voyo-backdrop-default-bg,$notSupportBg:$voyo-backdrop-back-bg){
+    @if $use-drop-blur{
+        background-color:$defaultBg;
+        backdrop-filter:blur(var(--blur-size));
+        @supports not(backdrop-filter: blur(5px)) {
+            background-color:$notSupportBg;
+        }
+    }
+    @else {
+        background-color:$notSupportBg;
+    }
+}

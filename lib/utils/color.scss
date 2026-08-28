@@ -1,0 +1,14 @@
+@use "../vars" as *;
+
+@each $k,$v in $color-various{
+  .voyo-color-#{$k}{
+    color:$v !important;
+  }
+}
+
+.voyo-color-des{
+  color:var(--color-font-des);
+}
+.voyo-color-brand{
+  color:var(--color-font-brand);
+}

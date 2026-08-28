@@ -1,0 +1,30 @@
+@use "../../mixins/animation" as an;
+@use "../../components-use" as v;
+@use "../ripple-radio";
+
+.voyo-checkbox{
+  width: v.$voyo-checkbox-w;
+  height: v.$voyo-checkbox-h;
+  position: relative;
+  display: inline-flex;
+  border-radius: v.$voyo-checkbox-radius;
+  margin-right: v.Space(2);
+  line-height: 1;
+}
+.voyo-checkbox-frame{
+  overflow:hidden;
+  color: v.$voyo-checkbox-border-color;
+  border-radius: v.$voyo-checkbox-radius;
+  border: 2px solid ;
+  transition: all .15s v.$voyo-out-timer;
+}
+@keyframes VoyoCheckBoxSelectedEnter {
+  from {transform: scale(.5)}
+  to {transform: scale(1)}
+}
+.voyo-checkbox-selected{
+  //background-repeat: no-repeat;
+  background-position: center;
+  background-size:100%;
+  @include an.Animation(VoyoCheckBoxSelectedEnter,"normal");
+}

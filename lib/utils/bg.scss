@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "../mixins" as *;
+@use "../vars" as *;
+
+.voyo-bg-soft{
+  background-color:var(--color-bg3);
+}
+.voyo-bg-linear{
+  @include LinearPrimaryBg();
+}
+.voyo-bg-default{
+  background-color:var(--color-bg);
+}
+@each $k,$v in $color-various{
+  .voyo-bg-#{$k}{
+    background-color:$v;
+    color:map.get($color-font-various,$k);
+  }
+}

@@ -1,0 +1,11 @@
+@use "../components-dep" as *;
+
+@each $k,$v in $voyo-icon-size{
+  .voyo-icon-#{$k}{
+    font-size:$v !important;
+  }
+}
+
+.voyo-icon-line{
+  font-weight: bold;
+}

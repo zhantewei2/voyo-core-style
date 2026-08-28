@@ -1,0 +1,27 @@
+@use "mixins" as *;
+
+html{
+  @include HTMLBase();
+}
+view,div,span,text,uni-view,article,main,header,nav,button{
+  box-sizing: border-box;
+}
+.root-body{
+  @include RootBody();
+}
+%voyo-page{
+  @include PageBase();
+}
+.voyo-tab-page{
+  @extend %voyo-page;
+}
+
+.voyo-full-page{
+  @extend %voyo-page;
+  position:fixed;
+}
+
+.voyo-page{
+  @extend .voyo-full-page;
+  @include IOSSafeHeight();
+}

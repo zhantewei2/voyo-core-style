@@ -1,0 +1,18 @@
+.img-scaleToFill{
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.img-aspectFill{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-svg{
+  width:1em;
+  height:1em;
+  display:inline-block;
+  background-size: contain;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+}

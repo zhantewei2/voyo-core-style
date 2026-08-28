@@ -1,0 +1,90 @@
+@use "../vars" as *;
+@use "../components-var" as *;
+
+@use "sass:math";
+
+@mixin _baseBorder($borderPos:bottom,$borderColor:var(--color-after-border),$percent:100%,$align:"mid",$space:null){
+  $pos:0;
+  
+  @if $space{
+    $pos: $space;
+  }@else{
+    @if $align == "mid"{
+      $pos: math.div(100%-$percent,2);
+    }@else if $align == "right"{
+      $pos: 100% - $percent;
+    }  
+  }
+  
+  content:"";
+  position:absolute;
+  @if $borderPos == "bottom"{
+    height:1px;
+    bottom:0;
+    width: $percent;
+    left: $pos;
+    transform:scaleY(.4);
+  }
+  @else if $borderPos == "right"{
+    height:$percent;
+    width:1px;
+    top: $pos;
+    right:0;
+    transform: scaleX(.4);
+  }
+  @else if $borderPos == "top"{
+    height:1px;
+    width:$percent;
+    left: $pos;
+    top:0;
+    transform: scaleY(.4);
+  }
+  background: $borderColor;
+}
+
+@mixin AfterBorder($borderPos:bottom,$borderColor: var(--color-after-border) ,$percent:100%,$align:"mid",$space:null){
+  &::after{
+    @include _baseBorder($borderPos,$borderColor,$percent,$align,$space);
+  }
+}
+@mixin AfterListBorder($reducerPercent:5%,$borderColor:var(--color-after-border)){
+  &::after{
+    content:"";
+    position:absolute;
+    box-sizing: border-box;
+    height:1px;
+    bottom:0;
+    left:$reducerPercent;
+    width:100%-$reducerPercent;
+    background:$borderColor;
+    transform:scaleY(.4);
+  }
+}
+
+@mixin BeforeBorder($borderPos:bottom,$borderColor:var(--color-after-border) ,$percent:100%){
+  &::before{
+    @include _baseBorder($borderPos,$borderColor,$percent);
+  }
+}
+
+@mixin AllBorder($radius:null,$borderColor:var(--color-after-border)){
+  content:"";
+  box-sizing: border-box;
+  position:absolute;
+  top:0;
+  left:0;
+  transform-origin: 0 0;
+  height:200%;
+  width: 200%;
+  transform:scale(.5,.5);
+  border:1px solid $borderColor;
+  @if $radius {
+    border-radius:$radius;
+  }
+}
+@mixin AfterAllBorder($radius:null,$borderColor:var(--color-after-border)){
+  &::after{
+    @include AllBorder($radius,$borderColor);
+  }
+}
+

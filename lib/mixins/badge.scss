@@ -1,0 +1,21 @@
+@use "../vars" as *;
+@use "../components-var" as *;
+@use "utils" as *;
+@use "border" as *;
+
+@mixin Badge(){
+  display:inline-flex;
+  align-items: center;
+  height:$voyo-badge-height;
+  padding:$voyo-badge-padding;
+  position:relative;
+  font-weight: 400;
+  @include Radius($voyo-badge-radius);
+  @include AfterAllBorder($radius:calc(#{$voyo-badge-radius} * 2));
+}
+
+@mixin BadgeBorderColor($v){
+  &::after{
+    border-color:$v;
+  }
+}

@@ -1,0 +1,149 @@
+@use "../mixins" as *;
+
+.touch-scroll{
+  -webkit-overflow-scrolling: touch;
+}
+.no-padding{
+  padding:0 !important;
+}
+.no-margin{
+  margin:0 !important;
+}
+.no-padding-b{
+  padding-bottom:0 !important;
+}
+.no-padding-t{
+  padding-top:0 !important;
+}
+.no-radius{
+  border-radius: 0 !important;
+}
+.no-padding-x{
+  padding-left:0 !important;
+  padding-right:0 !important;
+}
+.no-wrap{
+  white-space: nowrap;
+}
+.abs{
+  position:absolute;
+}
+.abs-full{
+  @include Full();
+}
+.d-block{
+  display:block !important;
+}
+.d-inline{
+  display:inline-block !important;
+}
+.abs-center{
+  position:absolute;
+  top:50%;
+  left:50%;
+  z-index:1;
+  transform: translate(-50%,-50%);
+}
+.abs-center-top{
+  @extend .abs-center;
+  top:10%;
+}
+.abs-center-page{
+  @extend .abs-center;
+  top:40%;
+}
+.fix-center{
+  position:fixed;
+  top:40%;
+  left:50%;
+  z-index:1;
+  transform: translate(-50%,-50%);
+}
+.no-display{
+  display:none !important;
+}
+
+.slide-right{
+  transform:translate3d(100%,0,0);
+}
+.slide-left{
+  transform: translate3d(-100%,0,0);
+}
+.slide-mid{
+  transform:translate3d(0,0,0);
+}
+.carousel-page{
+  @extend .abs-full;
+  contain:strict;
+  will-change: transform;
+  opacity:1;
+  overflow-y:auto;
+  user-select: none;
+}
+.carousel-container{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  width:100%;
+}
+.img-cover{
+  background-size:cover;
+}
+.overflow-y{
+  overflow-y:auto;
+}
+.overflow-x{
+  overflow-x:auto;
+}
+.scroll-container{
+  @extend .abs-full;
+  overflow-y:auto !important;
+}
+.scroll-view-y{
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+  -webkit-overflow-scrolling: touch;
+}
+.weixin-pure-btn{
+  background: transparent;
+  font-size:inherit;
+  padding:0;
+  line-height: unset;
+  &::after{
+    content:none;
+    display: none;
+  }
+}
+.ellipsis{
+  @include Ellipsis();
+}
+.rel{
+  position:relative;
+}
+.y-hid{
+  overflow-y:hidden;
+}
+.over-hid{
+  overflow:hidden;
+  @include IOSRadius();
+}
+.y-auto{
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+}
+.not-touch{
+  transition:transform .2s ease;
+}
+.font-b{
+  font-weight: bold;
+}
+.more-mini{
+  transform: scale(.9);
+  transform-origin: 0 50%;
+}
+.no-behavior{
+  overscroll-behavior-y: none;
+}
+.visible-hid{
+  visibility: hidden; 
+}
