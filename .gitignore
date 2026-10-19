@@ -26,3 +26,6 @@ pnpm-debug.log*
 .env
 .env.local
 .env.*.local
+
+.npmrc
+settings.json

@@ -19,7 +19,7 @@ $size-map:(
   medium:var(--size-medium),
   strong:var(--size-strong),
   large:var(--size-large)
-);
+) !default;
 $color-various:(
   primary:var(--color-primary),
   primary2:var(--color-primary2),
@@ -28,7 +28,7 @@ $color-various:(
   warn:var(--color-warn),
   error:var(--color-error),
   gentle:var(--color-gentle),
-);
+) !default;
 
 $color-border-various:(
   primary:var(--color-primary),
@@ -38,7 +38,7 @@ $color-border-various:(
   warn:var(--color-warn),
   error:var(--color-error),
   gentle:var(--color-gentle),
-);
+) !default;
 
 $color-font-various:(
   primary:var(--color-primary-font),
@@ -48,7 +48,7 @@ $color-font-various:(
   warn:var(--color-warn-font),
   error:var(--color-error-font),
   gentle:var(--color-gentle-font),
-);
+) !default;
 
 $color-light-various:(
   primary:var(--color-primary-light),
@@ -58,7 +58,7 @@ $color-light-various:(
   warn:var(--color-warn-light),
   error:var(--color-error-light),
   gentle:var(--color-gentle-light)
-);
+) !default;
 
 $color-gentle-various:(
   primary:var(--color-primary-gentle),
@@ -68,21 +68,21 @@ $color-gentle-various:(
   warn:var(--color-warn-gentle),
   error:var(--color-error-gentle),
   gentle:var(--color-gentle-gentle)
-);
+) !default;
 $font-colors:(
   des:var(--color-font-des),
   content:var(--color-font-content),
   title:var(--color-font-title),
   brand:var(--color-font-brand),
   assist:var(--color-font-assist)
-);
+) !default;
 
 $row-width-map:(
   25:25%,
   50:50%,
   75:75%,
   100:100%
-);
+) !default;
 
 $voyo-index:(
   toast:1000,
@@ -99,8 +99,8 @@ $voyo-index:(
   menu:1500,
 ) !default;
 
-$voyo-space-position:8px;
-$voyo-space-base:5px;
+$voyo-space-position:8px !default;
+$voyo-space-base:5px !default;
 //text
 
 $voyo-text-rich-size: var(--size-small) !default;
@@ -121,34 +121,34 @@ $voyo-icon-size:(
 ) !default;
 
 //line
-$voyo-title-line-padding:.5rem 1rem;
-$voyo-title-line-padding-inner: .3rem .4rem;
-$voyo-title-line-image-w:2em;
-$voyo-title-line-image-h:2em;
-$voyo-des-line-padding:.5rem 1rem;
-$voyo-content-line-padding:.5rem 1rem;
-$voyo-empty-line-padding:.5rem 1rem;
-$voyo-li-padding: .9em;
-$voyo-li-left:5%;
+$voyo-title-line-padding:.5rem 1rem !default;
+$voyo-title-line-padding-inner: .3rem .4rem !default;
+$voyo-title-line-image-w:2em !default;
+$voyo-title-line-image-h:2em !default;
+$voyo-des-line-padding:.5rem 1rem !default;
+$voyo-content-line-padding:.5rem 1rem !default;
+$voyo-empty-line-padding:.5rem 1rem !default;
+$voyo-li-padding: .9em !default;
+$voyo-li-left:5% !default;
 //icon
 $voyo-icon-space:var(--space-base) !default;
 $voyo-icon-padding: .5em !default;
 //animation
-$voyo-in-timer:cubic-bezier(.09,.34,.48,.97);
-$voyo-out-timer:cubic-bezier(.79,.07,.98,1);
+$voyo-in-timer:cubic-bezier(.09,.34,.48,.97) !default;
+$voyo-out-timer:cubic-bezier(.79,.07,.98,1) !default;
 
-$voyo-area-content-padding:1.5rem 1rem;
-$voyo-area-footer-padding:1rem;
-$voyo-area-sheetSelect-padding:.7rem;
-$voyo-area-deep-padding:1rem;
-$voyo-area-deep-bg:var(--color-bg3);
+$voyo-area-content-padding:1.5rem 1rem !default;
+$voyo-area-footer-padding:1rem !default;
+$voyo-area-sheetSelect-padding:.7rem !default;
+$voyo-area-deep-padding:1rem !default;
+$voyo-area-deep-bg:var(--color-bg3) !default;
 //avatar
 $voyo-avatar-h:5em !default;
 $voyo-avatar-w:5em !default;
-$voyo-avatar-title:1.5em;
-$voyo-avatar-des:1em;
-$voyo-avatar-title-p:0 0 .5rem 0;
-$voyo-avatar-title-max-w:9em;
+$voyo-avatar-title:1.5em !default;
+$voyo-avatar-des:1em !default;
+$voyo-avatar-title-p:0 0 .5rem 0 !default;
+$voyo-avatar-title-max-w:9em !default;
 $voyo-avatar-size-map:(
   mini: 1em,
   small: 1.5em,
@@ -164,6 +164,6 @@ $voyo-backdrop-back-bg:var(--color-bg) !default;
 $voyo-backdrop-filter-blur:10px !default;
 
 //row
-$voyo-col-count:12;
-$voyo-row-width:99.9%;
+$voyo-col-count:12 !default;
+$voyo-row-width:99.9% !default;
 

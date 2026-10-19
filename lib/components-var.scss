@@ -2,26 +2,26 @@
 
 @use "vars" as *;
 
-$voyo-page-content-z-index:50;
+$voyo-page-content-z-index:50 !default;
 
-$voyo-page-header-adapter-padding:0 .5rem;
-$voyo-page-header-z-index:51;
-$voyo-layout-opacity:.6;
+$voyo-page-header-adapter-padding:0 .5rem !default;
+$voyo-page-header-z-index:51 !default;
+$voyo-layout-opacity:.6 !default;
 
 $voyo-tabbar-height:64px !default;
 $voyo-tabbar-background:var(--color-bg) !default;
-$voyo-tabbar-icon-size:1.2em;
-$voyo-tabbar-title-size:small;
-$voyo-tabbar-z-index:52;
+$voyo-tabbar-icon-size:1.2em !default;
+$voyo-tabbar-title-size:small !default;
+$voyo-tabbar-z-index:52 !default;
 
-$voyo-carousel-image-bar-bottom: 3%;
-$voyo-carousel-image-thumb-w:.7rem;
-$voyo-carousel-image-thumb-h:.3rem;
-$voyo-carousel-image-thumb-margin:0 .3rem;
+$voyo-carousel-image-bar-bottom: 3% !default;
+$voyo-carousel-image-thumb-w:.7rem !default;
+$voyo-carousel-image-thumb-h:.3rem !default;
+$voyo-carousel-image-thumb-margin:0 .3rem !default;
 
-$voyo-btn-size:$size-map;
+$voyo-btn-size:$size-map !default;
 $voyo-btn-linear-deg: 90deg !default;
-$voyo-btn-colors:$color-various;
+$voyo-btn-colors:$color-various !default;
 $voyo-btn-various-height: (
   mini: 2.5em,
   small: 2.5em,
@@ -61,11 +61,11 @@ $voyo-btn-icon-various-len: (
 $voyo-btn-distance:1em !default;
 $voyo-btn-icon-dis:0.4em !default;
 $voyo-btn-icon-len:3em !default;
-$voyo-btn-min-width:5.5em;
-$voyo-btn-block-spacing:1em;
-$voyo-btn-block-font-size:1.1em;
-$voyo-btn-loading-percent:1.3;
-$voyo-btn-round-radius: var(--radius-large);
+$voyo-btn-min-width:5.5em !default;
+$voyo-btn-block-spacing:1em !default;
+$voyo-btn-block-font-size:1.1em !default;
+$voyo-btn-loading-percent:1.3 !default;
+$voyo-btn-round-radius: var(--radius-large) !default;
 $voyo-btn-padding: 0 .6em !default;
 $voyo-btn-shadow-use: false !default;
 $voyo-btn-shadow-size: 0 4px 16px -7px !default;
@@ -83,7 +83,7 @@ $voyo-toast-bottom:10% !default;
 $voyo-toast-min-width:5rem !default;
 $voyo-toast-max-width:80% !default;
 $voyo-toast-padding:.5em 1em !default;
-$voyo-toast-font-size:var(--size-small);
+$voyo-toast-font-size:var(--size-small) !default;
 
 //card
 $voyo-card-bg: var(--color-bg) !default;
@@ -118,13 +118,13 @@ $voyo-dialog2-footer-padding:1rem 0 0 0 !default;
 $voyo-dialog2-article-max-height:55vh !default;
 $voyo-dialog2-article-min-height:100px !default;
 //toastStrong
-$voyo-toastStrong-article-width:4rem;
-$voyo-toastStrong-article-height:4rem;
-$voyo-toastStrong-padding:.5rem 1rem;
-$voyo-toastStrong-bg:var(--color-bg-deep3);
-$voyo-toastStrong-footer-bg:var(--color-bg5);
-$voyo-toastStrong-footer-padding:.5rem;
-$voyo-toastStrong-color:var(--color-font-brand-reverse);
+$voyo-toastStrong-article-width:4rem !default;
+$voyo-toastStrong-article-height:4rem !default;
+$voyo-toastStrong-padding:.5rem 1rem !default;
+$voyo-toastStrong-bg:var(--color-bg-deep3) !default;
+$voyo-toastStrong-footer-bg:var(--color-bg5) !default;
+$voyo-toastStrong-footer-padding:.5rem !default;
+$voyo-toastStrong-color:var(--color-font-brand-reverse) !default;
 //input
 $voyo-input-wrapper-margin:0.2em 0 .2em 0 !default;
 $voyo-input-wrapper-padding:0 .5em !default;
@@ -147,7 +147,7 @@ $voyo-input-candy-radius:2em !default;
 $voyo-input-candy-bg:var(--color-bg3) !default;
 $voyo-input-colors:(
     error:var(--color-error)
-);
+) !default;
 $voyo-input-footer-height:1.2em !default;
 $voyo-input-footer-padding:.2em .2em 0 .2em !default;
 $voyo-input-cursor-height:70% !default;
@@ -155,10 +155,10 @@ $voyo-input-cursor-width:2px !default;
 $voyo-input-cursor-color:var(--color-font-base) !default;
 
 //line
-$voyo-line-bg:var(--color-bg);
-$voyo-line-padding:1em 1em 1em 0;
-$voyo-line-content-margin-left:1.5rem;
-$voyo-line-icon-space:1.5rem;
+$voyo-line-bg:var(--color-bg) !default;
+$voyo-line-padding:1em 1em 1em 0 !default;
+$voyo-line-content-margin-left:1.5rem !default;
+$voyo-line-icon-space:1.5rem !default;
 $voyo-line-content-font-size:1em !default;
 $voyo-line-icon-font-size:1.3em !default;
 $voyo-line-content-color:var(--color-font-content) !default;
@@ -182,14 +182,14 @@ $voyo-popup-radius:var(--radius-large) !default;
 $voyo-popup-view-type: mid top left right bottom !default;
 $voyo-popup-close-icon-size:1rem !default;
 $voyo-popup-close-icon-space:.5rem !default;
-$voyo-popup-container-padding-with-close-icon:2rem 1.5rem 1.5rem 1.5rem;
+$voyo-popup-container-padding-with-close-icon:2rem 1.5rem 1.5rem 1.5rem !default;
 $voyo-popup-activity-close-size:3rem !default;
 
 //load
-$voyo-load-text-color:var(--color-font-des);
-$voyo-load-text-margin: 0 0 0 .5rem;
-$voyo-load-text-block-margin:.5rem 0 0 0;
-$voyo-load-img-length: 4em;
+$voyo-load-text-color:var(--color-font-des) !default;
+$voyo-load-text-margin: 0 0 0 .5rem !default;
+$voyo-load-text-block-margin:.5rem 0 0 0 !default;
+$voyo-load-img-length: 4em !default;
 $voyo-load-img-block-length: 5em !default;
 $voyo-load-wrapper-h: 5.5em !default;
 $voyo-load-size-map:(
@@ -213,12 +213,12 @@ $voyo-load-block-size-map: (
 
 
 //pagination
-$voyo-pagination-bottom-area-h:50px;
-$voyo-pagination-message-h:300px;
-$voyo-pagination-message-title-padding:2rem 0 1rem 0;
-$voyo-pg-refresh-img-w:2.5rem;
-$voyo-pg-refresh-img-h:2.5rem;
-$voyo-pg-refresh-img-margin:0 .5rem 0 0;
+$voyo-pagination-bottom-area-h:50px !default;
+$voyo-pagination-message-h:300px !default;
+$voyo-pagination-message-title-padding:2rem 0 1rem 0 !default;
+$voyo-pg-refresh-img-w:2.5rem !default;
+$voyo-pg-refresh-img-h:2.5rem !default;
+$voyo-pg-refresh-img-margin:0 .5rem 0 0 !default;
 
 //figure
 $voyo-figure-padding:2.2rem 1rem 2rem 1rem !default;
@@ -228,80 +228,80 @@ $voyo-figure-title-padding:1rem !default;
 $voyo-figure-content-padding:1rem !default;
 
 //sidebar
-$voyo-sidebar-size:var(--size-font);
-$voyo-sidebar-width:6em;
-$voyo-sidebar-thumb-height:1em;
-$voyo-sidebar-thumb-width:.3em;
-$voyo-sidebar-thumb-color:var(--color-primary);
+$voyo-sidebar-size:var(--size-font) !default;
+$voyo-sidebar-width:6em !default;
+$voyo-sidebar-thumb-height:1em !default;
+$voyo-sidebar-thumb-width:.3em !default;
+$voyo-sidebar-thumb-color:var(--color-primary) !default;
 
-$voyo-sidebar-item-bg:var(--color-bg3);
-$voyo-sidebar-item-action-bg:var(--color-bg);
-$voyo-sidebar-item-height:4em;
+$voyo-sidebar-item-bg:var(--color-bg3) !default;
+$voyo-sidebar-item-action-bg:var(--color-bg) !default;
+$voyo-sidebar-item-height:4em !default;
 
 //image icon
-$voyo-image-icon-size:$size-map;
-$voyo-image-bg-color:var(--color-bg2);
+$voyo-image-icon-size:$size-map !default;
+$voyo-image-bg-color:var(--color-bg2) !default;
 
 //footer bar
-$voyo-footer-bar-height:3.6rem;
-$voyo-footer-bar-bg:var(--color-bg);
-$voyo-footer-bar-padding:0 1rem;
+$voyo-footer-bar-height:3.6rem !default;
+$voyo-footer-bar-bg:var(--color-bg) !default;
+$voyo-footer-bar-padding:0 1rem !default;
 
 //article
-$voyo-article-padding:1rem .8rem;
-$voyo-article-header-padding:1rem;
-$voyo-article-bg:var(--color-bg);
+$voyo-article-padding:1rem .8rem !default;
+$voyo-article-header-padding:1rem !default;
+$voyo-article-bg:var(--color-bg) !default;
 
 //keyboard
-$voyo-keyboard-key-h:6.5vh;
-$voyo-keyboard-key-h-alone:6.8vh;
-$voyo-keyboard-key-size:var(--size-strong);
-$voyo-keyboard-bg:var(--color-bg3);
-$voyo-keyboard-key-bg:var(--color-bg);
-$voyo-keyboard-content-padding:1rem .6rem .5rem .6rem;
-$voyo-keyboard-item-margin:.2rem;
-$voyo-keyboard-double-left:76%;
-$voyo-keyboard-double-right:24%;
-$voyo-keyboard-key-active-bg:var(--color-bg-deep3);
-$voyo-keyboard-closebar-padding:.2rem 0 .3rem 0;
+$voyo-keyboard-key-h:6.5vh !default;
+$voyo-keyboard-key-h-alone:6.8vh !default;
+$voyo-keyboard-key-size:var(--size-strong) !default;
+$voyo-keyboard-bg:var(--color-bg3) !default;
+$voyo-keyboard-key-bg:var(--color-bg) !default;
+$voyo-keyboard-content-padding:1rem .6rem .5rem .6rem !default;
+$voyo-keyboard-item-margin:.2rem !default;
+$voyo-keyboard-double-left:76% !default;
+$voyo-keyboard-double-right:24% !default;
+$voyo-keyboard-key-active-bg:var(--color-bg-deep3) !default;
+$voyo-keyboard-closebar-padding:.2rem 0 .3rem 0 !default;
 // verification
-$voyo-vf-padding:1em 0;
-$voyo-vf-col-margin:0 .25em;
-$voyo-vf-col-width-max:3em;
-$voyo-vf-col-height:3em;
-$voyo-vf-col-input-bg: var(--color-bg);
-$voyo-vf-col-input-radius: var(--radius-base);
-$voyo-vf-col-input-active-color:var(--color-primary);
+$voyo-vf-padding:1em 0 !default;
+$voyo-vf-col-margin:0 .25em !default;
+$voyo-vf-col-width-max:3em !default;
+$voyo-vf-col-height:3em !default;
+$voyo-vf-col-input-bg: var(--color-bg) !default;
+$voyo-vf-col-input-radius: var(--radius-base) !default;
+$voyo-vf-col-input-active-color:var(--color-primary) !default;
 $voyo-vf-col-input-disable-bg: var(--color-bg2) !default;
 //verification rotate
-$voyo-vf-r-figure-width:10em;
-$voyo-vf-r-figure-height:10em;
-$voyo-vf-r-thumb-padding:3em 2em 1em 2em;
-$voyo-vf-r-thumb-radius:.7em;
-$voyo-vf-r-thumb-bg:var(--color-bg3);
-$voyo-vf-r-thumbbar-bg:var(--color-bg);
-$voyo-vf-r-thumbbar-len:3.4em;
-$voyo-vf-r-thumbbar-radius:1.7em;
-$voyo-vf-r-thumb-height:.7em;
-$voyo-vf-r-thumb-top:2em;
-$voyo-vf-r-thumb-message-h:2.5em;
-$voyo-vf-r-figure-bg:var(--color-bg);
-$voyo-vf-r-bg:var(--color-bg);
-$voyo-vf-r-padding:2.5rem 1rem 1.5rem 1rem;
-$voyo-vf-r-width:80vw;
-$voyo-vf-r-max-width:370px;
-$voyo-vf-r-min-width:320px;
+$voyo-vf-r-figure-width:10em !default;
+$voyo-vf-r-figure-height:10em !default;
+$voyo-vf-r-thumb-padding:3em 2em 1em 2em !default;
+$voyo-vf-r-thumb-radius:.7em !default;
+$voyo-vf-r-thumb-bg:var(--color-bg3) !default;
+$voyo-vf-r-thumbbar-bg:var(--color-bg) !default;
+$voyo-vf-r-thumbbar-len:3.4em !default;
+$voyo-vf-r-thumbbar-radius:1.7em !default;
+$voyo-vf-r-thumb-height:.7em !default;
+$voyo-vf-r-thumb-top:2em !default;
+$voyo-vf-r-thumb-message-h:2.5em !default;
+$voyo-vf-r-figure-bg:var(--color-bg) !default;
+$voyo-vf-r-bg:var(--color-bg) !default;
+$voyo-vf-r-padding:2.5rem 1rem 1.5rem 1rem !default;
+$voyo-vf-r-width:80vw !default;
+$voyo-vf-r-max-width:370px !default;
+$voyo-vf-r-min-width:320px !default;
 //snackbar
-$voyo-snackbar-bg-padding:1.5rem 0;
-$voyo-snackbar-padding:1rem 1rem 1rem .5rem;
-$voyo-snackbar-close-padding:0 0 0 .5rem;
-$voyo-snackbar-radius:var(--radius-medium);
-$voyo-snackbar-bg:var(--color-bg6);
-$voyo-snackbar-w:85vw;
-$voyo-snackbar-max-w:500px;
-$voyo-snackbar-min-w:300px;
-$voyo-snackbar-left-w:20%;
-$voyo-snackbar-icon-w:2rem;
+$voyo-snackbar-bg-padding:1.5rem 0 !default;
+$voyo-snackbar-padding:1rem 1rem 1rem .5rem !default;
+$voyo-snackbar-close-padding:0 0 0 .5rem !default;
+$voyo-snackbar-radius:var(--radius-medium) !default;
+$voyo-snackbar-bg:var(--color-bg6) !default;
+$voyo-snackbar-w:85vw !default;
+$voyo-snackbar-max-w:500px !default;
+$voyo-snackbar-min-w:300px !default;
+$voyo-snackbar-left-w:20% !default;
+$voyo-snackbar-icon-w:2rem !default;
 
 //badge
 $voyo-badge-bg-use: true !default;
@@ -321,9 +321,9 @@ $voyo-fab-list-directions:(
   bottom:column,
   left:row-reverse,
   right:row
-);
-$voyo-fab-list-item-max-count:5;
-$voyo-fab-list-item-delay:.1s;
+) !default;
+$voyo-fab-list-item-max-count:5 !default;
+$voyo-fab-list-item-delay:.1s !default;
 
 
 //alert
@@ -332,8 +332,8 @@ $voyo-alert-inner-padding:0 .5em !default;
 $voyo-alert-bg-various:$color-gentle-various !default;
 $voyo-alert-font-various:$color-various !default;
 $voyo-alert-marquee-duration:16s !default;
-$voyo-alert-marquee-height:3em;
-$voyo-alert-round:var(--radius-medium);
+$voyo-alert-marquee-height:3em !default;
+$voyo-alert-round:var(--radius-medium) !default;
 
 
 //divider
@@ -346,15 +346,15 @@ $voyo-divider-content-padding:0 1em !default;
 $voyo-divider-line-color:var(--color-after-border) !default;
 
 //menu
-$voyo-menu-bg: var(--color-bg);
-$voyo-menu-max-height:60vh;
-$voyo-menu-min-width:7rem;
+$voyo-menu-bg: var(--color-bg) !default;
+$voyo-menu-max-height:60vh !default;
+$voyo-menu-min-width:7rem !default;
 $voyo-menu-position-various:(
   bottom: 50% 0%,
   left:100% 50%,
   right: 0% 50%,
   top:50% 100%
-);
+) !default;
 
 
 // animation
@@ -366,7 +366,7 @@ $voyo-an-origin:(
 ) !default;
 
 //select
-$voyo-select-ease-time:.2s ease-out;
+$voyo-select-ease-time:.2s ease-out !default;
 $voyo-select-bg: var(--color-bg-deep3) !default;
 $voyo-select-li-hover-bg:var(--color-primary-gentle) !default;
 $voyo-select-li-padding: Space(3) !default;
@@ -391,7 +391,7 @@ $voyo-cell-border: true !default;
 $voyo-cell-img-w:2em !default;
 $voyo-cell-img-h: 2em !default;
 $voyo-cell-icon-size:2em !default;
-$voyo-cell-space: Space(3);
+$voyo-cell-space: Space(3) !default;
 
 //panel
 $voyo-panel-setting:(
@@ -420,5 +420,5 @@ $voyo-panel:(
 ) !default;
 
 // skeleton
-$voyo-skeleton-color1:var(--color-after-border);
-$voyo-skeleton-color2:var(--color-bg);
+$voyo-skeleton-color1:var(--color-after-border) !default;
+$voyo-skeleton-color2:var(--color-bg) !default;
