@@ -1,6 +1,6 @@
 {
   "name": "@voyo/new-core-style",
-  "version": "3.0.2",
+  "version": "3.1.0",
   "description": "Voyo core style with modern Sass module system",
   "type": "module",
   "main": "lib/main.scss",
